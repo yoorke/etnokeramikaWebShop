@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="eshop.master.cs" Inherits="etnokeramikaWebShop.eshop" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebShop</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+
+    <link href="<%=ResolveUrl("~/css/style.min.css") %>" rel="stylesheet" />    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <!--TOP MENU-->
+        <div class="top-menu">
+            <div class="container">
+                <div class="row">
+                    <!--contact phone-->
+                    <div class="col col-md-7 col-lg-8 col-sm-6 col-xs-6">
+                        <span>Info centar:</span>
+                        <span class="important">023 531 900</span>
+                    </div>
+                    <div class="col col-md-3 col-lg-3 col-sm-4 col-xs-4 text-right">
+                        <a>Prijava</a>
+                        <a>Registracija</a>                        
+                    </div>
+                    <div class="col col-md-2 col-lg-1 col-sm-2 col-xs-2 text-right">
+                        <a href="http://www.facebook.com/etnokeramika"><span class="icon"><span class="fa fa-fw fa-facebook"></span></span></a>
+                        <a href="http://www.youtube.com"><span class="icon"><span class="fa fa-fw fa-youtube"></span></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//TOP MENU-->
+
+        <!--HEADER-->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <!--logo-->
+                    <div class="col-sm-4 col-md-3">
+                        <div class="logo">
+                            <a class="top" href="/">Etnokeramika</a>
+                            <p><a class="bottom" href="/">ručno pravljeno keramičko posuđe</a></p>
+                        </div>
+                    </div>
+                    <!--search-->
+                    <div class="col-sm-6 col-md-7">
+                        <div class="search-box padding-1-0">
+                            <asp:Panel runat="server" DefaultButton="btnSearch">
+                                <div class="input-group">
+                                    <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <span class="input-group-addon"><asp:LinkButton ID="btnSearch" runat="server" OnClick="btnSearch_Click" CausesValidation="false"><span class="fa fa-fw fa-search"></span></asp:LinkButton></span>
+                                </div>
+                            </asp:Panel>
+                        </div>
+                    </div>
+                    <!--cart-->
+                    <div class="col-sm-2">
+                        <div class="cart-fp-box padding-1-0">
+                            <div class="cart-fp"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//HEADER-->
+
+        <!--MASTER PAGE MENU-->
+        <div class="master-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        eqewqew
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//MASTER PAGE MENU-->
+
+        <!--BANNERS-->
+        <!--//BANNERS-->
+
+        <!--MAIN CONTENT-->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <!--//MAIN CONTENT-->
+
+        <!--FOOTER-->
+        <!--//FOOTER-->
+    
+    </form>
+</body>
+</html>

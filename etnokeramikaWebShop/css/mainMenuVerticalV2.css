@@ -1,0 +1,14 @@
+﻿@media only screen and (min-width: 1024px){
+    .cd-dropdown{
+        position:relative;
+    }
+
+    .cd-dropdown-content{
+        position:relative;
+        width:auto;
+        min-height:299px;
+    }
+    .no-touch .cd-dropdown-content .cd-secondary-dropdown a:hover{
+        text-decoration:none;
+    }
+}

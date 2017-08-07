@@ -1,0 +1,27 @@
+[
+  {
+    "outputFileName": "js/bootstrap.min.js",
+    "inputFiles": [
+      "js/bootstrap.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "gzip": false,
+      "preserveImportantComments": false
+    }
+  },
+  {
+    "outputFileName": "css/mainMenuVerticalV1.min.css",
+    "inputFiles": [
+      "css/mainMenuVerticalV1.css"
+    ],
+    "minify": {"enabled": true}
+  },
+  {
+    "outputFileName": "css/mainMenuVerticalV2.min.css",
+    "inputFiles": [
+      "css/mainMenuVerticalV2.css"
+    ],
+    "minify": {"enabled": true}
+  }
+]
