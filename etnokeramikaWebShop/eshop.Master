@@ -1,4 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="eshop.master.cs" Inherits="etnokeramikaWebShop.eshop" %>
+<%@ Register Src="~/userControls/MasterMenu.ascx" TagName="MasterMenu" TagPrefix="ws" %>
+<%@ Register Src="~/userControls/MainMenuVertical.ascx" TagName="MainMenuVertical" TagPrefix="ws" %>
 
 <!DOCTYPE html>
 
@@ -50,7 +52,7 @@
                         </div>
                     </div>
                     <!--search-->
-                    <div class="col-sm-6 col-md-7">
+                    <div class="col-sm-6 col-md-5">
                         <div class="search-box padding-1-0">
                             <asp:Panel runat="server" DefaultButton="btnSearch">
                                 <div class="input-group">
@@ -59,6 +61,12 @@
                                 </div>
                             </asp:Panel>
                         </div>
+                    </div>
+                    <div class="col-sm-1">
+                        Lista zelja
+                    </div>
+                    <div class="col-sm-1">
+                        Uporedi
                     </div>
                     <!--cart-->
                     <div class="col-sm-2">
@@ -72,11 +80,14 @@
         <!--//HEADER-->
 
         <!--MASTER PAGE MENU-->
-        <div class="master-menu">
+        <div class="master-menu-box">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        eqewqew
+                    <div class="col-sm-2">
+                        <ws:MainMenuVertical ID="mainMenuVertical1" runat="server"></ws:MainMenuVertical>
+                    </div> 
+                    <div class="col-sm-10">
+                        <ws:MasterMenu ID="masterMenu1" runat="server" MasterMenuID="1"></ws:MasterMenu>
                     </div>
                 </div>
             </div>

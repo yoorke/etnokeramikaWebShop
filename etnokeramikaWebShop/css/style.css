@@ -6783,14 +6783,28 @@ button.close {
 }
 .header .cart-fp-box .cart-fp:hover {
   background-color: #cc4422;
+  cursor: pointer;
 }
 .header .slogan-box {
   font-family: 'Lobster', Arial;
   color: #eee;
 }
-.master-menu {
+.master-menu-box {
   background-color: #bbb;
-  height: 30px;
+  min-height: 30px;
+}
+.master-menu-box .master-menu.navbar-default {
+  background-color: transparent;
+  border: none;
+}
+.master-menu-box .master-menu.navbar {
+  min-height: 0;
+  margin: 0;
+}
+.master-menu-box .master-menu .nav > li > a {
+  padding: 5px 5px 0 5px;
+  text-transform: uppercase;
+  color: #333;
 }
 /* -------------------------------- 
 
