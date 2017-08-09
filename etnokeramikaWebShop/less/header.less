@@ -1,43 +1,74 @@
-﻿.header{
-    .logo{
+﻿.header {
+    .logo {
         a.top {
-            font-size:2.4em;
-            background:url('../images/logo_bg.gif') repeat-x bottom;
+            font-size: 2.4em;
+            background: url('../images/logo_bg.gif') repeat-x bottom;
             font-family: 'Lobster', Arial;
         }
 
-        p{
-            margin-top:-5px;
+        p {
+            margin-top: -5px;
+
             a.bottom {
-                color:darken(@brand-primary, 30%);
-                font-size:0.85em; 
+                color: darken(@brand-primary, 30%);
+                font-size: 0.85em;
             }
         }
 
-        a:hover{
-            color:@brand-primary;
+        a:hover {
+            color: @brand-primary;
         }
     }
 
-    .search-box{
-        
+    .search-box {
     }
 
-    .cart-fp-box{
-        .cart-fp{
-            width:100%;
-            background-color:lighten(@brand-primary, 20%);
-            height:34px;
+    .header-box {
+        width: 100%;
+
+        .cart-fp {
+            background-color: lighten(@brand-primary, 20%);
+            height: 34px;
+            transition:@icon-transition-time;
         }
 
-        .cart-fp:hover{
-            background-color:@brand-primary;
-            cursor:pointer;
+        .cart-fp:hover {
+            background-color: @brand-primary;
+            //cursor: pointer;
+        }
+
+        .icon-fp{
+            height:34px;            
+            //color:@secondary-gray;
+            text-align:center;
+            font-size:1.2em;
+            padding:0.5em;
+            position:relative;
+
+            a {
+                color:@secondary-gray;
+                transition:@icon-transition-time;
+            }
+
+            a:hover{
+                color:@brand-primary;
+            }
+
+            .number{
+                position:absolute;
+                top:-5px;
+                right:5px;
+                background-color:@brand-primary;
+                border-radius:10em;
+                display:block;
+                padding:0 6px;
+                color:#fff;
+            }
         }
     }
 
-    .slogan-box{
+    .slogan-box {
         font-family: 'Lobster', Arial;
-        color:#eee;
+        color: #eee;
     }
 }

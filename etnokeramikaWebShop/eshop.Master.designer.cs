@@ -49,6 +49,24 @@ namespace etnokeramikaWebShop {
         protected global::System.Web.UI.WebControls.LinkButton btnSearch;
         
         /// <summary>
+        /// lnkCompare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkCompare;
+        
+        /// <summary>
+        /// lnkWishlist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkWishlist;
+        
+        /// <summary>
         /// masterMenu1 control.
         /// </summary>
         /// <remarks>

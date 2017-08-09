@@ -6776,14 +6776,40 @@ button.close {
 .header .logo a:hover {
   color: #cc4422;
 }
-.header .cart-fp-box .cart-fp {
+.header .header-box {
   width: 100%;
+}
+.header .header-box .cart-fp {
   background-color: #e7866d;
   height: 34px;
+  transition: 0.5s;
 }
-.header .cart-fp-box .cart-fp:hover {
+.header .header-box .cart-fp:hover {
   background-color: #cc4422;
-  cursor: pointer;
+}
+.header .header-box .icon-fp {
+  height: 34px;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.5em;
+  position: relative;
+}
+.header .header-box .icon-fp a {
+  color: #bbb;
+  transition: 0.5s;
+}
+.header .header-box .icon-fp a:hover {
+  color: #cc4422;
+}
+.header .header-box .icon-fp .number {
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  background-color: #cc4422;
+  border-radius: 10em;
+  display: block;
+  padding: 0 6px;
+  color: #fff;
 }
 .header .slogan-box {
   font-family: 'Lobster', Arial;

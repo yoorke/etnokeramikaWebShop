@@ -63,14 +63,24 @@
                         </div>
                     </div>
                     <div class="col-sm-1">
-                        Lista zelja
+                        <div class="header-box padding-1-0">
+                            <div class="icon-fp">
+                                <asp:HyperLink ID="lnkCompare" runat="server" NavigateUrl="/"><span class="fa fa-fw fa-balance-scale"></span></asp:HyperLink>
+                                <span class="number">0</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-sm-1">
-                        Uporedi
+                        <div class="header-box padding-1-0">
+                            <div class="icon-fp">
+                                <asp:HyperLink ID="lnkWishlist" runat="server" NavigateUrl="/"><span class="fa fa-fw fa-heart"></span></asp:HyperLink>
+                                <span class="number">0</span>
+                            </div>
+                        </div>
                     </div>
                     <!--cart-->
                     <div class="col-sm-2">
-                        <div class="cart-fp-box padding-1-0">
+                        <div class="header-box padding-1-0">
                             <div class="cart-fp"></div>
                         </div>
                     </div>
@@ -84,7 +94,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2">
-                        <%--<ws:MainMenuVertical ID="mainMenuVertical1" runat="server"></ws:MainMenuVertical>--%>
+                        
                     </div> 
                     <div class="col-sm-10">
                         <ws:MasterMenu ID="masterMenu1" runat="server" MasterMenuID="1"></ws:MasterMenu>
