@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MainMenuVertical.ascx.cs" Inherits="etnokeramikaWebShop.userControls.MainMenuVertical" %>
-<%--<%@ Register Src="~/userControls/CategoryBanner.ascx" TagName="CategoryBanner" TagPrefix="categoryBanner" %>--%>
+<%@ Register Src="~/userControls/CategoryBanner.ascx" TagName="CategoryBanner" TagPrefix="categoryBanner" %>
 
     <div class="cd-dropdown-wrapper">
         <a class="cd-dropdown-trigger" href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> Proizvodi</a>
@@ -51,7 +51,7 @@
 
 
                                         <%--09.08.--%>
-                                        <%--<categoryBanner:CategoryBanner ID="categoryBanner1" runat="server" CategoryBannerID='<%# ((eshopBE.Category)((RepeaterItem)(Container.NamingContainer.NamingContainer)).DataItem).CategoryBannerID %>'  />--%>
+                                        <categoryBanner:CategoryBanner ID="categoryBanner1" runat="server" CategoryBannerID='<%# ((eshopBE.Category)((RepeaterItem)(Container.NamingContainer.NamingContainer)).DataItem).CategoryBannerID %>'  />
 
 
                                         <%--<asp:Label runat="server" Text='<%# ((eshopBE.Category)((RepeaterItem)(Container.NamingContainer.NamingContainer)).DataItem).CategoryBannerID %>'></asp:Label>--%>

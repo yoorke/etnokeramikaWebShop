@@ -86,9 +86,10 @@ header {
   background-color: transparent;
   color: #ffffff !important;
   border-radius: 0px;
+  transition:@icon-transition-time;
 }
 .no-touch .cd-dropdown-trigger:hover {
-  background-color: #55849e;
+  background-color: @brand-primary;
   color:#ffffff !important;
   text-decoration:none;
 }
@@ -130,12 +131,12 @@ header {
   .cd-dropdown-trigger.dropdown-is-active {
     background-color: transparent;
     text-decoration:none;
-    background-color:#55849e;
+    background-color:@brand-primary;
   }
   .no-touch .cd-dropdown-trigger.dropdown-is-active:hover {
     background-color: transparent;
     color:#ffffff !important;
-    background-color:#55849e;
+    background-color:@brand-primary;
     text-decoration:none;
   }
   .cd-dropdown-trigger.dropdown-is-active::before, .cd-dropdown-trigger.dropdown-is-active::after {
@@ -555,8 +556,8 @@ header {
     border-bottom: none;
   }
   .no-touch .cd-dropdown-content > li:not(.has-children) a:hover {
-    color: #175e87 !important;
-    box-shadow:inset 5px 0 0 #175e87;
+    color: @brand-primary !important;
+    box-shadow:inset 5px 0 0 @brand-primary;
     background-color:#ffffff;
     border-top:1px solid #cccccc;
     border-bottom:1px solid #cccccc;
@@ -718,7 +719,7 @@ header {
     padding-left: 0;
   }
   .no-touch .cd-dropdown-content .cd-secondary-dropdown a:hover {
-    color:#175e87 !important;
+    color:@brand-primary !important;
   }
   .cd-dropdown-content .cd-secondary-dropdown ul {
     padding-bottom: 0px;
@@ -845,7 +846,7 @@ header {
   }
   .cd-dropdown-content > .has-children > ul {
     visibility: hidden;
-    background:radial-gradient(farthest-side at 100% 100%, #b5e6f1 0%, #ffffff 100%);
+    background:radial-gradient(farthest-side at 100% 100%, #eee 0%, #ffffff 100%);
     padding-bottom:2em;
   }
   .cd-dropdown-content > .has-children > ul.is-active {
@@ -858,15 +859,15 @@ header {
   }
   .cd-dropdown-content > .has-children > a.is-active {
     /* hover effect for .cd-dropdown-content items with subnavigation */
-    box-shadow: inset 5px 0 0 #175e87;
-    color: #175e87 !important;
+    box-shadow: inset 5px 0 0 @brand-primary;
+    color: @brand-primary !important;
     background-color:#ffffff;
     border-top:1px solid #cccccc;
     border-bottom:1px solid #cccccc;
     text-decoration:none;
   }
   .cd-dropdown-content > .has-children > a.is-active::before, .cd-dropdown-content > .has-children > a.is-active::after {
-    background: #175e87;
+    background: @brand-primary;
   }
   .open-to-left .cd-dropdown-content > .has-children > a.is-active {
     box-shadow: inset -2px 0 0 #3f8654;

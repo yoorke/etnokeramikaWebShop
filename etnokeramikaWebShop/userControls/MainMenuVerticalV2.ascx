@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MainMenuVerticalV2.ascx.cs" Inherits="etnokeramikaWebShop.userControls.MainMenuVerticalV2" %>
-<%@ Register Src="~/userControls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
-<%@ Register Src="~/userControls/CategoryBanner.ascx" TagName="CategoryBanner" TagPrefix="categoryBanner" %>
+<%--<%@ Register Src="~/userControls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>--%>
+<%@ Register Src="~/userControls/CategoryBanner.ascx" TagName="CategoryBanner" TagPrefix="ws" %>
 
 <a class="cd-dropdown-trigger" href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> Proizvodi</a>
 <nav class="cd-dropdown">
@@ -43,7 +43,7 @@
                                         
                                 <%--<img src="/images/no-image.jpg" style="position:absolute;right:0;bottom:0" />--%>
                                 <%--<banner:Banner ID="categoryBanner" runat="server" Position="FP2" />--%>
-                                <categoryBanner:CategoryBanner ID="categoryBanner1" runat="server" CategoryBannerID='<%# ((eshopBE.Category)((RepeaterItem)(Container.NamingContainer.NamingContainer)).DataItem).CategoryBannerID %>'  />
+                                <ws:CategoryBanner ID="categoryBanner1" runat="server" CategoryBannerID='<%# ((eshopBE.Category)((RepeaterItem)(Container.NamingContainer.NamingContainer)).DataItem).CategoryBannerID %>'  />
                                 <%--<asp:Label runat="server" Text='<%# ((eshopBE.Category)((RepeaterItem)(Container.NamingContainer.NamingContainer)).DataItem).CategoryBannerID %>'></asp:Label>--%>
                             </li>
                             <li class="bottom">

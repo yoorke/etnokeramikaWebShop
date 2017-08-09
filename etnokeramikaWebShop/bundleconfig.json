@@ -14,14 +14,25 @@
     "outputFileName": "css/mainMenuVerticalV1.min.css",
     "inputFiles": [
       "css/mainMenuVerticalV1.css"
-    ],
-    "minify": {"enabled": true}
+    ]
   },
   {
     "outputFileName": "css/mainMenuVerticalV2.min.css",
     "inputFiles": [
       "css/mainMenuVerticalV2.css"
+    ]
+  },
+  {
+    "outputFileName": "js/bundle.js",
+    "inputFiles": [
+      "js/bootstrap.js",
+      "js/modernizer.js",
+      "js/jquery.menu-aim.js",
+      "js/main.js"
     ],
-    "minify": {"enabled": true}
+    "minify": {
+      "enabled": true,
+      "preserveImportantComments": false
+    }
   }
 ]

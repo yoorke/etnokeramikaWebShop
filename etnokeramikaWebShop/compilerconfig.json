@@ -2,19 +2,27 @@
   {
     "outputFile": "css/style.css",
     "inputFile": "less/style.less",
-    "options": { "relativeUrls": false },
     "minify": {
-      "css": { "gzip": true },
+      "css": {
+        "gzip": true
+      },
       "commentMode": "none"
+    },
+    "options": {
+      "relativeUrls": false
     }
   },
   {
     "outputFile": "js/framework.min.js",
     "inputFile": "js/bootstrap.min.js",
-    "options": { "relativeUrls": false },
     "minify": {
-      "javascript": { "gzip": true },
+      "javascript": {
+        "gzip": true
+      },
       "commentMode": "none"
+    },
+    "options": {
+      "relativeUrls": false
     }
   }
 ]
