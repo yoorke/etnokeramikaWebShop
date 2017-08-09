@@ -84,7 +84,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2">
-                        <ws:MainMenuVertical ID="mainMenuVertical1" runat="server"></ws:MainMenuVertical>
+                        <%--<ws:MainMenuVertical ID="mainMenuVertical1" runat="server"></ws:MainMenuVertical>--%>
                     </div> 
                     <div class="col-sm-10">
                         <ws:MasterMenu ID="masterMenu1" runat="server" MasterMenuID="1"></ws:MasterMenu>
