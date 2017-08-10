@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace etnokeramikaWebShop {
+namespace eshopv2.userControls {
     
     
-    public partial class _default {
+    public partial class Slider {
         
         /// <summary>
-        /// mainMenuVertical control.
+        /// rptSlider control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.MainMenuVerticalV2 mainMenuVertical;
-        
-        /// <summary>
-        /// slider control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::eshopv2.userControls.Slider slider;
+        protected global::System.Web.UI.WebControls.Repeater rptSlider;
     }
 }

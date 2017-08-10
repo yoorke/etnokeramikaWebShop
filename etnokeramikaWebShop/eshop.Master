@@ -108,9 +108,13 @@
         <!--//BANNERS-->
 
         <!--MAIN CONTENT-->
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
+        <div class="main-content">
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
         <!--//MAIN CONTENT-->
 
         <!--FOOTER-->

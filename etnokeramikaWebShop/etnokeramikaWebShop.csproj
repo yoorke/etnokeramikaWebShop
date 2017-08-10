@@ -121,9 +121,22 @@
     <Content Include="js\bundle.min.js">
       <DependentUpon>bundle.js</DependentUpon>
     </Content>
+    <Content Include="js\camera.js" />
+    <Content Include="js\framework.min.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
     <Content Include="js\jquery.menu-aim.js" />
+    <Content Include="js\jquery.mobile.customized.min.js" />
     <Content Include="js\main.js" />
+    <Content Include="js\mainMenuVerticalV2Start.js" />
+    <Content Include="js\mainMenuVerticalV2Start.min.js">
+      <DependentUpon>mainMenuVerticalV2Start.js</DependentUpon>
+    </Content>
     <Content Include="js\modernizr.js" />
+    <Content Include="js\slider.js" />
+    <Content Include="js\slider.min.js">
+      <DependentUpon>slider.js</DependentUpon>
+    </Content>
+    <Content Include="js\sliderStart.js" />
     <Content Include="less\css\font-awesome.css" />
     <Content Include="less\css\mainMenuVerticalBase.css" />
     <Content Include="css\mainMenuVerticalV1.css" />
@@ -176,6 +189,7 @@
     <Content Include="userControls\MainMenuVertical.ascx" />
     <Content Include="userControls\MainMenuVerticalV2.ascx" />
     <Content Include="userControls\MasterMenu.ascx" />
+    <Content Include="userControls\Slider.ascx" />
     <Content Include="webshopAdmin\attribute.aspx" />
     <Content Include="webshopAdmin\attributeKimtecAttribute.aspx" />
     <Content Include="webshopAdmin\attributeKupindoAttribute.aspx" />
@@ -270,6 +284,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="less\main-content.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -357,6 +372,13 @@
     </Compile>
     <Compile Include="userControls\MasterMenu.ascx.designer.cs">
       <DependentUpon>MasterMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\Slider.ascx.cs">
+      <DependentUpon>Slider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\Slider.ascx.designer.cs">
+      <DependentUpon>Slider.ascx</DependentUpon>
     </Compile>
     <Compile Include="webshopAdmin\administrator.Master.cs">
       <DependentUpon>administrator.Master</DependentUpon>

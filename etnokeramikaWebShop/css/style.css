@@ -6762,6 +6762,12 @@ button.close {
 .margin-0 {
   margin: 0;
 }
+.padding-left-0 {
+  padding-left: 0;
+}
+padding-right-0 {
+  padding-right: 0;
+}
 .header .logo a.top {
   font-size: 2.4em;
   background: url('../images/logo_bg.gif') repeat-x bottom;
