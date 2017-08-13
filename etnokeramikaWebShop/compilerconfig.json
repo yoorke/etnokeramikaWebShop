@@ -11,18 +11,18 @@
     "options": {
       "relativeUrls": false
     }
-  },
-  {
-    "outputFile": "js/framework.min.js",
-    "inputFile": "js/bootstrap.min.js",
-    "minify": {
-      "javascript": {
-        "gzip": true
-      },
-      "commentMode": "none"
-    },
-    "options": {
-      "relativeUrls": false
-    }
   }
+  //{
+    //"outputFile": "js/framework.min.js",
+    //"inputFile": "js/bootstrap.min.js",
+    //"minify": {
+      //"javascript": {
+        //"gzip": true
+      //},
+      //"commentMode": "none"
+    //},
+    //"options": {
+      //"relativeUrls": false
+    //}
+  //}
 ]

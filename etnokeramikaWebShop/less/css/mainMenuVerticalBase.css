@@ -291,7 +291,7 @@ header {
 @media only screen and (min-width: 1024px) {
   .cd-dropdown {
     /*position: absolute;*/
-    top: calc(100% - 2px);
+    top: 0px;
     /* reset style*/
     height: auto;
     width: auto;
@@ -302,7 +302,7 @@ header {
     transform: translateX(0);
     background-color: #ffffff;
     color: #111433;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);*/
     opacity: 0;
     -webkit-transform: translateY(30px);
     -moz-transform: translateY(30px);
@@ -651,7 +651,7 @@ header {
   }
   .cd-dropdown-content .cd-secondary-dropdown {
     overflow: hidden;
-    width: 750px;
+    width: 875px;
     padding-bottom: 0px;
     min-height:302px;
     list-style-type:none;

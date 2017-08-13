@@ -99,6 +99,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="account.aspx" />
+    <Content Include="css\camera_bundle.css" />
+    <Content Include="css\camera_bundle.min.css">
+      <DependentUpon>camera_bundle.css</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="less\css\camera.css" />
+    <Content Include="less\css\camera.min.css">
+      <DependentUpon>camera.css</DependentUpon>
+    </Content>
+    <Content Include="less\css\cameraOverride.css" />
     <Content Include="css\mainMenuVerticalV1.min.css">
       <DependentUpon>mainMenuVerticalV1.css</DependentUpon>
     </Content>
@@ -112,35 +122,38 @@
     <Content Include="default.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\blank.gif" />
+    <Content Include="images\camera-loader.gif" />
+    <Content Include="images\camera_skins.png" />
     <Content Include="images\logo_bg.gif" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js">
+    <Content Include="js\src\bootstrap.js" />
+    <Content Include="js\src\bootstrap.min.js">
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
     <Content Include="js\bundle.js" />
     <Content Include="js\bundle.min.js">
       <DependentUpon>bundle.js</DependentUpon>
     </Content>
-    <Content Include="js\camera.js" />
-    <Content Include="js\framework.min.js" />
-    <Content Include="js\jquery.easing.1.3.js" />
-    <Content Include="js\jquery.menu-aim.js" />
-    <Content Include="js\jquery.mobile.customized.min.js" />
-    <Content Include="js\main.js" />
+    <Content Include="js\src\camera.js" />
+    <Content Include="js\src\jquery.easing.1.3.js" />
+    <Content Include="js\src\jquery.menu-aim.js" />
+    <Content Include="js\src\jquery.mobile.customized.min.js" />
+    <Content Include="js\src\main.js" />
     <Content Include="js\mainMenuVerticalV2Start.js" />
     <Content Include="js\mainMenuVerticalV2Start.min.js">
       <DependentUpon>mainMenuVerticalV2Start.js</DependentUpon>
     </Content>
-    <Content Include="js\modernizr.js" />
+    <Content Include="js\src\modernizr.js" />
     <Content Include="js\slider.js" />
     <Content Include="js\slider.min.js">
       <DependentUpon>slider.js</DependentUpon>
     </Content>
-    <Content Include="js\sliderStart.js" />
+    <Content Include="js\src\sliderStart.js" />
     <Content Include="less\css\font-awesome.css" />
     <Content Include="less\css\mainMenuVerticalBase.css" />
     <Content Include="css\mainMenuVerticalV1.css" />
     <Content Include="css\mainMenuVerticalV2.css" />
+    <Content Include="login.aspx" />
     <Content Include="packages.config" />
     <Content Include="less\boostrap\.csscomb.json" />
     <Content Include="less\boostrap\.csslintrc" />
@@ -185,6 +198,7 @@
     <Content Include="less\boostrap\utilities.less" />
     <Content Include="less\boostrap\variables.less" />
     <Content Include="less\boostrap\wells.less" />
+    <Content Include="userControls\Banner.ascx" />
     <Content Include="userControls\CategoryBanner.ascx" />
     <Content Include="userControls\MainMenuVertical.ascx" />
     <Content Include="userControls\MainMenuVerticalV2.ascx" />
@@ -285,6 +299,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="less\main-content.less" />
+    <Content Include="less\footer.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -344,7 +359,25 @@
     <Compile Include="eshop.Master.designer.cs">
       <DependentUpon>eshop.Master</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransferImages.cs" />
+    <Compile Include="userControls\Banner.ascx.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\Banner.ascx.designer.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+    </Compile>
     <Compile Include="userControls\CategoryBanner.ascx.cs">
       <DependentUpon>CategoryBanner.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

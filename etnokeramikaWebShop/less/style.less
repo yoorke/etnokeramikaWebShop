@@ -4,6 +4,7 @@
 @import 'header.less';
 @import 'master-menu-box.less';
 @import 'main-content.less';
+@import 'footer.less';
 
 @import (less) 'css/mainMenuVerticalBase.css';
 @import (less) 'css/font-awesome.css';
@@ -16,12 +17,18 @@
 @text-color:#777;
 @default-gray: #333;
 @secondary-gray: #bbb;
+@light-gray: #f4f4f4;
 @icon-transition-time:0.5s;
 
 body{
     font-family: 'Roboto', Arial;
+    background:url('../images/body_bg.jpg') no-repeat top fixed;
 
     a:hover {
-        text-decoration:none;        
+        text-decoration:none;
+    }
+
+    ul{
+        list-style-type:none;
     }
 }

@@ -27,7 +27,7 @@
 
 		gridDifference		: 250,	//to make the grid blocks slower than the slices, this value must be smaller than transPeriod
 		
-		height				: '50%',	//here you can type pixels (for instance '300px'), a percentage (relative to the width of the slideshow, for instance '50%') or 'auto'
+		height				: '40%',	//here you can type pixels (for instance '300px'), a percentage (relative to the width of the slideshow, for instance '50%') or 'auto'
 		
 		imagePath			: 'images/',	//he path to the image folder (it serves for the blank.gif, when you want to display videos)
 		
@@ -45,9 +45,9 @@
 		
 		loaderStroke		: 7,	//the thickness both of the pie loader and of the bar loader. Remember: for the pie, the loader thickness must be less than a half of the pie diameter
 				
-		minHeight			: '200px',	//you can also leave it blank
+		minHeight			: '',	//you can also leave it blank
 		
-		navigation			: true,	//true or false, to display or not the navigation buttons
+		navigation			: false,	//true or false, to display or not the navigation buttons
 		
 		navigationHover		: true,	//if true the navigation button (prev, next and play/stop buttons) will be visible on hover state only, if false they will be visible always
 		
@@ -59,7 +59,7 @@
 		
 		pagination			: true,
 		
-		playPause			: true,	//true or false, to display or not the play/pause buttons
+		playPause			: false,	//true or false, to display or not the play/pause buttons
 		
 		pauseOnClick		: true,	//true, false. It stops the slideshow when you click the sliders.
 		
