@@ -13,7 +13,7 @@ namespace etnokeramikaWebShop
     public class TransferImages
     {
         string path = @"c:/!dealStudio/Web sajtovi/etnokeramika eshop/eshop/eshop/images/";
-        string connectionString = "Server = sql5023.smarterasp.net; Database=DB_A0BDD4_etnokeramika20;User ID = DB_A0BDD4_etnokeramika20_admin; Password=DjD3jc38o";
+        string connectionString = "Server = sql5032.smarterasp.net; Database=DB_A0BDD4_etnokeramika20temp;User ID = DB_A0BDD4_etnokeramika20temp_admin; Password=DjD3jc38o";
 
         public void Start()
         {

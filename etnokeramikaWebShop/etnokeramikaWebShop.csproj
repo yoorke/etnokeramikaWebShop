@@ -104,6 +104,11 @@
       <DependentUpon>camera_bundle.css</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="images\body_bg.jpg" />
+    <Content Include="images\facebook.jpg" />
+    <Content Include="images\slide31.jpg" />
+    <Content Include="images\slide32.jpg" />
+    <Content Include="images\slide33.jpg" />
     <Content Include="less\css\camera.css" />
     <Content Include="less\css\camera.min.css">
       <DependentUpon>camera.css</DependentUpon>
@@ -203,6 +208,8 @@
     <Content Include="userControls\MainMenuVertical.ascx" />
     <Content Include="userControls\MainMenuVerticalV2.ascx" />
     <Content Include="userControls\MasterMenu.ascx" />
+    <Content Include="userControls\product_fp.ascx" />
+    <Content Include="userControls\product_slider.ascx" />
     <Content Include="userControls\Slider.ascx" />
     <Content Include="webshopAdmin\attribute.aspx" />
     <Content Include="webshopAdmin\attributeKimtecAttribute.aspx" />
@@ -370,6 +377,7 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routes.cs" />
     <Compile Include="TransferImages.cs" />
     <Compile Include="userControls\Banner.ascx.cs">
       <DependentUpon>Banner.ascx</DependentUpon>
@@ -405,6 +413,20 @@
     </Compile>
     <Compile Include="userControls\MasterMenu.ascx.designer.cs">
       <DependentUpon>MasterMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\product_fp.ascx.cs">
+      <DependentUpon>product_fp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\product_fp.ascx.designer.cs">
+      <DependentUpon>product_fp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\product_slider.ascx.cs">
+      <DependentUpon>product_slider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\product_slider.ascx.designer.cs">
+      <DependentUpon>product_slider.ascx</DependentUpon>
     </Compile>
     <Compile Include="userControls\Slider.ascx.cs">
       <DependentUpon>Slider.ascx</DependentUpon>
