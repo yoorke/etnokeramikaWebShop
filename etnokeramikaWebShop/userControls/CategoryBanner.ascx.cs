@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using eshopBE;
 using eshopBL;
 
-namespace eshopv2.userControls
+namespace etnokeramikaWebShop.userControls
 {
     public partial class CategoryBanner : System.Web.UI.UserControl
     {

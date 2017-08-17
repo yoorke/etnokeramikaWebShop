@@ -13,7 +13,7 @@ using System.Xml.Linq;
 using eshopBL;
 using eshopBE;
 
-namespace eshopv2.userControls
+namespace etnokeramikaWebShop.userControls
 {
     public partial class Slider : System.Web.UI.UserControl
     {

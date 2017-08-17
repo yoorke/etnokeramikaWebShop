@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="product_slider.ascx.cs" Inherits="etnokeramika.userControls.product_slider" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="product_slider.ascx.cs" Inherits="etnokeramikaWebShop.userControls.product_slider" %>
 <%@ Register Src="product_fp.ascx" TagName="ProductFirstPage" TagPrefix="product_fp" %>
-<div class="row product_slider_header">
+<div class="row product-slider-header">
     <div class="col-md-6">
         <asp:HyperLink ID="lnkName" runat="server" NavigateUrl='<%# "/proizvodi/" + Eval("url") %>'>
             <h2><asp:Label ID="lblName" runat="server" Text='<%#Eval("name") %>'></asp:Label></h2>
@@ -31,7 +31,7 @@
                     <div class="row">
                         <asp:Repeater ID="rptProducts" runat="server" OnItemDataBound="rptProducts_ItemDataBound">
                             <ItemTemplate>
-                                <div id="colDiv" runat="server" class="col-lg-2 col-md-3 col-sm-3 col-xs-6 padding-left-0 padding-right-0">
+                                <div id="colDiv" runat="server" class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
                                     <product_fp:ProductFirstPage ID="productFirstPage1" runat="server" ProductItem='<%#Container.DataItem %>' />
                                 </div>
                             </ItemTemplate>

@@ -13,7 +13,7 @@ using System.Xml.Linq;
 using System.Collections.Generic;
 using eshopBE;
 
-namespace etnokeramika.userControls
+namespace etnokeramikaWebShop.userControls
 {
     public partial class product_slider : System.Web.UI.UserControl
     {
@@ -109,7 +109,12 @@ namespace etnokeramika.userControls
             if(e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 HtmlControl colDiv = (HtmlControl)e.Item.FindControl("colDiv");
-                colDiv.Attributes.Add("class", "col-lg-" + _lgCols + " col-md-3 col-sm-3 col-xs-6 padding-left-0 padding-right-0");
+                colDiv.Attributes.Add("class", "col-lg-" + _lgCols + " col-md-3 col-sm-3 col-xs-6");
+
+                if(e.Item.ItemIndex != (((List<Product>)((Repeater)e.Item.Parent).DataSource).Count - 1))
+                {
+                    colDiv.Attributes.Add("class", colDiv.Attributes["class"] += " right-border");
+                }
             }
         }
     }

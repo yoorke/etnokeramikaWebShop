@@ -307,6 +307,9 @@
     </None>
     <Content Include="less\main-content.less" />
     <Content Include="less\footer.less" />
+    <Content Include="less\productFp.less" />
+    <Content Include="less\buttons.less" />
+    <Content Include="less\productSlider.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

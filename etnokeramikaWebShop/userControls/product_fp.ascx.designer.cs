@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace etnokeramika.userControls {
+namespace etnokeramikaWebShop.userControls {
     
     
     public partial class product_fp {
@@ -49,6 +49,15 @@ namespace etnokeramika.userControls {
         protected global::System.Web.UI.WebControls.Image imgPhoto;
         
         /// <summary>
+        /// lnkName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkName;
+        
+        /// <summary>
         /// lblBrand control.
         /// </summary>
         /// <remarks>
@@ -64,7 +73,7 @@ namespace etnokeramika.userControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lblName;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
         /// imgPromotion control.

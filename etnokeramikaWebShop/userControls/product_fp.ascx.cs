@@ -12,9 +12,8 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using eshopBE;
 using eshopBL;
-using System.Configuration;
 
-namespace etnokeramika.userControls
+namespace etnokeramikaWebShop.userControls
 {
     public partial class product_fp : System.Web.UI.UserControl
     {
@@ -58,16 +57,33 @@ namespace etnokeramika.userControls
             string filename = _product.Images[0].ImageUrl.Substring(0, _product.Images[0].ImageUrl.LastIndexOf('.'));
             string extension = _product.Images[0].ImageUrl.Substring(_product.Images[0].ImageUrl.LastIndexOf('.'));
             imgPhoto.ImageUrl = new ProductBL().CreateImageDirectory(int.Parse(_product.Images[0].ImageUrl.Substring(0, _product.Images[0].ImageUrl.LastIndexOf('.')))) + filename + "-" + ConfigurationManager.AppSettings["listName"] + extension;
-            lblBrand.Text = _product.Brand.Name;
-            lblName.Text = _product.Name;
+            switch(ConfigurationManager.AppSettings["productFP_Line1"])
+            {
+                case "Brand": lblBrand.Text = _product.Brand.Name;break;
+                case "Name": lblBrand.Text = _product.Name;break;
+            }
+            switch(ConfigurationManager.AppSettings["productFP_Line2"])
+            {
+                case "Name": lblName.Text = _product.Name; break;
+                case "Description": lblName.Text = _product.Description;break;
+            }
             string url = _product.Url;  //"/product.aspx?productUrl=" + _product.ProductID;
-            lblName.NavigateUrl = url;
+            lnkName.NavigateUrl = url;
             lnkPhoto.NavigateUrl = url;
             lblDetails.NavigateUrl = url;
             //lblBrand.NavigateUrl = url;
+
+            //Price
             lblPrice.Text = string.Format("{0:N2}", _product.Price);
             lblWebPrice.Text = (_product.Promotion == null) ? string.Format("{0:N2}", _product.WebPrice) : string.Format("{0:N2}", _product.Promotion.Price);
-            lblSaving.Text = string.Format("{0:N2}", _product.Price - double.Parse(lblWebPrice.Text));
+            lblSaving.Text = "Ušteda: " + string.Format("{0:N2}", _product.Price - double.Parse(lblWebPrice.Text)) + " din";
+            if(_product.Price != _product.WebPrice)
+            {
+                lblPrice.Visible = true;
+                lblSaving.Visible = true;
+            }
+
+
             //lblDescription.Text = _product.Description;
             //lnkInfo.NavigateUrl = "/product.aspx?productUrl=" + _product.ProductID;
             if (_product.Promotion != null)
@@ -75,12 +91,15 @@ namespace etnokeramika.userControls
                 imgPromotion.ImageUrl = "/images/" + _product.Promotion.ImageUrl;
                 imgPromotion.Visible = (_product.Promotion.ImageUrl != string.Empty) ? true : false;
 
-                price_div.Visible = true;
-                saving_div.Visible = true;
+                lblPrice.Visible = true;
+                lblSaving.Visible = true;
                 lblWebPrice.Attributes["class"] = "web_price color-red";
+                imgPromotion.Visible = false;
             }
             else
                 lblWebPrice.Attributes["class"] = "web_price color-blue";
+
+            
             lblProductID.Value = _product.ProductID.ToString();
             if (_wishList)
                 btnDeleteFromWishList.Visible = true;

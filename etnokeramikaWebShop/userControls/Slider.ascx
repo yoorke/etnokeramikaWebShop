@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Slider.ascx.cs" Inherits="eshopv2.userControls.Slider" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Slider.ascx.cs" Inherits="etnokeramikaWebShop.userControls.Slider" %>
 <div class="row slider">
     <div class="col-xs-12 padding-left-0 padding-right-0">
         <asp:Repeater ID="rptSlider" runat="server">

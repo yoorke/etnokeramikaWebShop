@@ -28,7 +28,7 @@ namespace etnokeramikaWebShop {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::eshopv2.userControls.Slider slider;
+        protected global::etnokeramikaWebShop.userControls.Slider slider;
         
         /// <summary>
         /// banner1 control.
@@ -65,5 +65,14 @@ namespace etnokeramikaWebShop {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::etnokeramikaWebShop.userControls.Banner banner4;
+        
+        /// <summary>
+        /// rptCategories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptCategories;
     }
 }

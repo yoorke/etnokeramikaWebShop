@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace etnokeramika.userControls {
+namespace etnokeramikaWebShop.userControls {
     
     
     public partial class product_slider {
