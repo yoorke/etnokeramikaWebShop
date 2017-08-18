@@ -208,6 +208,7 @@
     <Content Include="userControls\MainMenuVertical.ascx" />
     <Content Include="userControls\MainMenuVerticalV2.ascx" />
     <Content Include="userControls\MasterMenu.ascx" />
+    <Content Include="userControls\ProductImages.ascx" />
     <Content Include="userControls\product_fp.ascx" />
     <Content Include="userControls\product_slider.ascx" />
     <Content Include="userControls\Slider.ascx" />
@@ -416,6 +417,13 @@
     </Compile>
     <Compile Include="userControls\MasterMenu.ascx.designer.cs">
       <DependentUpon>MasterMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\ProductImages.ascx.cs">
+      <DependentUpon>ProductImages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\ProductImages.ascx.designer.cs">
+      <DependentUpon>ProductImages.ascx</DependentUpon>
     </Compile>
     <Compile Include="userControls\product_fp.ascx.cs">
       <DependentUpon>product_fp.ascx</DependentUpon>
