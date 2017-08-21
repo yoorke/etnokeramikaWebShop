@@ -48,4 +48,10 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="contentPlaceHolderFooter" runat="server">
     <script src="<%=ResolveUrl("~/js/mainMenuVerticalV2Start.min.js") %>" type="text/javascript"></script>
     <script src="<%=ResolveUrl("~/js/slider.min.js") %>" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
 </asp:Content>

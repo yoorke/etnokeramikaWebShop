@@ -13,7 +13,7 @@ namespace etnokeramikaWebShop
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            //new TransferImages().Start();
+            ///new TransferImages().Start();
             new CustomRoutes().RegisterRoutes(RouteTable.Routes);
         }
 

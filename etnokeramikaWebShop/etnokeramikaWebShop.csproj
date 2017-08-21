@@ -104,11 +104,25 @@
       <DependentUpon>camera_bundle.css</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="images\banner_cinije.jpg" />
+    <Content Include="images\banner_fp4.jpg" />
+    <Content Include="images\banner_recepti.jpg" />
+    <Content Include="images\banner_solje.jpg" />
     <Content Include="images\body_bg.jpg" />
+    <Content Include="images\bokali.gif" />
+    <Content Include="images\cupovi.gif" />
+    <Content Include="images\djuvecare-i-cupovi.gif" />
+    <Content Include="images\djuvecare.gif" />
     <Content Include="images\facebook.jpg" />
+    <Content Include="images\krigle.gif" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\slide2.jpg" />
+    <Content Include="images\slide3.jpg" />
     <Content Include="images\slide31.jpg" />
     <Content Include="images\slide32.jpg" />
     <Content Include="images\slide33.jpg" />
+    <Content Include="images\slide4.jpg" />
+    <Content Include="images\solje.gif" />
     <Content Include="less\css\camera.css" />
     <Content Include="less\css\camera.min.css">
       <DependentUpon>camera.css</DependentUpon>

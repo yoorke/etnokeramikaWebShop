@@ -1,5 +1,6 @@
 ﻿.ws-btn{
     border:none;
+    background-color:transparent;
 }
 
 .btn-cart{
@@ -18,6 +19,18 @@
     background-color:lighten(@brand-primary, 10%);
 }
 
+.btn-icon{
+
+}
+
+//.product-fp .btn-icon{
+    //position:absolute;
+    //top:2px;
+    //color:@default-gray;
+    //text-align:center;
+    //transition:0.2s ease all;
+//}
+
 .btn-details{
     background-color:#eee;
     color:@default-gray;
@@ -28,29 +41,88 @@
     display:inline-block;
 }
 
-.btn-compare{
-    position:absolute;
-    top:2px;
-    left:0;
-    color:@default-gray;    
-    text-align:center;
-    text-transform:uppercase;
-    background-color:transparent;
-    border:none;
+//.btn-compare{
+    //position:absolute;
+    //top:2px;
+    //left:0;
+    //color:@default-gray;    
+    //text-align:center;
+    //text-transform:uppercase;
+    //background-color:transparent;
+    //border:none;
+    //transition:0.2s ease all;
+    //display:block;
+//}
+
+//.btn-compare:hover{
+    //color:@brand-primary;
+    //font-size:1.2em;
+    //margin-top:-2px;
+    //margin-left:-2px;
+//}
+
+//.btn-wishlist{
+    //position:absolute;
+    //top:2px;
+    //right:0;
+    //color:@default-gray;
+    //text-align:center;
+    //text-transform:uppercase;
+    //background-color:transparent;
+    //border:none;
+    //display:block;
+    //transition:0.2s ease all;
+//}
+
+//.btn-wishlist:hover{
+    //color:@brand-primary;
+    //font-size:1.2em;
+    //margin-top:-2px;
+    //margin-right:-2px;
+//}
+
+
+//Buttons in productFP
+.product-fp {
+    .btn-cart{
+        display:inline-block;
+        font-size:1.1em;
+    }
+
+    .btn-icon{
+        position:absolute;
+        top:2px;
+        color:@default-gray;
+        text-align:center;
+        transition:0.2s ease all;
+    }
+
+    .btn-icon:hover{
+        color:@brand-primary;
+        font-size:1.2em;
+        margin-top:-2px;
+    }
+
+    .btn-wishlist{
+        right:0;
+    }
+
+    .btn-wishlist:hover{
+        margin-right:-2px;
+    }
+
+    .btn-compare{
+        left:0;
+    }
+
+    .btn-compare:hover{
+        margin-left:-2px;
+    }
 }
 
-.btn-wishlist{
-    position:absolute;
-    top:2px;
-    right:0;
-    color:@default-gray;
-    text-align:center;
-    text-transform:uppercase;
-    background-color:transparent;
-    border:none;
-}
 
-.product-fp .btn-cart{    
-    display:inline-block;
-    font-size:1.1em;
-}
+
+//.btn-cart{    
+    //display:inline-block;
+    //font-size:1.1em;
+//}

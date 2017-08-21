@@ -27,9 +27,9 @@
                         <span>Info centar:</span>
                         <span class="important"><span class="fa fa-fw fa-phone"></span> 023 531 900</span>
                     </div>
-                    <div class="col col-md-3 col-lg-3 col-sm-4 col-xs-4 text-right">
-                        <a href="" class="important margin-right-05"><span class="fa fa-fw fa-user"></span> Prijava</a>
-                        <a href="" class="important margin-right-05"><span class="fa fa-fw fa-user-plus"></span> Registracija</a>
+                    <div class="col col-md-3 col-lg-3 col-sm-4 col-xs-4 text-right user-action">
+                        <a href="" class="margin-right-05"><span class="fa fa-fw fa-user"></span> Prijava</a>
+                        <a href="" class="margin-right-05"><span class="fa fa-fw fa-user-plus"></span> Registracija</a>
                     </div>
                     <div class="col col-md-2 col-lg-1 col-sm-2 col-xs-2 text-right">
                         <a href="http://www.facebook.com/etnokeramika"><span class="icon"><span class="fa fa-fw fa-facebook"></span></span></a>
@@ -81,7 +81,10 @@
                     <!--cart-->
                     <div class="col-sm-2">
                         <div class="header-box padding-1-0">
-                            <div class="cart-fp"></div>
+                            <div class="cart-fp">
+                                <span class="fa fa-fw fa-shopping-cart"></span>
+                                <span class="title">Moja korpa</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,7 +168,7 @@
                             <span class="fa fa-fw fa-phone"></span>                            
                             <div class="number">
                                 <div class="info"><span>Info telefon</span></div>    
-                                <span class="phone_number">023 531 900</span>
+                                <span class="phone-number">023 531 900</span>
                             </div>
                         </div>
                         <a href="https://www.facebook.com/etokeramika"><img src='<%=ResolveUrl("~/images/facebook.jpg") %>' /></a>
