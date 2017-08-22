@@ -217,12 +217,16 @@
     <Content Include="less\boostrap\utilities.less" />
     <Content Include="less\boostrap\variables.less" />
     <Content Include="less\boostrap\wells.less" />
+    <Content Include="userControls\Pager.ascx" />
+    <Content Include="product.aspx" />
+    <Content Include="products.aspx" />
     <Content Include="userControls\Banner.ascx" />
     <Content Include="userControls\CategoryBanner.ascx" />
     <Content Include="userControls\MainMenuVertical.ascx" />
     <Content Include="userControls\MainMenuVerticalV2.ascx" />
     <Content Include="userControls\MasterMenu.ascx" />
     <Content Include="userControls\ProductImages.ascx" />
+    <Content Include="userControls\ProductSliderV2.ascx" />
     <Content Include="userControls\product_fp.ascx" />
     <Content Include="userControls\product_slider.ascx" />
     <Content Include="userControls\Slider.ascx" />
@@ -394,6 +398,27 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="userControls\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="product.aspx.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product.aspx.designer.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="products.aspx.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="products.aspx.designer.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes.cs" />
     <Compile Include="TransferImages.cs" />
@@ -438,6 +463,13 @@
     </Compile>
     <Compile Include="userControls\ProductImages.ascx.designer.cs">
       <DependentUpon>ProductImages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\ProductSliderV2.ascx.cs">
+      <DependentUpon>ProductSliderV2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\ProductSliderV2.ascx.designer.cs">
+      <DependentUpon>ProductSliderV2.ascx</DependentUpon>
     </Compile>
     <Compile Include="userControls\product_fp.ascx.cs">
       <DependentUpon>product_fp.ascx</DependentUpon>
