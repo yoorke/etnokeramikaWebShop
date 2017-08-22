@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/eshop2.Master" AutoEventWireup="true" CodeBehind="product.aspx.cs" Inherits="eshopv2.product" Title="Untitled Page" %>
-<%@ Register Src="user_controls/ProductImages.ascx" TagName="ProductImages" TagPrefix="uc1" %>
-<%@ Register Src="user_controls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
-<%@ Register Src="user_controls/product_slider.ascx" TagName="productSlider" TagPrefix="productSlider" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/eshop.Master" AutoEventWireup="true" CodeBehind="product.aspx.cs" Inherits="etnokeramikaWebShop.product" Title="Untitled Page" %>
+<%@ Register Src="userControls/ProductImages.ascx" TagName="ProductImages" TagPrefix="uc1" %>
+<%@ Register Src="userControls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
+<%@ Register Src="userControls/product_slider.ascx" TagName="productSlider" TagPrefix="productSlider" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!--<script type="text/javascript" src="/js/jquery-1.10.1.min.js"></script>-->
     <link rel="stylesheet" type="text/css" media="all" href="/css/lightbox.css" />
-    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVertical.css") %>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVerticalV1.css") %>" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--BANNER-->

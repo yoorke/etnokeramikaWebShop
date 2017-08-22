@@ -79,7 +79,7 @@ namespace etnokeramikaWebShop.userControls
 
         private void setImagesForLightBox()
         {
-            List<ProductImage> tempImages = _images;
+            List<ProductImage> tempImages = new List<ProductImage>(_images);
             tempImages.RemoveAt(0);
             rptThumbImages.DataSource = tempImages;
             rptThumbImages.DataBind();

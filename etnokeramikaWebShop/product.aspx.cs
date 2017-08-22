@@ -16,7 +16,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web.Services;
 
-namespace eshopv2
+namespace etnokeramikaWebShop
 {
     public partial class product : System.Web.UI.Page
     {
@@ -60,7 +60,7 @@ namespace eshopv2
                 
             }
             lblProductFacebookLike.InnerHtml = "<div class='fb-like' data-href='http://www.pinshop.co.rs" + Page.Request.RawUrl + "' data-width='100' data-layout='button_count' data-action='like' data-show-faces='true' data-share='true'></div>";
-            createProductTags();
+            //createProductTags();
         }
 
         private void loadProduct(int productID)

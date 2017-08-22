@@ -773,6 +773,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="less\boostrap\mixins\" />
+    <Folder Include="log\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="webshopAdmin\reports\rptOrder.rpt">
