@@ -72,8 +72,16 @@ namespace etnokeramikaWebShop
             priProductImages.Images = product.Images;
             priProductImages.ShowImages();
 
-            lblBrand.Text = product.Brand.Name;
-            lblName.Text = product.Name;
+            switch(ConfigurationManager.AppSettings["product_Line1"])
+            {
+                case "Name": lblBrand.Text = product.Name; break;
+                case "Brand": lblBrand.Text = product.Brand.Name; break;
+            }
+            switch(ConfigurationManager.AppSettings["product_Line2"])
+            {
+                case "Name": lblName.Text = product.Name;break;
+                case "Description": lblName.Text = product.Description;break;
+            }
             lblDescription.Text = product.Description;
             lblPrice.Text = "MP cena: " + string.Format("{0:N2}", product.Price) + " din";
             lblWebPrice.Text = (product.Promotion == null) ? string.Format("{0:N2}", product.WebPrice) + " din" : string.Format("{0:N2}", product.Promotion.Price) + " din";

@@ -103,6 +103,7 @@
     <Content Include="css\camera_bundle.min.css">
       <DependentUpon>camera_bundle.css</DependentUpon>
     </Content>
+    <Content Include="css\lightbox.min.css" />
     <Content Include="Global.asax" />
     <Content Include="images\banner_cinije.jpg" />
     <Content Include="images\banner_fp4.jpg" />
@@ -123,6 +124,8 @@
     <Content Include="images\slide33.jpg" />
     <Content Include="images\slide4.jpg" />
     <Content Include="images\solje.gif" />
+    <Content Include="js\lightbox.min.js" />
+    <Content Include="js\src\lightbox.js" />
     <Content Include="less\css\camera.css" />
     <Content Include="less\css\camera.min.css">
       <DependentUpon>camera.css</DependentUpon>
@@ -169,6 +172,7 @@
     </Content>
     <Content Include="js\src\sliderStart.js" />
     <Content Include="less\css\font-awesome.css" />
+    <Content Include="less\css\lightbox.css" />
     <Content Include="less\css\mainMenuVerticalBase.css" />
     <Content Include="css\mainMenuVerticalV1.css" />
     <Content Include="css\mainMenuVerticalV2.css" />

@@ -4,8 +4,8 @@
 <%@ Register Src="userControls/product_slider.ascx" TagName="productSlider" TagPrefix="productSlider" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!--<script type="text/javascript" src="/js/jquery-1.10.1.min.js"></script>-->
-    <link rel="stylesheet" type="text/css" media="all" href="/css/lightbox.css" />
-    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVerticalV1.css") %>" />
+    <link rel="stylesheet" type="text/css" media="all" href="<%=ResolveUrl("/css/lightbox.min.css") %>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVerticalV1.min.css") %>" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--BANNER-->
@@ -213,7 +213,7 @@
 </asp:Content>
 
     <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolderFooter">
-    <script type="text/javascript" src="/js/lightbox.js"></script>
+    <script type="text/javascript" src="/js/lightbox.min.js"></script>
     
     <script type="text/javascript">
         //jQuery(function() {

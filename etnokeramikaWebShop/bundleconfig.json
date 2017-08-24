@@ -68,5 +68,21 @@
       "enabled": true,
       "adjustRelativePaths": false
     }
+  },
+  {
+    "outputFileName": "js/lightbox.min.js",
+    "inputFiles": [
+      "js/src/lightbox.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "preserveImportantComments": false
+    }
+  },
+  {
+    "outputFileName": "css/lightbox.min.css",
+    "inputFiles": [
+      "less/css/lightbox.css"
+    ]
   }
 ]
