@@ -61,6 +61,7 @@ namespace etnokeramikaWebShop
             }
             lblProductFacebookLike.InnerHtml = "<div class='fb-like' data-href='http://www.pinshop.co.rs" + Page.Request.RawUrl + "' data-width='100' data-layout='button_count' data-action='like' data-show-faces='true' data-share='true'></div>";
             //createProductTags();
+            loanBox.Visible = bool.Parse(ConfigurationManager.AppSettings["loanBoxVisible"]);
         }
 
         private void loadProduct(int productID)
@@ -83,9 +84,16 @@ namespace etnokeramikaWebShop
                 case "Description": lblName.Text = product.Description;break;
             }
             lblDescription.Text = product.Description;
-            lblPrice.Text = "MP cena: " + string.Format("{0:N2}", product.Price) + " din";
-            lblWebPrice.Text = (product.Promotion == null) ? string.Format("{0:N2}", product.WebPrice) + " din" : string.Format("{0:N2}", product.Promotion.Price) + " din";
-            lblSaving.Text = "Ušteda: " + string.Format("{0:N2}", product.Price - double.Parse(lblWebPrice.Text.Substring(0, lblWebPrice.Text.IndexOf(" din")))) + " din";
+            lblPrice.Text = "MP cena: " + string.Format("{0:N2}", product.Price);
+            lblWebPrice.Text = (product.Promotion == null) ? string.Format("{0:N2}", product.WebPrice) : string.Format("{0:N2}", product.Promotion.Price);
+            lblSaving.Text = "Ušteda: " + string.Format("{0:N2}", product.Price - double.Parse(lblWebPrice.Text));
+
+            if(product.Price == double.Parse(lblWebPrice.Text))
+            {
+                priceDiv.Visible = false;
+                savingDiv.Visible = false;
+            }
+
             lblSpecification.Text = !product.Specification.Contains("<table class='table table-striped'><tbody></table>") ? product.Specification : "Nema podataka";
             lblDescription.Text = product.Description != string.Empty ? product.Description : "Nema opisa";
             if (product.Promotion != null)
@@ -171,8 +179,8 @@ namespace etnokeramikaWebShop
 
         private void loadProductSliders(Category category)
         {
-            sliderCategory.NumberOfProducts = 6;
-            sliderCategory.LgCols = 2;
+            sliderCategory.NumberOfProducts = 4;
+            sliderCategory.LgCols = 3;
             sliderCategory.Products = new ProductBL().GetProductsForFirstPage(category.CategoryID, -1, 12, "Slučajni");
             sliderCategory.Name = category.Name;
             ((Literal)sliderCategory.FindControl("lblPrev")).Text = @"<a id=""prev"" runat=""server"" href=""#carouselCategory"" data-slide=""prev""><img src=" + Page.ResolveUrl("~/images/prev_next.gif") + @" alt=""Prethodni"" /></a>";

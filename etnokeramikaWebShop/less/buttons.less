@@ -6,12 +6,13 @@
 .btn-cart{
     background-color:@brand-primary;
     color:#eee;
-    width:100%;
+    
     text-transform:uppercase;
     padding:5px 0;
 
     .fa{
         font-size:1.2em;
+        margin-right:0.5em;
     }
 }
 
@@ -20,7 +21,13 @@
 }
 
 .btn-icon{
+    transition:0.2s ease all;
+    color:@default-gray;
+}
 
+.btn-icon:hover{
+    color:@brand-primary;
+    font-size:1.2em;
 }
 
 //.product-fp .btn-icon{
@@ -83,23 +90,25 @@
 
 
 //Buttons in productFP
+
 .product-fp {
     .btn-cart{
         display:inline-block;
         font-size:1.1em;
+        width:100%;
     }
 
     .btn-icon{
         position:absolute;
         top:2px;
-        color:@default-gray;
+        //color:@default-gray;
         text-align:center;
-        transition:0.2s ease all;
+        //transition:0.2s ease all;
     }
 
     .btn-icon:hover{
-        color:@brand-primary;
-        font-size:1.2em;
+        //color:@brand-primary;
+        //font-size:1.2em;
         margin-top:-2px;
     }
 
@@ -117,6 +126,12 @@
 
     .btn-compare:hover{
         margin-left:-2px;
+    }
+}
+
+.product{
+    .btn-cart{
+        padding:0.5em 1em;
     }
 }
 

@@ -333,6 +333,9 @@
     <Content Include="less\productFp.less" />
     <Content Include="less\buttons.less" />
     <Content Include="less\productSlider.less" />
+    <Content Include="less\product.less" />
+    <Content Include="less\productPaging.less" />
+    <Content Include="less\productFilter.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

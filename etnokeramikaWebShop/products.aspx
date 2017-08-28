@@ -5,22 +5,25 @@
 <%@ Register Src="userControls/ProductSliderV2.ascx" TagName="ProductSlider" TagPrefix="ProductSlider" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:Literal ID="canonicalUrl" runat="server"></asp:Literal>
-    <link rel="Stylesheet" id="camera-css" href="<%=ResolveUrl("~/css/camera.css") %>" />
-    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVertical.css") %>" />
-    <link rel="stylesheet" href="<%=ResolveUrl("~/css/jquery.bxslider.min.css") %>" />
+    <link rel="Stylesheet" id="camera-css" href="<%=ResolveUrl("~/css/camera_bundle.min.css") %>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVerticalV1.css") %>" />
+    <%--<link rel="stylesheet" href="<%=ResolveUrl("~/css/jquery.bxslider.min.css") %>" />--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2 left-column filter">
+    <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2 product-filter">
         <%--<h2>Kategorija</h2>
         <div class="filterBox">
             <asp:CheckBoxList ID="chkCategory" runat="server" AutoPostBack="true" OnSelectedIndexChanged="chkCategory_SelectedIndexChanged"></asp:CheckBoxList>
         </div>--%>
-        <h2 id="brandLabel" runat="server">Proizvođač</h2>
-        <div class="filterBox">
-            <asp:CheckBoxList ID="chkBrands" runat="server" OnSelectedIndexChanged="chkBrands_SelectedIndexChanged"></asp:CheckBoxList>
+        <div id="filterBrandsDiv" runat="server">
+            <h2 id="brandLabel" runat="server">Proizvođač</h2>
+            <div class="filter-box">
+                <asp:CheckBoxList ID="chkBrands" runat="server" OnSelectedIndexChanged="chkBrands_SelectedIndexChanged"></asp:CheckBoxList>
+            </div>
         </div>
+
         <h2>Cena</h2>
-        <div class="filterBox">
+        <div class="filter-box">
             <label class="before">Od:</label><asp:DropDownList ID="cmbPriceFrom" runat="server" OnSelectedIndexChanged="cmbPriceFrom_SelectedIndexChanged"></asp:DropDownList><label><small>din</small></label><br />
             <label class="before">Do:</label><asp:DropDownList ID="cmbPriceTo" runat="server" OnSelectedIndexChanged="cmbPriceTo_SelectedIndexChanged"></asp:DropDownList><label><small>din</small></label>
         </div>
@@ -28,16 +31,21 @@
             <ItemTemplate>
                 <h2><asp:Literal ID="lblFilterName" runat="server" Text='<%#Eval("nameScreen") %>'></asp:Literal></h2>
                 <asp:HiddenField ID="lblAttributeID" runat="server" Value='<%#Eval("attributeID") %>' />
-                <div class="filterBox">
+                <div class="filter-box">
                     <asp:CheckBoxList ID="chkValues" runat="server" DataSource='<%#Eval("values") %>' DataTextField="value" DataValueField="attributeValueID" OnSelectedIndexChanged="chkValues_SelectedIndexChanged"></asp:CheckBoxList>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
     </div>
-    <div class="col-xs-7 col-sm-10 col-md-10, col-lg-10 main-content first-page">
+    <div class="col-xs-7 col-sm-10 col-md-10, col-lg-10 margin-top-1 products">
         <slider:Slider ID="slider" runat="server" />
         <ProductSlider:ProductSlider ID="productSlider" runat="server" Visible="false" />
-        <div class="row">
+        <div class="row category-description">
+            <div class="col-md-12">
+                <asp:Label ID="lblCategoryDescription" runat="server"></asp:Label>
+            </div>
+        </div>
+        <div class="row product-pager">
             <div class="col-lg-5">
                 <pager:Pager ID="pgrPager" runat="server" OnOnClick="pgrPages_Click" />
             </div>
@@ -46,7 +54,7 @@
                     <div class="col-sm-6 col-xs-12">
                         <div role="form" class="form-horizontal">
                             <div class="form-group">
-                                <label for="cmbPageSize" class="col-xs-8 padding-left-0">Prikaži po stranici:</label>
+                                <label for="cmbPageSize" class="col-xs-8 padding-left-0 control-label">Po stranici:</label>
                                 <div class="col-xs-4 padding-left-0">
                                     <asp:DropDownList ID="cmbPageSize" runat="server" OnSelectedIndexChanged="cmbPageSize_SelectedIndexChanged" CssClass="form-control"></asp:DropDownList>
                                 </div>
@@ -56,7 +64,7 @@
                     <div class="col-sm-6 col-xs-12">
                         <div role="form" class="form-horizontal">
                             <div class="form-group">
-                                <label for="cmbSort" class="col-xs-5 padding-left-0">Sortiraj po:</label>
+                                <label for="cmbSort" class="col-xs-5 padding-left-0 control-label">Sort:</label>
                                 <div class="col-xs-7 padding-left-0">
                                     <asp:DropDownList ID="cmbSort" runat="server" OnSelectedIndexChanged="cmbSort_SelectedIndexChanged" CssClass="pull-right form-control"></asp:DropDownList>
                                 </div>
@@ -89,9 +97,10 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderFooter" runat="server">
-    <script src="<%=ResolveUrl("~/js/jquery.mobile.customized.min.js") %>"></script>
+    <%--<script src="<%=ResolveUrl("~/js/jquery.mobile.customized.min.js") %>"></script>
     <script src="<%=ResolveUrl("~/js/jquery.easing.1.3.js") %>"></script>
-    <script src="<%=ResolveUrl("~/js/camera.js") %>"></script>
+    <script src="<%=ResolveUrl("~/js/camera.js") %>"></script>--%>
+    <script src="<%=ResolveUrl("~/js/slider.min.js") %>"></script>
     <script>
         $(document).ready(function () {
             $('[id*=chkBrands] input').click(function () {
@@ -182,12 +191,12 @@
             window.location = href + (queryString.length > 0 ? ('?' + encodeURI(queryString)) : '');
         }
     </script>
-    <script src="<%=ResolveUrl("~/js/jquery.bxslider.min.js") %>"></script>
+    <%--<script src="<%=ResolveUrl("~/js/jquery.bxslider.min.js") %>"></script>
     <script>
         $(document).ready(function () {
             $('.bxslider').bxSlider({
                 auto: true
             });
         })
-    </script>
+    </script>--%>
 </asp:Content>

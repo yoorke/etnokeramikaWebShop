@@ -67,6 +67,15 @@ namespace etnokeramikaWebShop {
         protected global::System.Web.UI.WebControls.HyperLink lnkCategory;
         
         /// <summary>
+        /// loanBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl loanBox;
+        
+        /// <summary>
         /// txtAvailability control.
         /// </summary>
         /// <remarks>
@@ -85,13 +94,31 @@ namespace etnokeramikaWebShop {
         protected global::System.Web.UI.WebControls.Literal txtDelivery;
         
         /// <summary>
+        /// priceDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl priceDiv;
+        
+        /// <summary>
         /// lblPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lblPrice;
+        protected global::System.Web.UI.WebControls.Label lblPrice;
+        
+        /// <summary>
+        /// webPriceDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl webPriceDiv;
         
         /// <summary>
         /// lblWebPrice control.
@@ -103,13 +130,22 @@ namespace etnokeramikaWebShop {
         protected global::System.Web.UI.WebControls.Label lblWebPrice;
         
         /// <summary>
+        /// savingDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl savingDiv;
+        
+        /// <summary>
         /// lblSaving control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lblSaving;
+        protected global::System.Web.UI.WebControls.Label lblSaving;
         
         /// <summary>
         /// btnCart control.

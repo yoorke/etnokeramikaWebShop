@@ -15,7 +15,7 @@
     </div><!--col-banner-->--%>
             
     <!--MAIN CONTENT-->
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content product-content">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product">
         <!--images, name, price-->
         <div class="row">
             <div class="col-sm-5">
@@ -29,7 +29,7 @@
                 <p>Pogledajte i ostale proizvode iz kategorije <asp:HyperLink ID="lnkCategory" runat="server" CssClass="underline"></asp:HyperLink></p>
                 
                 <!--Kredit i rate-->
-                <div class="row loanBox">
+                <div class="row box-content box-content-primary" id="loanBox" runat="server">
                     <div class="col-sm-1">
                         <img src='<%=Page.ResolveUrl("~/images/loan.gif") %>' />
                     </div>
@@ -48,41 +48,43 @@
                     </div>
                 </div><!--row-kredit-i-rate-->
                 
-                <div class="row priceBox color-gray">
+                <div class="row box-content box-content-secondary">
                     <div class="col-sm-6">
                         <p>Dostupnost:</p>
                         <p class="bold uppercase"><asp:Literal ID="txtAvailability" runat="server" Text="Na stanju"></asp:Literal></p>
                         <p class="margin-top-2">Očekivani rok isporuke:</p>
-                        <p><asp:Literal ID="txtDelivery" runat="server" Text="-"></asp:Literal></p>
+                        <p class="bold"><asp:Literal ID="txtDelivery" runat="server" Text="2 dana"></asp:Literal></p>
                     </div>
                     <div class="col-sm-6 text-right">
-                        <p class="margin-bottom-0"><asp:Literal ID="lblPrice" runat="server" Text="MP 110.989 din"></asp:Literal></p>
-                        <p class="font-2em color-blue bold margin-bottom-0"><asp:Label ID="lblWebPrice" runat="server" Text="99.890 din"></asp:Label></p>
-                        <p><asp:Literal ID="lblSaving" runat="server" Text="Ušteda: 2.548,00 din"></asp:Literal></p>
+                        <div class="price-div"><p class="margin-bottom-0" id="priceDiv" runat="server"><asp:Label ID="lblPrice" runat="server" Text="MP 110.989 din"></asp:Label><span class="price-label"></span></p></div>
+                        <div class="web-price-div"><p class="web-price margin-bottom-0" id="webPriceDiv" runat="server"><asp:Label ID="lblWebPrice" runat="server" Text="99.890 din"></asp:Label><span class="web-price-label"> RSD</span></p></div>
+                        <div class="saving-div"><p id="savingDiv" runat="server"><asp:Label ID="lblSaving" runat="server" Text="Ušteda: 2.548,00 din"></asp:Label><span class="saving-label"></span></p></div>
                         <!--<asp:Button ID="btnCart" runat="server" CssClass="btnAddToCart" Text="Dodaj u korpu" OnClick="btnCart_Click" />-->
-                        <button type="button" id="btnCart" class="btnAddToCart" onclick="AddToCart('<%=lblProductID.ClientID %>')">Dodaj u korpu</button>
+                        <button type="button" id="btnCart" class="ws-btn btn-cart" onclick="AddToCart('<%=lblProductID.ClientID %>')"><span class="fa fa-fw fa-shopping-cart"></span><span>Dodaj u korpu</span></button>
                     </div>
                 </div><!--row-->
-                <div class="row icons">
-                    <div class="col-xs-1">
-                        <img src='<%=Page.ResolveUrl("~/images/compare.gif") %>' />
+                <div class="row icons margin-top-05">
+                    <%--<div class="col-xs-1">--%>
+                        <%--<img src='<%=Page.ResolveUrl("~/images/compare.gif") %>' />--%>
                         
-                    </div>
-                    <div class="col-xs-3"><!--<asp:LinkButton ID="btnCompare" runat="server" Text="Uporedi" OnClientClick="btnCompare_Click('<%=lblProductID.ClientID %>')"></asp:LinkButton>-->
+                    <%--</div>--%>
+                    <div class="col-xs-4 text-center"><!--<asp:LinkButton ID="btnCompare" runat="server" Text="Uporedi" OnClientClick="btnCompare_Click('<%=lblProductID.ClientID %>')"></asp:LinkButton>-->
                         <!--<button type="button" id="btnCompare" onclick="btnCompare_Click('<%=lblProductID.ClientID %>')">Uporedi</button>-->
-                        <label onclick="btnCompare_Click('<%=lblProductID.ClientID %>')" class="cursor-pointer bold-none">Uporedi</label>
+                        <button type="button" onclick="btnCompare_Click('<%=lblProductID.ClientID %>')" class="ws-btn btn-icon"><span class="fa fa-fw fa-balance-scale"></span></button>
 
                     </div>
-                    <div class="col-xs-1">
-                        <img src='<%=Page.ResolveUrl("~/images/wishlist.gif") %>' />
+                    <%--<div class="col-xs-1">--%>
+                        <%--<img src='<%=Page.ResolveUrl("~/images/wishlist.gif") %>' />--%>
                         
+                    <%--</div>--%>
+                    <div class="col-xs-4 text-center">
+                        <button type="button" onclick="AddToWishList()" class="ws-btn btn-icon"><span class="fa fa-fw fa-heart"></span></button>
                     </div>
-                    <div class="col-xs-3"><label onclick="AddToWishList()" class="cursor-pointer bold-none">Lista želja</label></div>
-                    <div class="col-xs-1">
-                        <img src='<%=Page.ResolveUrl("~/images/recommend.gif") %>' />
+                    <%--<div class="col-xs-1">--%>
+                        <%--<img src='<%=Page.ResolveUrl("~/images/recommend.gif") %>' />--%>
                         
-                    </div>
-                    <div class="col-xs-3"><label onclick="recommend()" class="cursor-pointer bold-none">Preporučite</label></div>
+                    <%--</div>--%>
+                    <div class="col-xs-4 text-center"><label onclick="recommend()" class="cursor-pointer bold-none"><span class="fa fa-fw fa-envelope"></span></label></div>
                 </div><!--row-->
                 <div class="row margin-top-2">
                     <div class="col-lg-12 text-right">
@@ -210,6 +212,8 @@
                                     })
         });
     </script>--%>
+    </span>
+    </label>
 </asp:Content>
 
     <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolderFooter">

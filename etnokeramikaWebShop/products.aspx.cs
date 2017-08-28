@@ -134,11 +134,13 @@ namespace etnokeramikaWebShop
                 }
 
 
-
+                lblCategoryDescription.Text = category.Description;
                 createQueryString();
             }
             Page.Title = ViewState["pageTitle"].ToString();
             canonicalUrl.Text = @"<link rel=""canonical"" href=""" + ConfigurationManager.AppSettings["webShopUrl"] + "/proizvodi/" + ViewState["categoryUrl"].ToString() + @"""/>";
+
+            filterBrandsDiv.Visible = bool.Parse(ConfigurationManager.AppSettings["filterBrandsVisible"]);
         }
 
         private void loadIntoForm()

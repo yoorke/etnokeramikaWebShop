@@ -22,6 +22,15 @@ namespace etnokeramikaWebShop {
         protected global::System.Web.UI.WebControls.Literal canonicalUrl;
         
         /// <summary>
+        /// filterBrandsDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl filterBrandsDiv;
+        
+        /// <summary>
         /// brandLabel control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace etnokeramikaWebShop {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::etnokeramikaWebShop.userControls.ProductSliderV2 productSlider;
+        
+        /// <summary>
+        /// lblCategoryDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCategoryDescription;
         
         /// <summary>
         /// pgrPager control.

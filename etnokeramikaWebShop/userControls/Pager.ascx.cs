@@ -94,7 +94,7 @@ namespace etnokeramikaWebShop.userControls
                 {
                     lnkPage.Enabled = false;
                     lnkPage.Font.Bold = true;
-                    lnkPage.Attributes["class"] = "pagingActive";
+                    lnkPage.Attributes["class"] = "paging-active";
                 }
             }
         }
