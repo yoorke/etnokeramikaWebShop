@@ -126,6 +126,7 @@
     <Content Include="images\solje.gif" />
     <Content Include="js\lightbox.min.js" />
     <Content Include="js\src\lightbox.js" />
+    <Content Include="js\src\tooltipStart.js" />
     <Content Include="less\css\camera.css" />
     <Content Include="less\css\camera.min.css">
       <DependentUpon>camera.css</DependentUpon>

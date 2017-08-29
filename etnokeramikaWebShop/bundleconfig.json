@@ -51,7 +51,8 @@
       "js/src/bootstrap.js",
       "js/src/modernizr.js",
       "js/src/jquery.menu-aim.js",
-      "js/src/main.js"
+      "js/src/main.js",
+      "js/src/tooltipStart.js"
     ],
     "minify": {
       "enabled": true,

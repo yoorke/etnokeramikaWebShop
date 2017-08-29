@@ -2486,7 +2486,9 @@ jQuery.extend( jQuery.easing,
 })(jQuery);
 
 $(document).ready(function () {
-    $('#camera_wrap_1').camera({
-        thumbnails: true
-    })
+    if($('#camera_wrap_1').length){
+        $('#camera_wrap_1').camera({
+            thumbnails: true
+        })
+    }
 })

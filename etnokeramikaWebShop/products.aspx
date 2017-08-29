@@ -132,11 +132,11 @@
                 createQueryString();
             })
 
-            if($('#camera_wrap_1').length){
-                jquery_1_7_1('#camera_wrap_1').camera({
-                    thumbnails:true
-                })
-            }
+            //if($('#camera_wrap_1').length){
+                //jquery_1_7_1('#camera_wrap_1').camera({
+                    //thumbnails:true
+                //})
+            //}
         })
 
         function createQueryString() {
