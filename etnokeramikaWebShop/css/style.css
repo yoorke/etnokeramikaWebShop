@@ -7093,6 +7093,17 @@ button.close {
 .product .saving-div {
   min-height: 20px;
 }
+.product .img-zoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 315px;
+  background-color: #fff;
+  display: none;
+  border: 1px solid #333;
+  z-index: 999;
+}
 .products .category-description {
   margin-bottom: 1em;
   display: block;

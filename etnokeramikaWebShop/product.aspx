@@ -23,6 +23,7 @@
                 <asp:Image ID="imgPromotion" runat="server" Visible="false" CssClass="imgPromotion" />
             </div><!--col-->
             <div class="col-sm-7">
+                <div id="imgZoom" class="img-zoom"></div>
                 <asp:HiddenField ID="lblProductID" runat="server" />
                 <h1><asp:Literal ID="lblBrand" runat="server"></asp:Literal></h1>
                 <h2><asp:Literal ID="lblName" runat="server"></asp:Literal></h2>
@@ -212,12 +213,13 @@
                                     })
         });
     </script>--%>
-    </span>
-    </label>
+    <%--</span>
+    </label>--%>
 </asp:Content>
 
     <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolderFooter">
     <script type="text/javascript" src="/js/lightbox.min.js"></script>
+    <script src="/js/productImageZoom.js" type="text/javascript"></script>
     
     <script type="text/javascript">
         //jQuery(function() {

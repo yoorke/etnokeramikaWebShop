@@ -85,5 +85,15 @@
     "inputFiles": [
       "less/css/lightbox.css"
     ]
+  },
+  {
+    "outputFileName": "js/productImageZoom.min.js",
+    "inputFiles": [
+      "js/productImageZoom.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "preserveImportantComments": false
+    }
   }
-]
+    ]
