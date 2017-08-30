@@ -219,7 +219,7 @@
 
     <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolderFooter">
     <script type="text/javascript" src="/js/lightbox.min.js"></script>
-    <script src="/js/productImageZoom.js" type="text/javascript"></script>
+    <script src="/js/productImageZoom.min.js" type="text/javascript"></script>
     
     <script type="text/javascript">
         //jQuery(function() {
