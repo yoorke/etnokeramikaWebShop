@@ -1,16 +1,16 @@
 ﻿$(document).ready(function () {
     $('#ctl00_ContentPlaceHolder1_priProductImages_imgMain').mouseenter(function () {
         var src = $('#ctl00_ContentPlaceHolder1_priProductImages_imgMain')[0].src;
-        var filename = src.substring(0, src.indexOf('-large.jpg'));
+        var filename = src.substring(0, src.indexOf('-main.jpg'));
         $('#imgZoom').css('background-image', 'url(' + filename + '.jpg' + ')');
-        $('$imgZoom').css('background-size', '300%');
+        $('#imgZoom').css('background-size', '300%');
         $('#imgZoom').show();
     })
     $('#ctl00_ContentPlaceHolder1_priProductImages_imgMain').mouseout(function () {
         $('#imgZoom').hide();
     })
     $('#ctl00_ContentPlaceHolder1_priProductImages_imgMain').mousemove(function (e) {
-        var dimensions = $('#ctl00_ContentPlaceHolder1_priProductsImages_imgMain')[0].getBoundingClientRect();
+        var dimensions = $('#ctl00_ContentPlaceHolder1_priProductImages_imgMain')[0].getBoundingClientRect();
 
         var x = e.clientX - dimensions.left;
         var y = e.clientY - dimensions.top;
