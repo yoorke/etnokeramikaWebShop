@@ -53,6 +53,7 @@
       "js/src/jquery.menu-aim.js",
       "js/src/main.js",
       "js/src/tooltipStart.js"
+      
     ],
     "minify": {
       "enabled": true,

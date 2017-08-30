@@ -124,6 +124,7 @@
     <Content Include="images\slide33.jpg" />
     <Content Include="images\slide4.jpg" />
     <Content Include="images\solje.gif" />
+    <Content Include="jQueryTemplates\cartFPTemplate.html" />
     <Content Include="js\lightbox.min.js" />
     <Content Include="js\productImageZoom.js" />
     <Content Include="js\productImageZoom.min.js">
@@ -131,6 +132,7 @@
     </Content>
     <Content Include="js\src\lightbox.js" />
     <Content Include="js\src\tooltipStart.js" />
+    <Content Include="js\src\webShop.js" />
     <Content Include="less\css\camera.css" />
     <Content Include="less\css\camera.min.css">
       <DependentUpon>camera.css</DependentUpon>
@@ -239,6 +241,7 @@
     <Content Include="userControls\product_fp.ascx" />
     <Content Include="userControls\product_slider.ascx" />
     <Content Include="userControls\Slider.ascx" />
+    <Content Include="WebMethods.aspx" />
     <Content Include="webshopAdmin\attribute.aspx" />
     <Content Include="webshopAdmin\attributeKimtecAttribute.aspx" />
     <Content Include="webshopAdmin\attributeKupindoAttribute.aspx" />
@@ -341,6 +344,7 @@
     <Content Include="less\product.less" />
     <Content Include="less\productPaging.less" />
     <Content Include="less\productFilter.less" />
+    <Content Include="less\cart.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -503,6 +507,13 @@
     </Compile>
     <Compile Include="userControls\Slider.ascx.designer.cs">
       <DependentUpon>Slider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebMethods.aspx.cs">
+      <DependentUpon>WebMethods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebMethods.aspx.designer.cs">
+      <DependentUpon>WebMethods.aspx</DependentUpon>
     </Compile>
     <Compile Include="webshopAdmin\administrator.Master.cs">
       <DependentUpon>administrator.Master</DependentUpon>

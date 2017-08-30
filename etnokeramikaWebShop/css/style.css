@@ -7154,6 +7154,15 @@ button.close {
 .product-filter .filter-box input[type="checkbox"] {
   float: left;
 }
+#cartFpContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+}
 /* -------------------------------- 
 
 Primary style
