@@ -7160,8 +7160,18 @@ button.close {
   right: 0;
   border: 1px solid #bbb;
   background-color: #fff;
-  width: 200px;
   height: 200px;
+  transition: 0.2s ease all;
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+#cartFpContainer table td {
+  padding: 0.2em 0.5em;
+}
+@media only screen and (min-width: 1024px) {
+  #cartFpContainer {
+    width: 300px;
+  }
 }
 /* -------------------------------- 
 
