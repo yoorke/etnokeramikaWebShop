@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using eshopBL;
 using eshopBE;
 
-namespace eshopv2
+namespace etnokeramikaWebShop
 {
     public partial class search : System.Web.UI.Page
     {

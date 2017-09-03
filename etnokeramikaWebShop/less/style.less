@@ -52,4 +52,19 @@ body{
             border-bottom-color:lighten(@brand-primary, 10%) !important;
         }
     }
+
+    .panel-primary{
+        border:1px solid @secondary-gray;
+
+        .panel-heading{
+            color:@brand-primary;
+            background-color:lighten(@secondary-gray, 20%);
+            border:none;
+            border-left:5px solid @brand-primary;
+        }
+    }
+
+    .panel .radio input, .panel .checkbox input{
+        margin-left:0;
+    }
 }

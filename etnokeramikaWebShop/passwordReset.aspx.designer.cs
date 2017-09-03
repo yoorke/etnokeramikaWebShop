@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eshopv2 {
+namespace etnokeramikaWebShop {
     
     
     public partial class passwordReset {

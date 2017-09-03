@@ -15,7 +15,7 @@
         <asp:ScriptManager runat="server"></asp:ScriptManager>
         <asp:UpdatePanel runat="server">
             <ContentTemplate>
-                <div class="row margin-top-2">
+                <div class="row page-content">
                     <div class="col-lg-12">
                         <div id="cart">
                             <cart:Cart ID="cart1" runat="server" />

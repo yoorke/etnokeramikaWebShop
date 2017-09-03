@@ -51,6 +51,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\AjaxMin.dll</HintPath>
     </Reference>
+    <Reference Include="BotDetect">
+      <HintPath>..\..\..\pinshop\eshopv2\bin\BotDetect.dll</HintPath>
+    </Reference>
     <Reference Include="CKEditor.NET, Version=3.6.4.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\CKEditor.NET.dll</HintPath>

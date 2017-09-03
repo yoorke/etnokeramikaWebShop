@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/eshop.Master" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="etnokeramikaWebShop.cart" Title="Korpa | PinShop" %>
 <%@Register Src="userControls/Cart.ascx" TagName="Cart" TagPrefix="Cart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVertical.css") %>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVerticalV1.min.css") %>" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
@@ -12,7 +12,7 @@
                 <h1>Korpa</h1>
             </div>
             <div class="col-lg-12">
-                <div class="row margin-top-2" id="cart">
+                <div class="row margin-top-2 cart-page" id="cart">
                     <div class="col-lg-12">
                         <Cart:Cart ID="cart1" runat="server" />
                     </div><!--col-->

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eshopv2 {
+namespace etnokeramikaWebShop {
     
     
     public partial class search {
@@ -28,7 +28,7 @@ namespace eshopv2 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::eshopv2.user_controls.Pager pager1;
+        protected global::etnokeramikaWebShop.userControls.Pager pager1;
         
         /// <summary>
         /// cmbPageSize control.

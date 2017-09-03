@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eshopv2 {
+namespace etnokeramikaWebShop {
     
     
     public partial class wishList {
@@ -19,7 +19,7 @@ namespace eshopv2 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::eshopv2.user_controls.Banner banner1;
+        protected global::etnokeramikaWebShop.userControls.Banner banner1;
         
         /// <summary>
         /// banner2 control.
@@ -28,7 +28,7 @@ namespace eshopv2 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::eshopv2.user_controls.Banner banner2;
+        protected global::etnokeramikaWebShop.userControls.Banner banner2;
         
         /// <summary>
         /// rptProducts control.

@@ -19,7 +19,7 @@ namespace etnokeramikaWebShop {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl cart1;
+        protected global::etnokeramikaWebShop.userControls.Cart cart1;
         
         /// <summary>
         /// btnContinueShopping control.

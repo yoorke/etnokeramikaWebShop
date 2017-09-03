@@ -13,7 +13,7 @@ using System.Xml.Linq;
 using eshopBL;
 using eshopBE;
 
-namespace eshopv2
+namespace etnokeramikaWebShop
 {
     public partial class wishList : System.Web.UI.Page
     {

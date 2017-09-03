@@ -6890,6 +6890,13 @@ button.close {
 .main-content .container {
   background-color: #fff;
 }
+.main-content .page-content {
+  padding-top: 1em;
+}
+.main-content .page-content h1 {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
 .footer .top {
   background-color: #fff;
   border-top: 3px solid #cc4422;
@@ -7046,6 +7053,9 @@ button.close {
 .product .btn-cart {
   padding: 0.5em 1em;
 }
+.btn-order {
+  padding: 2em 4em;
+}
 .product-slider-header h2 {
   font-size: 1.5em;
   background-color: #f4f4f4;
@@ -7172,6 +7182,17 @@ button.close {
   #cartFpContainer {
     width: 300px;
   }
+}
+#cart table {
+  border: 1px solid #bbb;
+}
+#cart table th,
+#cart table td {
+  border: none;
+  vertical-align: middle;
+}
+#cart table td img {
+  max-width: 38px;
 }
 /* -------------------------------- 
 
@@ -10735,4 +10756,17 @@ body .tooltip .tooltip-inner {
 }
 body .tooltip .tooltip-arrow {
   border-bottom-color: #df6142 !important;
+}
+body .panel-primary {
+  border: 1px solid #bbb;
+}
+body .panel-primary .panel-heading {
+  color: #cc4422;
+  background-color: #eeeeee;
+  border: none;
+  border-left: 5px solid #cc4422;
+}
+body .panel .radio input,
+body .panel .checkbox input {
+  margin-left: 0;
 }

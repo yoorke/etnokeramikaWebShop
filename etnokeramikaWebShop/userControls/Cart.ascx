@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-lg-12">
         <asp:Label ID="lblStatus" runat="server" Visible="false" CssClass="status"></asp:Label>
-        <asp:GridView ID="dgvCart" runat="server" CssClass="table table-bordered table-striped table-condensed"
+        <asp:GridView ID="dgvCart" runat="server" CssClass="table table-striped table-condensed"
             AutoGenerateColumns="false" OnRowDataBound="dgvCart_RowDataBound" OnRowCommand="dgvCart_RowCommand" DataKeyNames="productID"
             OnRowDeleting="dgvCart_RowDeleting">
                 <Columns>

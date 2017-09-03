@@ -377,7 +377,7 @@
     <div class="row margin-top-2 margin-bottom-2">
         <div class="col-lg-12">
             <asp:LinkButton ID="btnBack" runat="server" Text="Vrati se na korpu" CssClass="btn btn-default margin-top-3" OnClick="btnBack_Click" CausesValidation="false"></asp:LinkButton>
-            <asp:LinkButton ID="btnOrder" runat="server" Text="Naruči" CssClass="btn btn-order pull-right" OnClick="btnOrder_Click"></asp:LinkButton>
+            <asp:LinkButton ID="btnOrder" runat="server" Text="Naruči" CssClass="btn btn-primary btn-order pull-right" OnClick="btnOrder_Click"></asp:LinkButton>
         </div>
     </div>
 </div><!--checkout-->

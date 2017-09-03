@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/eshop2.Master" AutoEventWireup="true" CodeBehind="wishList.aspx.cs" Inherits="eshopv2.wishList" Title="Lista želja | PinShop" %>
-<%@ Register Src="user_controls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
-<%@ Register Src="user_controls/product_fp.ascx" TagName="ProductFP" TagPrefix="product_fp" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/eshop.Master" AutoEventWireup="true" CodeBehind="wishList.aspx.cs" Inherits="etnokeramikaWebShop.wishList" Title="Lista želja | PinShop" %>
+<%@ Register Src="userControls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
+<%@ Register Src="userControls/product_fp.ascx" TagName="ProductFP" TagPrefix="product_fp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVertical.css") %>" />
 </asp:Content>

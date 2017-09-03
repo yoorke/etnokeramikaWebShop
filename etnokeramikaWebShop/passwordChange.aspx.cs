@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using eshopBL;
 using eshopUtilities;
 
-namespace eshopv2
+namespace etnokeramikaWebShop
 {
     public partial class passwordChange : System.Web.UI.Page
     {

@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/eshop2.Master" AutoEventWireup="true" CodeBehind="promotion.aspx.cs" Inherits="eshopv2.promotion" %>
-<%@ Register Src="/user_controls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
-<%@ Register Src="/user_controls/product_fp.ascx" TagName="ProductFP" TagPrefix="productFP" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/eshop.Master" AutoEventWireup="true" CodeBehind="promotion.aspx.cs" Inherits="etnokeramikaWebShop.promotion" %>
+<%@ Register Src="/userControls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
+<%@ Register Src="/userControls/product_fp.ascx" TagName="ProductFP" TagPrefix="productFP" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVertical.css") %>" />
 </asp:Content>

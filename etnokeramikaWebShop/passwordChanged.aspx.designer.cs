@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eshopv2 {
+namespace etnokermikaWebShop {
     
     
     public partial class passwordChanged {

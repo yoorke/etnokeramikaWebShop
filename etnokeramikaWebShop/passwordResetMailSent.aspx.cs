@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace eshopv2
+namespace etnokeramikaWebShop
 {
     public partial class passwordResetMailSent : System.Web.UI.Page
     {

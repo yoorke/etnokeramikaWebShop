@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using eshopBE;
 using eshopBL;
 
-namespace eshopv2
+namespace etnokeramikaWebShop
 {
     public partial class promotion : System.Web.UI.Page
     {

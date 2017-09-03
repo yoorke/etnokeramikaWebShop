@@ -9,7 +9,7 @@ using eshopBL;
 using eshopUtilities;
 using System.Web.Security;
 
-namespace eshopv2
+namespace etnokeramikaWebShop
 {
     public partial class registration : System.Web.UI.Page
     {
