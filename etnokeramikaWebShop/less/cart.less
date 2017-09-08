@@ -5,25 +5,57 @@
     border:1px solid @secondary-gray;
     background-color:#fff;
     //width:200px;
-    height:200px;
+    //height:200px;
     transition:0.2s ease all;
     padding:0.5em;
     font-size:0.9em;
 
     table td{
         padding:0.2em 0.5em;
+
+        img{
+            max-width:38px;
+        }
+    }
+
+    .close{
+        font-size:16px;
+    }
+
+    .cartfp-heading{
+        color:@brand-primary;
+        border-bottom:1px solid @light-gray;
+        display:block;
+        width:100%;
+        margin-bottom:0.5em;
+        font-size:1.2em;
+    }
+
+    .buttons{
+        
+    }
+
+    .total{
+        text-align:right;
+        margin:1em 0;
+        font-size:1.2em;
+
+        #cartFpTotal{
+            font-weight:bold;
+            color:@brand-primary;
+        }
     }
 }
 
 @media only screen and (min-width: 1024px){
     #cartFpContainer{
-        width:300px;
+        width:400px;
     }
 }
 
 #cart{
     table{
-        border:1px solid @secondary-gray;
+        border:1px solid @light-gray;
 
         th, td{
             border:none;
@@ -32,6 +64,33 @@
 
         td img{
             max-width:38px;
+        }
+
+        input[type=text]{
+            max-width:50px;
+        }
+    }
+
+    .total-box{
+        background-color:@light-gray;
+        //border:1px solid @secondary-gray;
+        padding:0.5em;
+
+        .value{
+            display:inline-block;
+            padding:5px;
+            width:80%;
+
+        }
+
+        .value-total{
+            font-weight:bold;
+            font-size:1.2em;
+        }
+
+        .currency{
+            font-size:0.7em;
+            color:lighten(@text-color, 10%);
         }
     }
 }

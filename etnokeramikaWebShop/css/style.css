@@ -6765,6 +6765,9 @@ button.close {
 .margin-0 {
   margin: 0;
 }
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
 .padding-left-0 {
   padding-left: 0;
 }
@@ -6892,6 +6895,7 @@ button.close {
 }
 .main-content .page-content {
   padding-top: 1em;
+  padding-bottom: 1em;
 }
 .main-content .page-content h1 {
   font-size: 1.5em;
@@ -7170,7 +7174,6 @@ button.close {
   right: 0;
   border: 1px solid #bbb;
   background-color: #fff;
-  height: 200px;
   transition: 0.2s ease all;
   padding: 0.5em;
   font-size: 0.9em;
@@ -7178,13 +7181,36 @@ button.close {
 #cartFpContainer table td {
   padding: 0.2em 0.5em;
 }
+#cartFpContainer table td img {
+  max-width: 38px;
+}
+#cartFpContainer .close {
+  font-size: 16px;
+}
+#cartFpContainer .cartfp-heading {
+  color: #cc4422;
+  border-bottom: 1px solid #f4f4f4;
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+#cartFpContainer .total {
+  text-align: right;
+  margin: 1em 0;
+  font-size: 1.2em;
+}
+#cartFpContainer .total #cartFpTotal {
+  font-weight: bold;
+  color: #cc4422;
+}
 @media only screen and (min-width: 1024px) {
   #cartFpContainer {
-    width: 300px;
+    width: 400px;
   }
 }
 #cart table {
-  border: 1px solid #bbb;
+  border: 1px solid #f4f4f4;
 }
 #cart table th,
 #cart table td {
@@ -7193,6 +7219,26 @@ button.close {
 }
 #cart table td img {
   max-width: 38px;
+}
+#cart table input[type=text] {
+  max-width: 50px;
+}
+#cart .total-box {
+  background-color: #f4f4f4;
+  padding: 0.5em;
+}
+#cart .total-box .value {
+  display: inline-block;
+  padding: 5px;
+  width: 80%;
+}
+#cart .total-box .value-total {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+#cart .total-box .currency {
+  font-size: 0.7em;
+  color: #919191;
 }
 /* -------------------------------- 
 
@@ -10758,15 +10804,19 @@ body .tooltip .tooltip-arrow {
   border-bottom-color: #df6142 !important;
 }
 body .panel-primary {
-  border: 1px solid #bbb;
+  border: 1px solid #f4f4f4;
 }
 body .panel-primary .panel-heading {
   color: #cc4422;
-  background-color: #eeeeee;
+  background-color: #f4f4f4;
   border: none;
   border-left: 5px solid #cc4422;
 }
 body .panel .radio input,
 body .panel .checkbox input {
   margin-left: 0;
+}
+body .panel .radio label,
+body .panel .checkbox label {
+  margin-right: 0.5em;
 }

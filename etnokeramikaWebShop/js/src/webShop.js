@@ -38,6 +38,11 @@ function GetCartItems() {
             $.get('/jQueryTemplates/cartFPTemplate.html', null, function (cartTemplate) {
                 $.tmpl(cartTemplate, JSON.parse(response.d)).appendTo('#tblCartItems');
             })
+            var total = 0;
+            $.each(JSON.parse(response.d), function (index, value) {
+                total += parseFloat(value.userPrice) * parseFloat(value.quantity);
+            })
+            $('#cartFpTotal')[0].innerText = total.toFixed(2);
         },
         error: function (jqXHR, textStatus, errorThrown) {
             alert(jqXHR.responseText);

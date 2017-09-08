@@ -54,11 +54,11 @@ body{
     }
 
     .panel-primary{
-        border:1px solid @secondary-gray;
+        border:1px solid @light-gray;
 
         .panel-heading{
             color:@brand-primary;
-            background-color:lighten(@secondary-gray, 20%);
+            background-color:@light-gray;
             border:none;
             border-left:5px solid @brand-primary;
         }
@@ -66,5 +66,9 @@ body{
 
     .panel .radio input, .panel .checkbox input{
         margin-left:0;
+    }
+
+    .panel .radio label, .panel .checkbox label{
+        margin-right:0.5em;
     }
 }

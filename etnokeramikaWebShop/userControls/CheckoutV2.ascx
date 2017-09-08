@@ -277,7 +277,7 @@
                                                         <div id="showShop" class="margin-top-2" runat="server" style="display:none">
                                                             <span>Odaberite radnju:</span>
                                                             <select id="cmbShop" class="form-control">
-                                                                <option>Pin Servis, Pupinova 16, 23000 Zrenjanin</option>
+                                                                <option>Etnokeramika doo, Pančevačka 40a, 23000 Zrenjanin</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -371,6 +371,11 @@
                                 </div>
                             </div>
                         </div>
+                        <%--<div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-primary btn-order">Naruči</button>
+                            </div>
+                        </div>--%>
                     </div>
                 
    </div><!--row-->

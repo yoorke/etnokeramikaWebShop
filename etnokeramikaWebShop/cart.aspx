@@ -8,23 +8,27 @@
     <asp:ScriptManager runat="server"></asp:ScriptManager>
     <asp:UpdatePanel runat="server">
         <ContentTemplate>
-            <div class="col-lg-12 page-content">
-                <h1>Korpa</h1>
-            </div>
-            <div class="col-lg-12">
-                <div class="row margin-top-2 cart-page" id="cart">
+            <div class="col-md-12 page-content">
+                <div class="row">
                     <div class="col-lg-12">
-                        <Cart:Cart ID="cart1" runat="server" />
-                    </div><!--col-->
-                </div><!--row-->
-                <div class="row margin-bottom-2 margin-top-2">
+                        <h1>Korpa</h1>
+                    </div>
                     <div class="col-lg-12">
-                        <div class="pull-right">
-                            <asp:LinkButton ID="btnContinueShopping" runat="server" Text="Nastavi kupovinu" OnClick="btnContinueShopping_Click" CssClass="btn btn-default" CausesValidation="false"></asp:LinkButton>    
-                            <asp:LinkButton ID="btnCheckout" runat="server" Text="Naruči" OnClick="btnCheckout_Click" CssClass="btn btn-primary" CausesValidation="false"></asp:LinkButton>
+                        <div class="row margin-top-2 cart-page" id="cart">
+                            <div class="col-lg-12">
+                                <Cart:Cart ID="cart1" runat="server" />
+                            </div><!--col-->
+                        </div><!--row-->
+                        <div class="row margin-bottom-2 margin-top-2">
+                            <div class="col-lg-12">
+                                <div class="pull-right">
+                                    <asp:LinkButton ID="btnContinueShopping" runat="server" Text="Nastavi kupovinu" OnClick="btnContinueShopping_Click" CssClass="btn btn-default" CausesValidation="false"></asp:LinkButton>    
+                                    <asp:LinkButton ID="btnCheckout" runat="server" Text="Naruči" OnClick="btnCheckout_Click" CssClass="btn btn-primary" CausesValidation="false"></asp:LinkButton>
             
+                                </div>
+                            </div><!--col-->
                         </div>
-                    </div><!--col-->
+                    </div>
                 </div>
             </div>
         </ContentTemplate>

@@ -199,9 +199,19 @@
 
         <!--Floating divs-->
         <div id="cartFpContainer" style="display:none">
+            <span class="close"><span class="fa fa-fw fa-remove"></span></span>
+            <span class="cartfp-heading">Sadržaj korpe</span>
             <table id="tblCartItems">
 
             </table>
+            <div class="total">
+                <span>Ukupno: </span>
+                <span id="cartFpTotal">0,00 RSD</span>
+            </div>
+            <div class="buttons">
+                <a href="<%=ResolveUrl("~/korpa") %>" class="ws-button btn btn-primary pull-left">Korpa</a>
+                <a href="<%=ResolveUrl("~/porucivanje") %>" class="ws-button btn btn-primary pull-right">Kupi odmah</a>
+            </div>
         </div>
     
     </form>
