@@ -14,7 +14,7 @@
                     <ul class="nav navbar-nav navbar-right">
                 </HeaderTemplate>
                 <ItemTemplate>
-                    <li><asp:HyperLink runat="server" NavigateUrl='<%#Eval("url") %>' Text='<%#Eval("name") %>'></asp:HyperLink></li>
+                    <li><asp:HyperLink runat="server" NavigateUrl='<%# ResolveUrl("~/" + Eval("url")) %>' Text='<%#Eval("name") %>'></asp:HyperLink></li>
                 </ItemTemplate>
                 <FooterTemplate>
                     </ul>

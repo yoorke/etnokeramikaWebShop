@@ -38,7 +38,7 @@ namespace etnokeramikaWebShop.userControls
 
             newRow = dtMasterMenu.NewRow();
             newRow["name"] = "Gde kupiti";
-            newRow["url"] = "gde-kupiti";
+            newRow["url"] = "prodajna-mesta-i-distributeri";
             dtMasterMenu.Rows.Add(newRow);
 
             newRow = dtMasterMenu.NewRow();

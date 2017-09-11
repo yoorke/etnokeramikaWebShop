@@ -111,6 +111,7 @@
     </Content>
     <Content Include="css\lightbox.min.css" />
     <Content Include="customPage.aspx" />
+    <Content Include="retails.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\banner_cinije.jpg" />
     <Content Include="images\banner_fp4.jpg" />
@@ -262,6 +263,7 @@
     <Content Include="userControls\ProductSliderV2.ascx" />
     <Content Include="userControls\product_fp.ascx" />
     <Content Include="userControls\product_slider.ascx" />
+    <Content Include="userControls\Retail.ascx" />
     <Content Include="userControls\Slider.ascx" />
     <Content Include="WebMethods.aspx" />
     <Content Include="webshopAdmin\attribute.aspx" />
@@ -368,6 +370,7 @@
     <Content Include="less\productPaging.less" />
     <Content Include="less\productFilter.less" />
     <Content Include="less\cart.less" />
+    <Content Include="less\retail.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -454,6 +457,13 @@
     </Compile>
     <Compile Include="eshop.Master.designer.cs">
       <DependentUpon>eshop.Master</DependentUpon>
+    </Compile>
+    <Compile Include="retails.aspx.cs">
+      <DependentUpon>retails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="retails.aspx.designer.cs">
+      <DependentUpon>retails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -649,6 +659,13 @@
     </Compile>
     <Compile Include="userControls\product_slider.ascx.designer.cs">
       <DependentUpon>product_slider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\Retail.ascx.cs">
+      <DependentUpon>Retail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\Retail.ascx.designer.cs">
+      <DependentUpon>Retail.ascx</DependentUpon>
     </Compile>
     <Compile Include="userControls\Slider.ascx.cs">
       <DependentUpon>Slider.ascx</DependentUpon>

@@ -7240,6 +7240,21 @@ button.close {
   font-size: 0.7em;
   color: #919191;
 }
+.retail {
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #f4f4f4;
+}
+.retail .retail-name {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.retail .retail-address {
+  height: 40px;
+}
+.retail .retil-phone {
+  height: 20px;
+}
 /* -------------------------------- 
 
 Primary style
