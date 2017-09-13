@@ -104,6 +104,14 @@
     <Content Include="account.aspx" />
     <Content Include="cart.aspx" />
     <Content Include="checkout.aspx" />
+    <Content Include="CommonDLLs\AjaxControlToolkit.dll" />
+    <Content Include="CommonDLLs\AjaxMin.dll" />
+    <Content Include="CommonDLLs\BotDetect.dll" />
+    <Content Include="CommonDLLs\CKEditor.NET.dll" />
+    <Content Include="CommonDLLs\Newtonsoft.Json.dll" />
+    <Content Include="CommonDLLs\NReco.PdfGenerator.dll" />
+    <Content Include="CommonDLLs\stdole.dll" />
+    <Content Include="CommonDLLs\wkhtmltopdf.exe" />
     <Content Include="compare.aspx" />
     <Content Include="css\camera_bundle.css" />
     <Content Include="css\camera_bundle.min.css">
