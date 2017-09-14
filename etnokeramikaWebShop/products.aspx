@@ -41,7 +41,7 @@
         <slider:Slider ID="slider" runat="server" />
         <ProductSlider:ProductSlider ID="productSlider" runat="server" Visible="false" />
         <div class="row category-description">
-            <div class="col-md-12">
+            <div class="col-md-12 padding-0">
                 <asp:Label ID="lblCategoryDescription" runat="server"></asp:Label>
             </div>
         </div>

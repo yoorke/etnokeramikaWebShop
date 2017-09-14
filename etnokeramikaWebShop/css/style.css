@@ -6774,6 +6774,9 @@ button.close {
 .padding-right-0 {
   padding-right: 0;
 }
+.padding-0 {
+  padding: 0;
+}
 .width-100 {
   width: 100%;
 }
@@ -6826,6 +6829,7 @@ button.close {
   background-color: #e7866d;
   height: 34px;
   transition: 0.5s;
+  cursor: pointer;
 }
 .header .header-box .cart-fp span {
   color: #eee;
@@ -7119,7 +7123,7 @@ button.close {
   z-index: 999;
 }
 .products .category-description {
-  margin-bottom: 1em;
+  margin: 1em 0;
   display: block;
   text-align: justify;
   font-style: italic;
