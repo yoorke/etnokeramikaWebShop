@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,7 +46,7 @@
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=3.5.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>CommonDLLs\AjaxControlToolkit.dll</HintPath>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="AjaxMin, Version=4.97.4951.28478, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -63,13 +64,13 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="eshopBE">
-      <HintPath>..\..\..\WebShopFramework\eshopBE\bin\Debug\eshopBE.dll</HintPath>
+      <HintPath>..\..\..\WebShop - Framework\WebShopFramework\eshopBE\bin\Debug\eshopBE.dll</HintPath>
     </Reference>
     <Reference Include="eshopBL">
-      <HintPath>..\..\..\WebShopFramework\eshopBL\bin\Debug\eshopBL.dll</HintPath>
+      <HintPath>..\..\..\WebShop - Framework\WebShopFramework\eshopBL\bin\Debug\eshopBL.dll</HintPath>
     </Reference>
     <Reference Include="eshopUtilities">
-      <HintPath>..\..\..\WebShopFramework\eshopUtilities\bin\Debug\eshopUtilities.dll</HintPath>
+      <HintPath>..\..\..\WebShop - Framework\WebShopFramework\eshopUtilities\bin\Debug\eshopUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>

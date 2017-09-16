@@ -88,7 +88,7 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-        <div class="row">
+        <div class="row product-pager">
             <div class="col-lg-5">
                 <pager:Pager ID="pgrPager1" runat="server" OnOnClick="pgrPages_Click" />
                 <asp:HiddenField ID="lblPageIndex" runat="server" />
