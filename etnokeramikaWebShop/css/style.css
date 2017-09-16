@@ -6939,6 +6939,9 @@ button.close {
 .footer .top ul {
   padding: 0 0 0 0.5em;
 }
+.footer .top li a {
+  color: #777;
+}
 .footer .middle {
   background-color: #333;
 }
@@ -6988,6 +6991,7 @@ button.close {
   color: #cc4422;
   font-weight: bold;
   margin-bottom: 0.5em;
+  position: relative;
 }
 .product-fp .wrapper .webprice_div .webprice-label {
   font-size: 0.7em;
@@ -6995,6 +6999,14 @@ button.close {
 }
 .product-fp .wrapper .saving_div {
   text-align: right;
+}
+.product-fp .wrapper .code {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 0.7em;
+  font-weight: normal;
+  color: #777;
 }
 .right-border {
   border-right: 1px solid #eee;
@@ -7128,6 +7140,9 @@ button.close {
   text-align: justify;
   font-style: italic;
 }
+.product-pager {
+  padding-bottom: 0.5em;
+}
 .product-pager .paging {
   font-size: 1.2em;
 }
@@ -7248,9 +7263,9 @@ button.close {
   margin: 0.5em;
   padding: 0.5em;
   background-color: #f4f4f4;
+  border-left: 3px solid #eeaa99;
 }
 .retail .retail-name {
-  font-size: 1.1em;
   font-weight: bold;
 }
 .retail .retail-address {

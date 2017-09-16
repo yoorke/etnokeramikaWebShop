@@ -67,6 +67,9 @@ namespace etnokeramikaWebShop.userControls
                 case "Name": lblName.Text = _product.Name; break;
                 case "Description": lblName.Text = _product.Description;break;
             }
+            if (bool.Parse(ConfigurationManager.AppSettings["showProductCode"]))
+                lblCode.Text = "š: " +_product.Code;
+
             string url = _product.Url;  //"/product.aspx?productUrl=" + _product.ProductID;
             lnkName.NavigateUrl = url;
             lnkPhoto.NavigateUrl = url;

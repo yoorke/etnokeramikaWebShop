@@ -34,7 +34,7 @@ namespace etnokeramikaWebShop
             rptFt3.DataSource = customPageBL.GetCustomPagesForCustomPageCategory(3);
             rptFt3.DataBind();
 
-            rptCategories.DataSource = new CategoryBL().GetNestedCategoriesList();
+            rptCategories.DataSource = new CategoryBL().GetCategoriesForFooter();
             rptCategories.DataBind();
         }
     }
