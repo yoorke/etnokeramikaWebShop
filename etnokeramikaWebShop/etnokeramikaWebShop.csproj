@@ -112,6 +112,19 @@
     </Content>
     <Content Include="css\lightbox.min.css" />
     <Content Include="customPage.aspx" />
+    <Content Include="images\cinije-slider.jpg" />
+    <Content Include="images\cinije.gif" />
+    <Content Include="images\cupovi-slider.jpg" />
+    <Content Include="images\djuvecare-slider.jpg" />
+    <Content Include="images\pepeljare-slider.jpg" />
+    <Content Include="images\salvetnici-slider.jpg" />
+    <Content Include="images\slanici-slider.jpg" />
+    <Content Include="images\sosijere-slider.jpg" />
+    <Content Include="images\tanjiri-slider.jpg" />
+    <Content Include="images\tave-slider-2.jpg" />
+    <Content Include="images\tave-slider.jpg" />
+    <Content Include="images\vaze-slider.jpg" />
+    <Content Include="images\vinski-setovi-slider.jpg" />
     <Content Include="retails.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\banner_cinije.jpg" />
