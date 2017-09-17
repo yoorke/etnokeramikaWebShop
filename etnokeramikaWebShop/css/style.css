@@ -6905,6 +6905,11 @@ button.close {
   font-size: 1.5em;
   margin-bottom: 2em;
 }
+.main-content .page-content h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 1em 0;
+}
 .main-content .page-content .gallery-img {
   margin: 0.5em;
   display: inline-block;
