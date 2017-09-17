@@ -50,6 +50,42 @@ function GetCartItems() {
     })
 }
 
+function AddToCompare(lblProductID) {
+    var productID = parseInt($('#' + lblProductID).val());
+
+    $ajax({
+        type: 'POST',
+        url: '/WebMethods.aspx/AddToCompare',
+        data: JSON.stringify({ "productID": productID }),
+        contentType: 'application/json;charset=utf-8',
+        dataType: 'json',
+        success: function (msg) {
+            alert('compare');
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert(jqXHR.responseText);
+        }
+    })
+}
+
+function AddToWishList(lblProductID) {
+    var productID = parseInt($('#' + lblProductID).val());
+
+    $.ajax({
+        type: 'POST',
+        url: '/WebMethods.aspx/AddToWishList',
+        data: JSON.stringify({ "productID": productID }),
+        contentType: 'application/json;charset=utf-8',
+        dataType: 'json',
+        success: function (msg) {
+            alert('wishlist');
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert(jqXHR);
+        }
+    })
+}
+
 //document
 $(window).scroll(function () {
     if($('#cartFpContainer').is(':visible')){
