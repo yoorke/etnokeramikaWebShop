@@ -6900,6 +6900,7 @@ button.close {
 .main-content .page-content {
   padding-top: 1em;
   padding-bottom: 1em;
+  min-height: 500px;
 }
 .main-content .page-content h1 {
   font-size: 1.5em;
@@ -7148,6 +7149,9 @@ button.close {
   display: block;
   text-align: justify;
   font-style: italic;
+}
+.products .search-found {
+  background-color: #ffff00;
 }
 .product-pager {
   padding-bottom: 0.5em;

@@ -2,10 +2,10 @@
 <%@ Register Src="userControls/product_fp.ascx" TagName="product_fp" TagPrefix="product_fp" %>
 <%@ Register Src="userControls/Pager.ascx" TagName="Pager" TagPrefix="Pager" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVertical.css") %>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVerticalV1.min.css") %>" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-lg-12 page-content">
+    <div class="col-lg-12 page-content products">
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="heading"><asp:Literal ID="lblHeading" runat="server"></asp:Literal></h1>
@@ -65,11 +65,11 @@
 
             var searchedText = decodeURIComponent(getQueryString()['a']).split(' ');
             $(searchedText).each(function(p, text){
-                $('.product_fp h3 span:Contains(' + text + '), .product_fp h4 a:Contains(' + text + ')').each(function (i, element) {
+                $('.product-fp h3 span:Contains(' + text + '), .product-fp h4:Contains(' + text + '), .product-fp .webprice_div .code:Contains(' + text + ')').each(function (i, element) {
                     var content = $(element).text();
                     //content = content.replace(text, '<span class="search_found">' + text + '</span>');
                     var regex = new RegExp('(' + text + ')', 'gi');
-                    content = content.replace(regex, '<span class="search_found">$1</span>');
+                    content = content.replace(regex, '<span class="search-found">$1</span>');
                     element.innerHTML = content;
                 })
             })

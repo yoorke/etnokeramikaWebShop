@@ -102,7 +102,7 @@ namespace etnokeramikaWebShop
                 imgPromotion.Visible = true;
             }
             lblProductID.Value = product.ProductID.ToString();
-            Page.Title = product.Brand.Name + " " + product.Name;
+            Page.Title = (ConfigurationManager.AppSettings["product_Line1"] == "Name" ? product.Name : product.Brand.Name) + " " + (ConfigurationManager.AppSettings["product_Line2"] == "Name" ? product.Name : product.Description);
             ViewState.Add("pageTitle", Page.Title);
             ViewState.Add("productDescription", product.Description);
             ViewState.Add("image", product.Images[0]);

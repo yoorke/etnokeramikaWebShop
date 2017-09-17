@@ -116,7 +116,7 @@ namespace etnokeramikaWebShop
                 loadPrices(categoryUrl, priceFrom, priceTo, category.ParentCategoryID == 1);
 
                 
-                ViewState["pageTitle"] = category.Name + " | PinShop";
+                ViewState["pageTitle"] = category.Name + " | Etnokeramika doo";
                 ViewState["categoryUrl"] = category.Url;
 
                 if (category.Slider != null && category.Slider.SliderID > 0)
