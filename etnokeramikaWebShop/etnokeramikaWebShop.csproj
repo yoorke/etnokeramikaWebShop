@@ -63,14 +63,17 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="eshopBE">
-      <HintPath>..\..\..\WebShop - Framework\WebShopFramework\eshopBE\bin\Debug\eshopBE.dll</HintPath>
+    <Reference Include="eshopBE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WebShopFramework\eshopBE\bin\Debug\eshopBE.dll</HintPath>
     </Reference>
-    <Reference Include="eshopBL">
-      <HintPath>..\..\..\WebShop - Framework\WebShopFramework\eshopBL\bin\Debug\eshopBL.dll</HintPath>
+    <Reference Include="eshopBL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WebShopFramework\eshopBL\bin\Debug\eshopBL.dll</HintPath>
     </Reference>
-    <Reference Include="eshopUtilities">
-      <HintPath>..\..\..\WebShop - Framework\WebShopFramework\eshopUtilities\bin\Debug\eshopUtilities.dll</HintPath>
+    <Reference Include="eshopUtilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WebShopFramework\eshopUtilities\bin\Debug\eshopUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -117,6 +120,20 @@
     <Content Include="images\cinije.gif" />
     <Content Include="images\cupovi-slider.jpg" />
     <Content Include="images\djuvecare-slider.jpg" />
+    <Content Include="images\gallery\IMG-20121002-006280.jpg" />
+    <Content Include="images\gallery\IMG-20121002-00646.jpg" />
+    <Content Include="images\gallery\IMG-20121002-00651.jpg" />
+    <Content Include="images\gallery\IMG-20121002-00652.jpg" />
+    <Content Include="images\gallery\IMG-20121003-00670.jpg" />
+    <Content Include="images\gallery\IMG-20121120-00781.jpg" />
+    <Content Include="images\gallery\IMG-20130303-00094.jpg" />
+    <Content Include="images\gallery\IMG-20130304-00103.jpg" />
+    <Content Include="images\gallery\IMG-20130724-00491.jpg" />
+    <Content Include="images\gallery\IMG-20140622-00460.jpg" />
+    <Content Include="images\gallery\IMG-20140622-00464.jpg" />
+    <Content Include="images\gallery\IMG-20140622-00480.jpg" />
+    <Content Include="images\gallery\IMG_20140930_140652.jpg" />
+    <Content Include="images\gallery\IMG_20141106_162335.jpg" />
     <Content Include="images\pepeljare-slider.jpg" />
     <Content Include="images\salvetnici-slider.jpg" />
     <Content Include="images\slanici-slider.jpg" />

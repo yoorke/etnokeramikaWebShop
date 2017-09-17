@@ -6905,6 +6905,10 @@ button.close {
   font-size: 1.5em;
   margin-bottom: 2em;
 }
+.main-content .page-content .gallery-img {
+  margin: 0.5em;
+  display: inline-block;
+}
 .footer .top {
   background-color: #fff;
   border-top: 3px solid #cc4422;

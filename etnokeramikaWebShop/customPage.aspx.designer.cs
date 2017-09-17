@@ -13,6 +13,15 @@ namespace etnokeramikaWebShop {
     public partial class customPage {
         
         /// <summary>
+        /// lblHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lblHeader;
+        
+        /// <summary>
         /// lblHeading control.
         /// </summary>
         /// <remarks>
@@ -31,30 +40,12 @@ namespace etnokeramikaWebShop {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divContent;
         
         /// <summary>
-        /// bannerCP1 control.
+        /// lblFooter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.Banner bannerCP1;
-        
-        /// <summary>
-        /// bannerCP2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.Banner bannerCP2;
-        
-        /// <summary>
-        /// bannerCP3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.Banner bannerCP3;
+        protected global::System.Web.UI.WebControls.Literal lblFooter;
     }
 }

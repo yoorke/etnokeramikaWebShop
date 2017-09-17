@@ -40,6 +40,8 @@ namespace etnokeramikaWebShop
             ViewState.Add("pageTitle", customPage.Title);
             lblHeading.Text = customPage.Heading;
             divContent.InnerHtml = customPage.Content;
+            lblHeader.Text = customPage.Head;
+            lblFooter.Text = customPage.Footer;
         }
     }
 }

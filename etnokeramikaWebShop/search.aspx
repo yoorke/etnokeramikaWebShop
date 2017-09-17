@@ -11,7 +11,7 @@
                 <h1 class="heading"><asp:Literal ID="lblHeading" runat="server"></asp:Literal></h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row product-pager">
             <div class="col-lg-5">
                 <Pager:Pager ID="pager1" runat="server" OnOnClick="pager1_OnClick" />
             </div>
