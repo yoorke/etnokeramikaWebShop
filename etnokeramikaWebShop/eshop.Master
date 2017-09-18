@@ -171,7 +171,7 @@
                                 <span class="phone-number">023 531 900</span>
                             </div>
                         </div>
-                        <a href="https://www.facebook.com/etokeramika"><img src='<%=ResolveUrl("~/images/facebook.jpg") %>' /></a>
+                        <a href="https://www.facebook.com/etnokeramika" target="_blank"><img src='<%=ResolveUrl("~/images/facebook.jpg") %>' /></a>
                     </div>
                 </div>
                 <div class="row middle">
