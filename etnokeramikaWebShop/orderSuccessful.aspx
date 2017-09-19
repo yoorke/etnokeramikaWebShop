@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/eshop.Master" AutoEventWireup="true" CodeBehind="orderSuccessful.aspx.cs" Inherits="etnokeramikaWebShop.orderSuccessful" Title="Narudžbina uspešno prosleđena | Webshop" %>
 <%@ Register Src="userControls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVertical.css") %>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVerticalV1.min.css") %>" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--<div class="bannerColumn">

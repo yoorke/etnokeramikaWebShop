@@ -2,7 +2,7 @@
 <%@ Register Src="userControls/Banner.ascx" TagName="Banner" TagPrefix="banner" %>
 <%@ Register Src="userControls/product_fp.ascx" TagName="ProductFP" TagPrefix="product_fp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVertical.css") %>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/css/mainMenuVerticalV1.min.css") %>" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--BANNER-->
