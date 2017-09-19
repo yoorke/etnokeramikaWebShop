@@ -19,7 +19,7 @@
             <span class="price_label">din</span>
         </div><!--price_div-->
         <div class="webprice_div" id="webprice_div">
-            <asp:Label ID="lblCode" runat="server" CssClass="code" ToolTip="Šifra proizvoda"></asp:Label>
+            <asp:Label ID="lblCode" runat="server" CssClass="code hidden-sm hidden-xs" ToolTip="Šifra proizvoda"></asp:Label>
             <span class="webprice_label"></span>
             <asp:Label ID="lblWebPrice" runat="server">12313,12</asp:Label>
             <span class="webprice-label">RSD</span>
