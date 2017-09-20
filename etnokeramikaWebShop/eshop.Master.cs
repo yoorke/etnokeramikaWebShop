@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using eshopBL;
+using System.Web.Security;
 
 namespace etnokeramikaWebShop
 {
@@ -12,6 +13,8 @@ namespace etnokeramikaWebShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+                ((Label)loginView.FindControl("lblUsername")).Text = Membership.GetUser().UserName;
             loadFooter();
         }
 
@@ -36,6 +39,12 @@ namespace etnokeramikaWebShop
 
             rptCategories.DataSource = new CategoryBL().GetCategoriesForFooter();
             rptCategories.DataBind();
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Response.Redirect(Request.RawUrl);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace etnokeramikaWebShop
                 if (ViewState["sort"] != null)
                     return ViewState["sort"].ToString();
                 else
-                    return "priceAsc";
+                    return "sortIndex";
             }
             set { ViewState["sort"] = value; }
         }
@@ -153,6 +153,7 @@ namespace etnokeramikaWebShop
             cmbSort.Items.Add(new ListItem("Nazivu", "name"));
             cmbSort.Items.Add(new ListItem("Ceni opadajuće", "priceDesc"));
             cmbSort.Items.Add(new ListItem("Ceni rastuće", "priceAsc"));
+            cmbSort.Items.Add(new ListItem("Opisu", "sortIndex"));
             cmbSort.SelectedValue = this.sort;
         }
 

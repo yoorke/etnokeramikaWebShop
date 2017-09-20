@@ -28,8 +28,16 @@
                         <span class="important"><span class="fa fa-fw fa-phone"></span> 023 531 900</span>
                     </div>
                     <div class="col col-md-3 col-lg-3 col-sm-4 col-xs-4 text-right user-action">
-                        <a href="/prijava" class="margin-right-05"><span class="fa fa-fw fa-user"></span> Prijava</a>
-                        <a href="/registracija" class="margin-right-05"><span class="fa fa-fw fa-user-plus"></span> Registracija</a>
+                        <asp:LoginView ID="loginView" runat="server">
+                            <AnonymousTemplate>
+                                <a href="/prijava" class="margin-right-05"><span class="fa fa-fw fa-user"></span> Prijava</a>
+                                <a href="/registracija" class="margin-right-05"><span class="fa fa-fw fa-user-plus"></span> Registracija</a>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <span>Dobrodošli, </span><asp:Label ID="lblUsername" runat="server"></asp:Label>
+                                <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Odjava"></asp:LinkButton>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
                     </div>
                     <div class="col col-md-2 col-lg-1 col-sm-2 col-xs-2 text-right">
                         <a href="http://www.facebook.com/etnokeramika"><span class="icon"><span class="fa fa-fw fa-facebook"></span></span></a>
@@ -182,7 +190,7 @@
                 <div class="row bottom">
                     <div class="col-md-12">
                         <div><span> | </span><a href="/uslovi-koriscenja">Uslovi korišćenja</a><span> | </span><a href="/politika-privatnosti">Politika privatnosti</a><span> | </span><span>2017 Etnokeramika doo. Sva prava zadržana.</span></div>
-                        <p>Cena na sajtu su izražene u dinarima sa uračunatim porezom i plaćanje se vrši isključivo u dinarima.</p>
+                        <p>Cene na sajtu su izražene u dinarima sa uračunatim porezom i plaćanje se vrši isključivo u dinarima.</p>
                         <p>Nastojimo da budemo što precizniji u opisu proizvoda, prikazu slika i samih cena, ali ne možemo garantovati da su sve informacije kompletne i bez grešaka.</p>
                         <p>Svi artikli na sajtu su deo naše ponude i ne podrazumeva se da su dostupni u svakom momentu.</p>
                     </div>
