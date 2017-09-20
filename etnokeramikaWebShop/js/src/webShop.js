@@ -53,7 +53,7 @@ function GetCartItems() {
 function AddToCompare(lblProductID) {
     var productID = parseInt($('#' + lblProductID).val());
 
-    $ajax({
+    $.ajax({
         type: 'POST',
         url: '/WebMethods.aspx/AddToCompare',
         data: JSON.stringify({ "productID": productID }),
@@ -78,7 +78,10 @@ function AddToWishList(lblProductID) {
         contentType: 'application/json;charset=utf-8',
         dataType: 'json',
         success: function (msg) {
-            alert('wishlist');
+            if (msg.d == 'Not loggedin')
+                window.location = '/prijava?returnUrl=' + window.location.pathname;
+            else
+                alert('wishlist');
         },
         error: function (jqXHR, textStatus, errorThrown) {
             alert(jqXHR);

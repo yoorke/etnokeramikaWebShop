@@ -6980,10 +6980,12 @@ button.close {
   margin: 0 auto;
 }
 .product-fp .wrapper h3 {
-  font-size: 1.5em;
+  font-size: 1.1em;
   color: #333;
   text-align: center;
   font-weight: bold;
+  margin: 0.5em 0 0 0;
+  min-height: 30px;
 }
 .product-fp .wrapper h4 {
   height: 40px;
@@ -6991,6 +6993,7 @@ button.close {
   font-size: 1em;
   font-weight: 400;
   font-style: italic;
+  margin: 0;
 }
 .product-fp .wrapper .price_div {
   text-align: right;

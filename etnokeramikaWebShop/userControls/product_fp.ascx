@@ -35,8 +35,8 @@
             <!--<asp:LinkButton ID="btnDetails" runat="server" Text="Detalji" CssClass="btn_details"></asp:LinkButton>-->
             <asp:HyperLink ID="lblDetails" runat="server" CssClass="btn-details"><span>Detalji</span></asp:HyperLink>
             <%--<asp:LinkButton ID="btnCompare" runat="server" Text="Uporedi" CssClass="btn_compare" OnClientClick="function(){ $('#messageBoxCompare').show()}"></asp:LinkButton>--%>
-            <button type="button" id="btnCompare" class="ws-btn btn-icon btn-compare" onclick="btnCompare_Click('<%=lblProductID.ClientID %>')" data-toggle="tooltip" data-placement="bottom" title="Uporedi"><span class="fa fa-fw fa-square-o"></span></button>
-            <button type="button" id="btnWishList" class="ws-btn btn-icon btn-wishlist" data-toggle="tooltip" data-placement="bottom" title="Ubaci u listu želja"><span class="fa fa-fw fa-heart-o"></span></button>
+            <button type="button" id="btnCompare" class="ws-btn btn-icon btn-compare" onclick="AddToCompare('<%=lblProductID.ClientID %>')" data-toggle="tooltip" data-placement="bottom" title="Uporedi"><span class="fa fa-fw fa-square-o"></span></button>
+            <button type="button" id="btnWishList" class="ws-btn btn-icon btn-wishlist" data-toggle="tooltip" data-placement="bottom" title="Ubaci u listu želja" onclick="AddToWishList('<%=lblProductID.ClientID %>')"><span class="fa fa-fw fa-heart-o"></span></button>
             
         </div><!--buttons-->
         <asp:HiddenField ID="lblProductID" runat="server" />
