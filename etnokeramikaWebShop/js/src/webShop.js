@@ -103,3 +103,12 @@ $(document).click(function (e) {
         $('#cartFpContainer').hide();
     }
 })
+
+function ChangeImage(imageUrl) {
+    var image = document.getElementById("ctl00_ContentPlaceHolder1_priProductImages_imgMain");
+    var extension = imageUrl.substring(imageUrl.lastIndexOf('.'));
+
+    image.src = imageUrl.toString().substring(0, imageUrl.toString().indexOf('-thumb')) + '-main' + extension;
+    var link = document.getElementById("ctl00_ContentPlaceHolder1_priProductImages_lnkMainImage");
+    link.href = imageUrl.toString().substring(0, imageUrl.toString().indexOf('-thumb')) + extension;
+}
