@@ -314,6 +314,7 @@
     <Content Include="userControls\MainMenuVertical.ascx" />
     <Content Include="userControls\MainMenuVerticalV2.ascx" />
     <Content Include="userControls\MasterMenu.ascx" />
+    <Content Include="userControls\ProductCompare.ascx" />
     <Content Include="userControls\ProductImages.ascx" />
     <Content Include="userControls\ProductSliderV2.ascx" />
     <Content Include="userControls\product_fp.ascx" />
@@ -686,6 +687,13 @@
     </Compile>
     <Compile Include="userControls\MasterMenu.ascx.designer.cs">
       <DependentUpon>MasterMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\ProductCompare.ascx.cs">
+      <DependentUpon>ProductCompare.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\ProductCompare.ascx.designer.cs">
+      <DependentUpon>ProductCompare.ascx</DependentUpon>
     </Compile>
     <Compile Include="userControls\ProductImages.ascx.cs">
       <DependentUpon>ProductImages.ascx</DependentUpon>
