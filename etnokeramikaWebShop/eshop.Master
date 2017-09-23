@@ -74,7 +74,7 @@
                         <div class="header-box padding-1-0">
                             <div class="icon-fp">
                                 <asp:HyperLink ID="lnkCompare" runat="server" NavigateUrl="/uporedi"><span class="fa fa-fw fa-balance-scale"></span></asp:HyperLink>
-                                <span class="number" id="lblCompareCount">0</span>
+                                <asp:Label CssClass="number" ID="lblCompareCount" runat="server" Text="0"></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                         <div class="header-box padding-1-0">
                             <div class="icon-fp">
                                 <asp:HyperLink ID="lnkWishlist" runat="server" NavigateUrl="/lista-zelja"><span class="fa fa-fw fa-heart"></span></asp:HyperLink>
-                                <span class="number" id="lblWishListCount">0</span>
+                                <asp:Label CssClass="number" ID="lblWishListCount" runat="server" Text="0"></asp:Label>
                             </div>
                         </div>
                     </div>

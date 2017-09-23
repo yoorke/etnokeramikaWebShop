@@ -48,6 +48,7 @@ namespace etnokeramikaWebShop
             //routes.MapPageRoute("uslovi-koriscenja", "uslovi-koriscenja", "~/customPage.aspx", false, new RouteValueDictionary { { "url", "uslovi-koriscenja" } });
             routes.MapPageRoute("porudzbinaUspesna", "porudzbina-uspesna", "~/orderSuccessful.aspx");
             routes.MapPageRoute("retails", "prodajna-mesta-i-distributeri", "~/retails.aspx");
+            routes.MapPageRoute("uporedi", "uporedi", "~/compare.aspx");
 
             //routes.MapPageRoute("kupindo-xml", "kupindoXml", "~/kupindoXml.ashx");
         }

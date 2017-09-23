@@ -22,33 +22,71 @@ namespace etnokeramikaWebShop
         {
             if (!Page.IsPostBack)
             {
-                string[] productList;
-                if (Page.Request.QueryString.ToString().Contains("productList"))
-                {
-                    if (Page.Request.QueryString["productList"] != null)
-                    {
-                        productList = Page.Request.QueryString["productList"].Split('-');
-                        showProducts(productList);
-                    }
-                }
-
+                //string[] productList;
+                //if (Page.Request.QueryString.ToString().Contains("productList"))
+                //{
+                //if (Page.Request.QueryString["productList"] != null)
+                //{
+                //productList = Page.Request.QueryString["productList"].Split('-');
+                //showProducts(productList);
+                //}
+                //}
+                //List<int> productList = (List<int>)HttpContext.Current.Session["compare"];
+                showProducts();
             }
         }
 
-        private void showProducts(string[] productList)
+        private void showProducts()
         {
             List<int> productsID = (List<int>)Session["compare"];
             List<Product> products = new List<Product>();
-            if (productsID != null)
+            if (productsID != null && productsID.Count > 0)
             {
                 for (int i = 0; i < productsID.Count; i++)
                 {
-                    products.Add(new ProductBL().GetProduct(productsID[i], string.Empty, false, string.Empty));
+                    Product newProduct = new ProductBL().GetProduct(productsID[i], string.Empty, false, string.Empty);
+                    foreach (Product product in products)                        
+                    {
+                        foreach (eshopBE.AttributeValue newAttribute in newProduct.Attributes)
+                        {
+                            bool exists = false;
+                            foreach(AttributeValue attribute in product.Attributes)
+                            {
+                                if (attribute.AttributeID == newAttribute.AttributeID)
+                                {
+                                    exists = true;
+                                    break;
+                                }
+                            }
+                            if (!exists)
+                            {
+                                AttributeValue value = new AttributeValue();
+                                value.AttributeID = newAttribute.AttributeID;
+                                value.AttributeValueID = -1;
+                                value.Value = string.Empty;
+                                product.Attributes.Add(value);
+                            }
+                        }
+                    }
+
+
+                    products.Add(newProduct);
                 }
 
                 rptProducts.DataSource = products;
                 rptProducts.DataBind();
             }
+            else
+            {
+                setStatus("Nema proizvoda u listi za poređenje", "warning");
+            }
+        }
+
+        private void setStatus(string text, string classes)
+        {
+            lblStatus.Text = text;
+            lblStatus.CssClass = "alert alert-" + classes + " status";
+            lblStatus.Visible = true;
         }
     }
 }

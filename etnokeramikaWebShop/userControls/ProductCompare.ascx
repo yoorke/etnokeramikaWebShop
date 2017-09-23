@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ProductCompare.ascx.cs" Inherits="eshopv2.user_controls.ProductCompare" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ProductCompare.ascx.cs" Inherits="etnokeramikaWebShop.userControls.ProductCompare" %>
 <div class="row productCompare">
     <div class="close">
         <span class="glyphicon glyphicon-remove" onclick="btnProductCompareRemove_Click('<%=lblProductID.ClientID %>')"></span>

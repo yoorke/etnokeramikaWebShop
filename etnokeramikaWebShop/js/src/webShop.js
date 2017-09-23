@@ -69,7 +69,7 @@ function AddToCompare(event, lblProductID) {
         dataType: 'json',
         success: function (msg) {
             ShowCompareFpContainer(event.pageX, event.pageY, msg.d);
-            $('#lblCompareCount')[0].innerText = msg.d;
+            $('#ctl00_lblCompareCount')[0].innerText = msg.d;
         },
         error: function (jqXHR, textStatus, errorThrown) {
             alert(jqXHR.responseText);
