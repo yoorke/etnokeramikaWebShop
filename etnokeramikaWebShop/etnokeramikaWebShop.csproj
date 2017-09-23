@@ -156,9 +156,12 @@
     <Content Include="images\salvetnici-slider.jpg" />
     <Content Include="images\slanici-slider.jpg" />
     <Content Include="images\slatko-slider.jpg" />
+    <Content Include="images\slide34.jpg" />
+    <Content Include="images\slide35.jpg" />
     <Content Include="images\solje-slider.jpg" />
     <Content Include="images\sosijere-slider.jpg" />
     <Content Include="images\tanjiri-slider.jpg" />
+    <Content Include="images\tanjiri.gif" />
     <Content Include="images\tave-slider-2.jpg" />
     <Content Include="images\tave-slider.jpg" />
     <Content Include="images\vaze-slider.jpg" />
