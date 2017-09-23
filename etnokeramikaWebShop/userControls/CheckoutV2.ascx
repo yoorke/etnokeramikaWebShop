@@ -2,7 +2,7 @@
 <%@ Register src="CustomStatus.ascx" tagname="CustomStatus" tagprefix="uc1" %>
 <div class="checkout">
     <a id="account" name="account"></a>
-    <div class="row">
+    <div class="row margin-top-1 margin-bottom-1">
         <div class="col-lg-12">
             <uc1:CustomStatus ID="csStatus" runat="server" />
         </div><!--col-->
