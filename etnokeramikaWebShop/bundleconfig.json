@@ -86,7 +86,11 @@
     "outputFileName": "css/lightbox.min.css",
     "inputFiles": [
       "less/css/lightbox.css"
-    ]
+    ],
+    "minify": {
+      "enabled": true,
+      "adjustRelativePaths": false
+    }
   },
   {
     "outputFileName": "js/productImageZoom.min.js",

@@ -1,4 +1,4 @@
-﻿#cartFpContainer{
+﻿.fp-container{
     position:absolute;
     top:0;
     right:0;
@@ -9,6 +9,7 @@
     transition:0.2s ease all;
     padding:0.5em;
     font-size:0.9em;
+    z-index:999;
 
     table td{
         padding:0.2em 0.5em;
@@ -22,7 +23,7 @@
         font-size:16px;
     }
 
-    .cartfp-heading{
+    .fp-heading{
         color:@brand-primary;
         border-bottom:1px solid @light-gray;
         display:block;
@@ -34,7 +35,9 @@
     .buttons{
         
     }
+}
 
+#cartFpContainer{
     .total{
         text-align:right;
         margin:1em 0;
@@ -44,6 +47,13 @@
             font-weight:bold;
             color:@brand-primary;
         }
+    }
+}
+
+#compareFpContainer{
+    .btn{
+        width:100%;
+        margin-top:0.5em;
     }
 }
 

@@ -7,6 +7,14 @@
     GetCartItems();
 }
 
+function ShowCompareFpContainer(x, y, count) {
+    //$(document).mousemove(function (event) {
+        $('#compareFpContainer').css({ top: y - $('#compareFpContainer').height(), right: $(document)   .width() - x - $('#compareFpContainer').width()});
+        //})
+        $('#compareFpCount')[0].innerText = count;
+    $('#compareFpContainer').show();
+}
+
 function AddToCart(lblProductID) {
     var productID = parseInt($('#' + lblProductID).val());
     
@@ -50,7 +58,7 @@ function GetCartItems() {
     })
 }
 
-function AddToCompare(lblProductID) {
+function AddToCompare(event, lblProductID) {
     var productID = parseInt($('#' + lblProductID).val());
 
     $.ajax({
@@ -60,7 +68,8 @@ function AddToCompare(lblProductID) {
         contentType: 'application/json;charset=utf-8',
         dataType: 'json',
         success: function (msg) {
-            alert('compare');
+            ShowCompareFpContainer(event.pageX, event.pageY, msg.d);
+            $('#lblCompareCount')[0].innerText = msg.d;
         },
         error: function (jqXHR, textStatus, errorThrown) {
             alert(jqXHR.responseText);
@@ -80,8 +89,10 @@ function AddToWishList(lblProductID) {
         success: function (msg) {
             if (msg.d == 'Not loggedin')
                 window.location = '/prijava?returnUrl=' + window.location.pathname;
-            else
-                alert('wishlist');
+            else{
+                //alert('wishlist');
+                ShowWishListContainer(event.pagex, event.pageY, msg.d);
+            }
         },
         error: function (jqXHR, textStatus, errorThrown) {
             alert(jqXHR);
@@ -102,4 +113,16 @@ $(document).click(function (e) {
     if ($('#cartFpContainer').is(':visible') && e.target.id != 'btnCartFp') {
         $('#cartFpContainer').hide();
     }
+    if ($('#compareFpContainer').is(':visible')) {
+        $('#compareFpContainer').hide();
+    }
 })
+
+function ChangeImage(imageUrl) {
+    var image = document.getElementById("ctl00_ContentPlaceHolder1_priProductImages_imgMain");
+    var extension = imageUrl.substring(imageUrl.lastIndexOf('.'));
+
+    image.src = imageUrl.toString().substring(0, imageUrl.toString().indexOf('-thumb')) + '-main' + extension;
+    var link = document.getElementById("ctl00_ContentPlaceHolder1_priProductImages_lnkMainImage");
+    link.href = imageUrl.toString().substring(0, imageUrl.toString().indexOf('-thumb')) + extension;
+}

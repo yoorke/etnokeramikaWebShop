@@ -47,9 +47,9 @@ namespace etnokeramikaWebShop.userControls
                     {
                         ImageButton image = new ImageButton();
                         image.ID = "imgThumb" + i.ToString();
-                        image.ImageUrl = getDirectory(getFilename(_images[i].ImageUrl)) + getFilename(_images[i].ImageUrl) + "-" + ConfigurationManager.AppSettings["mainName"] + getExtension(_images[i].ImageUrl);
+                        image.ImageUrl = getDirectory(getFilename(_images[i].ImageUrl)) + getFilename(_images[i].ImageUrl) + "-" + ConfigurationManager.AppSettings["thumbName"] + getExtension(_images[i].ImageUrl);
                         image.CssClass = "thumb img-responsive";
-                        image.OnClientClick = "changeImg(this.src);return false;";
+                        image.OnClientClick = "ChangeImage(this.src);return false;";
 
                         pnlThumbs.Controls.Add(new LiteralControl("<div class='col-md-3'>"));
                         pnlThumbs.Controls.Add(image);

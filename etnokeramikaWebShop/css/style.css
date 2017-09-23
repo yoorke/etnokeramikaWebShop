@@ -6768,6 +6768,9 @@ button.close {
 .margin-bottom-0 {
   margin-bottom: 0;
 }
+margin-bottom-1 {
+  margin-bottom: 1em;
+}
 .padding-left-0 {
   padding-left: 0;
 }
@@ -6915,6 +6918,11 @@ button.close {
   margin: 0.5em;
   display: inline-block;
 }
+.main-content .page-content .status {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 .footer .top {
   background-color: #fff;
   border-top: 3px solid #cc4422;
@@ -6985,7 +6993,7 @@ button.close {
   text-align: center;
   font-weight: bold;
   margin: 0.5em 0 0 0;
-  min-height: 30px;
+  min-height: 32px;
 }
 .product-fp .wrapper h4 {
   height: 40px;
@@ -7203,7 +7211,7 @@ button.close {
 .product-filter .filter-box input[type="checkbox"] {
   float: left;
 }
-#cartFpContainer {
+.fp-container {
   position: absolute;
   top: 0;
   right: 0;
@@ -7212,17 +7220,18 @@ button.close {
   transition: 0.2s ease all;
   padding: 0.5em;
   font-size: 0.9em;
+  z-index: 999;
 }
-#cartFpContainer table td {
+.fp-container table td {
   padding: 0.2em 0.5em;
 }
-#cartFpContainer table td img {
+.fp-container table td img {
   max-width: 38px;
 }
-#cartFpContainer .close {
+.fp-container .close {
   font-size: 16px;
 }
-#cartFpContainer .cartfp-heading {
+.fp-container .fp-heading {
   color: #cc4422;
   border-bottom: 1px solid #f4f4f4;
   display: block;
@@ -7238,6 +7247,10 @@ button.close {
 #cartFpContainer .total #cartFpTotal {
   font-weight: bold;
   color: #cc4422;
+}
+#compareFpContainer .btn {
+  width: 100%;
+  margin-top: 0.5em;
 }
 @media only screen and (min-width: 1024px) {
   #cartFpContainer {

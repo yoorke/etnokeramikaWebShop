@@ -54,7 +54,7 @@
                         <p>Dostupnost:</p>
                         <p class="bold uppercase"><asp:Literal ID="txtAvailability" runat="server" Text="Na stanju"></asp:Literal></p>
                         <p class="margin-top-2">Očekivani rok isporuke:</p>
-                        <p class="bold"><asp:Literal ID="txtDelivery" runat="server" Text="2 dana"></asp:Literal></p>
+                        <p class="bold"><asp:Literal ID="txtDelivery" runat="server" Text="do 2 dana"></asp:Literal></p>
                     </div>
                     <div class="col-sm-6 text-right">
                         <div class="price-div"><p class="margin-bottom-0" id="priceDiv" runat="server"><asp:Label ID="lblPrice" runat="server" Text="MP 110.989 din"></asp:Label><span class="price-label"></span></p></div>
@@ -114,6 +114,13 @@
                 <asp:Literal ID="lblDescription" runat="server"></asp:Literal>
             </div><!--col-->
         </div><!--row-->
+
+        <div class="row margin-top-1" id="divUputstvo" runat="server">
+            <div class="col-md-12">
+                <span class="fa fa-fw fa-newspaper-o"></span>
+                <a href="/uputstvo-za-koriscenje-posudja">Uputstvo za korišćenje.</a>
+            </div>
+        </div>
         
         <!--specification-->
         <div class="row">

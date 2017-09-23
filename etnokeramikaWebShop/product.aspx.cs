@@ -111,6 +111,8 @@ namespace etnokeramikaWebShop
             lnkCategory.Text = product.Categories[0].Name;
 
             loadProductSliders(product.Categories[0]);
+
+            divUputstvo.Visible = ConfigurationManager.AppSettings["categoryManual"].Contains(product.Categories[0].Url.ToLower()) ? true : false;
         }
 
         protected void btnCart_Click(object sender, EventArgs e)

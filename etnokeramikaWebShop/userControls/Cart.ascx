@@ -2,7 +2,7 @@
 <%@ Register src="CustomStatus.ascx" tagname="CustomStatus" tagprefix="uc1" %>
 <div class="row">
     <div class="col-lg-12">
-        <asp:Label ID="lblStatus" runat="server" Visible="false" CssClass="status"></asp:Label>
+        <asp:Label ID="lblStatus" runat="server" Visible="false" CssClass="alert alert-warning status"></asp:Label>
         <asp:GridView ID="dgvCart" runat="server" CssClass="table table-striped table-condensed"
             AutoGenerateColumns="false" OnRowDataBound="dgvCart_RowDataBound" OnRowCommand="dgvCart_RowCommand" DataKeyNames="productID"
             OnRowDeleting="dgvCart_RowDeleting">
