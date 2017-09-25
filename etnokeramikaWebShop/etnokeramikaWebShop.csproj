@@ -121,6 +121,12 @@
     <Content Include="images\cinije.gif" />
     <Content Include="images\cupovi-slider.jpg" />
     <Content Include="images\djuvecare-slider.jpg" />
+    <Content Include="images\gallery\IMAG0328-min.jpg" />
+    <Content Include="images\gallery\IMAG0328.jpg" />
+    <Content Include="images\gallery\IMAG0329-min.jpg" />
+    <Content Include="images\gallery\IMAG0329.jpg" />
+    <Content Include="images\gallery\IMAG0331-min.jpg" />
+    <Content Include="images\gallery\IMAG0331.jpg" />
     <Content Include="images\gallery\IMG-20121002-006280-min.jpg" />
     <Content Include="images\gallery\IMG-20121002-006280.jpg" />
     <Content Include="images\gallery\IMG-20121002-00646-min.jpg" />
@@ -149,6 +155,14 @@
     <Content Include="images\gallery\IMG_20140930_140652.jpg" />
     <Content Include="images\gallery\IMG_20141106_162335-min.jpg" />
     <Content Include="images\gallery\IMG_20141106_162335.jpg" />
+    <Content Include="images\gallery\IMG_20161102_123938-min.jpg" />
+    <Content Include="images\gallery\IMG_20161102_123938.jpg" />
+    <Content Include="images\gallery\IMG_20161103_114439-min.jpg" />
+    <Content Include="images\gallery\IMG_20161103_114439.jpg" />
+    <Content Include="images\gallery\IMG_20161103_114803-min.jpg" />
+    <Content Include="images\gallery\IMG_20161103_114803.jpg" />
+    <Content Include="images\gallery\IMG_20161103_114901-min.jpg" />
+    <Content Include="images\gallery\IMG_20161103_114901.jpg" />
     <Content Include="images\krigle-slider.jpg" />
     <Content Include="images\olivernici-slider.jpg" />
     <Content Include="images\pepeljare-slider.jpg" />
