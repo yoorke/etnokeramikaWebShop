@@ -228,6 +228,13 @@
             <span>Ukupno proizvoda: </span><span id="compareFpCount"></span>
             <a class="btn btn-primary" href="/uporedi">Uporedi</a>
         </div>
+
+        <div id="wishListFpContainer" style="display:none" class="fp-container">
+            <span class="close"><span class="fa fa-fw fa-remove"></span></span>
+            <span class="fp-heading">Proizvod dodat u listu želja</span>
+            <span>Ukupno proizvoda: </span><span id="wishListFpCount"></span>
+            <a class="btn btn-primary" href="/lista-zelja">Lista želja</a>
+        </div>
     
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

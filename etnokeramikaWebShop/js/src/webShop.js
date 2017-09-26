@@ -9,10 +9,16 @@
 
 function ShowCompareFpContainer(x, y, count) {
     //$(document).mousemove(function (event) {
-        $('#compareFpContainer').css({ top: y - $('#compareFpContainer').height(), right: $(document)   .width() - x - $('#compareFpContainer').width()});
+        $('#compareFpContainer').css({ top: y - $('#compareFpContainer').height(), right: $(document).width() - x - $('#compareFpContainer').width()});
         //})
         $('#compareFpCount')[0].innerText = count;
     $('#compareFpContainer').show();
+}
+
+function ShowWishListFpContainer(x, y, count) {
+    $('#wishListFpContainer').css({ top: y - $('#wishListFpContainer').height(), right: $(document).width() - x - $('#wishListFpContainer').width() });
+    $('#wishListFpCount')[0].innerText = count;
+    $('#wishListFpContainer').show();
 }
 
 function AddToCart(lblProductID) {
@@ -77,7 +83,7 @@ function AddToCompare(event, lblProductID) {
     })
 }
 
-function AddToWishList(lblProductID) {
+function AddToWishList(event, lblProductID) {
     var productID = parseInt($('#' + lblProductID).val());
 
     $.ajax({
@@ -91,7 +97,8 @@ function AddToWishList(lblProductID) {
                 window.location = '/prijava?returnUrl=' + window.location.pathname;
             else{
                 //alert('wishlist');
-                ShowWishListContainer(event.pagex, event.pageY, msg.d);
+                ShowWishListFpContainer(event.pageX, event.pageY, msg.d);
+                $('#ctl00_lblWishListCount')[0].innerText = msg.d;
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -115,6 +122,18 @@ $(document).click(function (e) {
     }
     if ($('#compareFpContainer').is(':visible')) {
         $('#compareFpContainer').hide();
+    }
+})
+
+$(document).ready(function () {
+    if ($(location).pathname == '/'){
+        if ($(window).width() >= 1024) {
+            $('.cd-dropdown').addClass('dropdown-is-active');
+            $('.cd-dropdown-trigger').hide();
+        }
+        else {
+            $('.cd-dropdown-trigger').show();
+            }
     }
 })
 

@@ -46,6 +46,8 @@ namespace etnokeramikaWebShop
         {
             if (Session["compare"] != null)
                 lblCompareCount.Text = ((List<int>)Session["compare"]).Count.ToString();
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+                lblWishListCount.Text = new WishListBL().GetWishListProducts(int.Parse(Membership.GetUser().ProviderUserKey.ToString())).Count.ToString();
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

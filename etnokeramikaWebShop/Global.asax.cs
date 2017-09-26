@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Routing;
+using System.Configuration;
 
 namespace etnokeramikaWebShop
 {
@@ -34,7 +35,9 @@ namespace etnokeramikaWebShop
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
+            if(bool.Parse(ConfigurationManager.AppSettings["useSSL"]))
+                if (!HttpContext.Current.Request.IsSecureConnection && !HttpContext.Current.Request.IsLocal)
+                    Response.Redirect("https://" + Request.ServerVariables["HTTP_HOST"] + HttpContext.Current.Request.RawUrl);
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)

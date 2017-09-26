@@ -29,11 +29,20 @@ namespace etnokeramikaWebShop
             if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 new WishListBL().SaveProductToWishList(int.Parse(Membership.GetUser().ProviderUserKey.ToString()), productID);
+                return GetWishListCount();
             }
             else
                 //throw new Exception("Not loggedin");
                 return "Not loggedin";
             return "rewrer";
+        }
+
+        [WebMethod()]
+        public static string GetWishListCount()
+        {
+            if(HttpContext.Current.User.Identity.IsAuthenticated)
+                return new WishListBL().GetWishListProducts(int.Parse(Membership.GetUser().ProviderUserKey.ToString())).Count.ToString();
+            return "0";
         }
 
         [WebMethod()]

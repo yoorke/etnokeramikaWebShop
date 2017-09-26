@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="product_fp.ascx.cs" Inherits="etnokeramikaWebShop.userControls.product_fp" %>
 <div class="product-fp">
     <div class="wrapper">
-        <asp:LinkButton ID="btnDeleteFromWishList" runat="server" CssClass="btn_deleteFromWishList" OnClick="btnDeleteFromWishList_Click" Visible="false"><span class="glyphicon glyphicon-remove"></span></asp:LinkButton>
+        <asp:LinkButton ID="btnDeleteFromWishList" runat="server" CssClass="btn-deleteFromWishList" OnClick="btnDeleteFromWishList_Click" Visible="false"><span class="glyphicon glyphicon-remove"></span></asp:LinkButton>
         <asp:HyperLink ID="lnkEditProduct" runat="server" CssClass="btn_editProduct" Visible="false" Target="_blank" ToolTip="Izmeni proizvod"></asp:HyperLink>
         <div class="photo">
             <asp:HyperLink ID="lnkPhoto" runat="server">
@@ -36,7 +36,7 @@
             <asp:HyperLink ID="lblDetails" runat="server" CssClass="btn-details"><span>Detalji</span></asp:HyperLink>
             <%--<asp:LinkButton ID="btnCompare" runat="server" Text="Uporedi" CssClass="btn_compare" OnClientClick="function(){ $('#messageBoxCompare').show()}"></asp:LinkButton>--%>
             <button type="button" id="btnCompare" class="ws-btn btn-icon btn-compare" onclick="AddToCompare(event, '<%=lblProductID.ClientID %>')" data-toggle="tooltip" data-placement="bottom" title="Uporedi"><span class="fa fa-fw fa-square-o"></span></button>
-            <button type="button" id="btnWishList" class="ws-btn btn-icon btn-wishlist" data-toggle="tooltip" data-placement="bottom" title="Ubaci u listu želja" onclick="AddToWishList('<%=lblProductID.ClientID %>')"><span class="fa fa-fw fa-heart-o"></span></button>
+            <button type="button" id="btnWishList" class="ws-btn btn-icon btn-wishlist" data-toggle="tooltip" data-placement="bottom" title="Ubaci u listu želja" onclick="AddToWishList(event, '<%=lblProductID.ClientID %>')"><span class="fa fa-fw fa-heart-o"></span></button>
             
         </div><!--buttons-->
         <asp:HiddenField ID="lblProductID" runat="server" />
