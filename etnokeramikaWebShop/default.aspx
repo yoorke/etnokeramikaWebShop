@@ -4,8 +4,8 @@
 <%@ Register Src="~/userControls/Banner.ascx" TagName="Banner" TagPrefix="ws" %>
 <%@ Register Src="~/userControls/product_slider.ascx" TagName="ProductSlider" TagPrefix="ws" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="<%=ResolveUrl("~/css/mainMenuVerticalV2.min.css") %>" rel="stylesheet" />
-    <link href="<%=ResolveUrl("/css/camera_bundle.min.css") %>" rel="stylesheet" />
+    <link href="<%# ResolveUrl("~/css/mainMenuVerticalV2.min.css") %>" rel="stylesheet" />
+    <link href="<%# ResolveUrl("/css/camera_bundle.min.css") %>" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">

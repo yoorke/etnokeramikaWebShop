@@ -17,7 +17,9 @@ namespace etnokeramikaWebShop
             if (!Page.IsPostBack)
             { 
                 loadCategories();
+                Page.Header.DataBind();
             }
+            insertFacebookTags();
         }
 
         private void loadCategories()
