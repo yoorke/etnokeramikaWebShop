@@ -6825,6 +6825,10 @@ margin-bottom-1 {
 .header .logo a:hover {
   color: #cc4422;
 }
+.header .search-box {
+  height: 86px;
+  padding-top: 1em;
+}
 .header .header-box {
   width: 100%;
 }
@@ -7493,7 +7497,7 @@ header {
 }
 .cd-dropdown {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
@@ -7523,7 +7527,7 @@ header {
   position: relative;
   z-index: 1;
   color: #eeeeee;
-  background-color: #175e87;
+  background-color: #cc4422;
   border-bottom: 1px solid #242643;
   margin: 0;
 }

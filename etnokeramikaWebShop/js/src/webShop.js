@@ -126,14 +126,19 @@ $(document).click(function (e) {
 })
 
 $(document).ready(function () {
-    if ($(location).pathname == '/'){
+    if ($(location)[0].pathname == '/'){
         if ($(window).width() >= 1024) {
             $('.cd-dropdown').addClass('dropdown-is-active');
             $('.cd-dropdown-trigger').hide();
+            
         }
         else {
             $('.cd-dropdown-trigger').show();
+            $('.cd-dropdown-trigger').css({ "margin-top": "-40px", "width": "150px" });
+            if ($(window).width() < 751) {
+                $('.cd-dropdown-trigger').css({ "margin-top": "-54px", "line-height": "54px" });
             }
+        }
     }
 })
 
