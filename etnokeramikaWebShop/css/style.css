@@ -6927,6 +6927,12 @@ margin-bottom-1 {
   width: 100%;
   text-align: center;
 }
+.main-content .fp-description {
+  font-style: italic;
+  margin: 1em 0;
+  text-align: justify;
+  font-size: 1.1em;
+}
 .footer .top {
   background-color: #fff;
   border-top: 3px solid #cc4422;
@@ -10857,7 +10863,7 @@ header {
 }
 body {
   font-family: 'Roboto', Arial;
-  background: url('../images/wrapper-background.jpg') no-repeat top fixed;
+  background: url('../images/wrapper-background.jpg') no-repeat bottom fixed;
 }
 body h1,
 body h2 {

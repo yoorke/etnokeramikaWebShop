@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using eshopBL;
 using etnokeramikaWebShop.userControls;
+using System.Web.UI.HtmlControls;
 
 namespace etnokeramikaWebShop
 {
@@ -38,6 +39,27 @@ namespace etnokeramikaWebShop
                 ((Literal)productSlider.FindControl("lblCarousel")).Text = @"<div id=" + "carousel" + ((HiddenField)e.Item.FindControl("lblCategoryID")).Value + @" class=""carousel slide"" data-ride="""" runat=""server"">";
                 ((Literal)productSlider.FindControl("lblCarouselClose")).Text = "</div>";
             }
+        }
+
+        private void insertFacebookTags()
+        {
+            List<HtmlMeta> tags = new FacebookHandler().CreateFacebookTags("Etnokeramika - ručno pravljeno keramičko posuđe",
+                                                                           "website", "https://www.etnokeramika.com",
+                                                                           "https://www.etnokeramika.com/images/etnokeramika.jpg",
+                                                                           "Etnokeramika - ručno pravljeno keramičko posuđe",
+                                                                           "Na našim stranicama ćete pronaći sve ono što vam je" +
+                                                                           " neophodno za pripremanje hrane po starim i tradicionalnim" +
+                                                                           " receptima. Osim što je ukus jela pripremljenih u keramičkom" +
+                                                                           " posuđu nemerljiv u poređenju sa jelima pripremljenim u" +
+                                                                           " posuđu od veštačkih materijala, ne treba zaboraviti činjenicu" +
+                                                                           " koliko dugo hrana čuvana u keramici ostaje topla i sveža." +
+                                                                           " Naše posuđe osim unikatnih, ručno iscrtanih motiva," +
+                                                                           " pleni kvalitetnom glazurom kao važnim momentom" +
+                                                                           " koji ovim predmetima i poduđu daje trajnost.",
+                                                                           "https://www.etnokeramika.com");
+
+            foreach (HtmlMeta tag in tags)
+                Header.Controls.Add(tag);
         }
     }
 }

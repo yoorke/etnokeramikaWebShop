@@ -32,6 +32,16 @@
             <ws:Banner ID="banner4" runat="server" Position="FP4" />
         </div>
     </div>
+    <div class="row fp-description">
+        <div class="col-md-12">
+            <p>
+                Na našim stranicama ćete pronaći sve ono što vam je neophodno za pripremanje hrane po starim i tradicionalnim receptima.
+                Osim što je ukus jela pripremljenih u keramičkom posuđu nemerljiv u poređenju sa jelima pripremljenim u posuđu od veštačkih materijala,
+                ne treba zaporaviti činjenicu koliko dugo hrana čuvana u keramici ostaje topla i sveža.
+                Naše posuđe, osim unikatnih, ručno iscrtanih motiva, pleni kvalitetnom glazurom kao važnim momentom koji ovim predmetima i posuđu daje trajnost.
+            </p>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-12">
             <asp:Repeater ID="rptCategories" runat="server" OnItemDataBound="rptCategories_ItemDataBound">
