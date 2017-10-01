@@ -6901,6 +6901,13 @@ margin-bottom-1 {
   color: #e8e8e8;
   font-weight: bold;
 }
+.master-menu-box .navbar-collapse {
+  margin-left: 50%;
+  text-align: right;
+}
+.master-menu-box .navbar-toggle {
+  z-index: 2;
+}
 .main-content .container {
   background-color: #fff;
 }

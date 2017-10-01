@@ -17,6 +17,8 @@ namespace etnokeramikaWebShop
                 ((Label)loginView.FindControl("lblUsername")).Text = Membership.GetUser().UserName;
             loadFooter();
             loadHeader();
+            if (!Page.IsPostBack)
+                Page.Header.DataBind();
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)

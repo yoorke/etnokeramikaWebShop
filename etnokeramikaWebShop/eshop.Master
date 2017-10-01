@@ -6,6 +6,15 @@
 
 <html>
 <head runat="server">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39015584-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+
+        gtag('config', 'UA-39015584-1');
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Etnokeramika - ručno pravljeno keramičko i zemljano posuđe</title>
@@ -70,7 +79,9 @@
                             </asp:Panel>
                         </div>
                     </div>
-                    <div class="col-sm-1 col-xs-1">
+                    <div class="col-xs-5 hidden-sm hidden-md hidden-lg"></div>
+                    <div class="col-sm-8 hidden-xs hidden-md hidden-lg"></div>
+                    <div class="col-sm-1 col-xs-2">
                         <div class="header-box padding-1-0">
                             <div class="icon-fp">
                                 <asp:HyperLink ID="lnkCompare" runat="server" NavigateUrl="/uporedi"><span class="fa fa-fw fa-balance-scale"></span></asp:HyperLink>
@@ -78,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-1 col-xs-1">
+                    <div class="col-sm-1 col-xs-2">
                         <div class="header-box padding-1-0">
                             <div class="icon-fp">
                                 <asp:HyperLink ID="lnkWishlist" runat="server" NavigateUrl="/lista-zelja"><span class="fa fa-fw fa-heart"></span></asp:HyperLink>
@@ -87,7 +98,7 @@
                         </div>
                     </div>
                     <!--cart-->
-                    <div class="col-sm-2 col-xs-2">
+                    <div class="col-sm-2 col-xs-3">
                         <div class="header-box padding-1-0">
                             <div class="cart-fp" onclick="ShowCartFpContainer('cartButton')" id="btnCartFp">
                                 <span class="fa fa-fw fa-shopping-cart"></span>
