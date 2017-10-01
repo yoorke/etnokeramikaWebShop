@@ -10,88 +10,98 @@
     <%--<link rel="stylesheet" href="<%=ResolveUrl("~/css/jquery.bxslider.min.css") %>" />--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2 product-filter">
-        <%--<h2>Kategorija</h2>
-        <div class="filterBox">
-            <asp:CheckBoxList ID="chkCategory" runat="server" AutoPostBack="true" OnSelectedIndexChanged="chkCategory_SelectedIndexChanged"></asp:CheckBoxList>
-        </div>--%>
-        <div id="filterBrandsDiv" runat="server">
-            <h2 id="brandLabel" runat="server">Proizvođač</h2>
-            <div class="filter-box">
-                <asp:CheckBoxList ID="chkBrands" runat="server" OnSelectedIndexChanged="chkBrands_SelectedIndexChanged"></asp:CheckBoxList>
-            </div>
-        </div>
-
-        <h2>Cena</h2>
-        <div class="filter-box">
-            <label class="before">Od:</label><asp:DropDownList ID="cmbPriceFrom" runat="server" OnSelectedIndexChanged="cmbPriceFrom_SelectedIndexChanged"></asp:DropDownList><label><small>din</small></label><br />
-            <label class="before">Do:</label><asp:DropDownList ID="cmbPriceTo" runat="server" OnSelectedIndexChanged="cmbPriceTo_SelectedIndexChanged"></asp:DropDownList><label><small>din</small></label>
-        </div>
-        <asp:Repeater ID="rptFilter" runat="server">
-            <ItemTemplate>
-                <h2><asp:Literal ID="lblFilterName" runat="server" Text='<%#Eval("nameScreen") %>'></asp:Literal></h2>
-                <asp:HiddenField ID="lblAttributeID" runat="server" Value='<%#Eval("attributeID") %>' />
-                <div class="filter-box">
-                    <asp:CheckBoxList ID="chkValues" runat="server" DataSource='<%#Eval("values") %>' DataTextField="value" DataValueField="attributeValueID" OnSelectedIndexChanged="chkValues_SelectedIndexChanged"></asp:CheckBoxList>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
+    <div class="row">
+        <div class="col-xs-12"></div>
     </div>
-    <div class="col-xs-7 col-sm-10 col-md-10, col-lg-10 margin-top-1 products">
-        <slider:Slider ID="slider" runat="server" />
-        <ProductSlider:ProductSlider ID="productSlider" runat="server" Visible="false" />
-        <div class="row category-description">
-            <div class="col-md-12 padding-0">
-                <asp:Label ID="lblCategoryDescription" runat="server"></asp:Label>
-            </div>
-        </div>
-        <div class="row product-pager">
-            <div class="col-lg-5">
-                <pager:Pager ID="pgrPager" runat="server" OnOnClick="pgrPages_Click" />
-            </div>
-            <div class="col-lg-7">
-                <div class="row sort">
-                    <div class="col-sm-6 col-xs-12">
-                        <div role="form" class="form-horizontal">
-                            <div class="form-group">
-                                <label for="cmbPageSize" class="col-xs-8 padding-left-0 control-label">Po stranici:</label>
-                                <div class="col-xs-4 padding-left-0">
-                                    <asp:DropDownList ID="cmbPageSize" runat="server" OnSelectedIndexChanged="cmbPageSize_SelectedIndexChanged" CssClass="form-control"></asp:DropDownList>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xs-12">
-                        <div role="form" class="form-horizontal">
-                            <div class="form-group">
-                                <label for="cmbSort" class="col-xs-5 padding-left-0 control-label">Sort:</label>
-                                <div class="col-xs-7 padding-left-0">
-                                    <asp:DropDownList ID="cmbSort" runat="server" OnSelectedIndexChanged="cmbSort_SelectedIndexChanged" CssClass="pull-right form-control"></asp:DropDownList>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="row">
+        <div class="product-filter">
+            <%--<h2>Kategorija</h2>
+            <div class="filterBox">
+                <asp:CheckBoxList ID="chkCategory" runat="server" AutoPostBack="true" OnSelectedIndexChanged="chkCategory_SelectedIndexChanged"></asp:CheckBoxList>
+            </div>--%>
+            <div id="filterBrandsDiv" runat="server">
+                <h2 id="brandLabel" runat="server">Proizvođač</h2>
+                <div class="filter-box">
+                    <asp:CheckBoxList ID="chkBrands" runat="server" OnSelectedIndexChanged="chkBrands_SelectedIndexChanged"></asp:CheckBoxList>
                 </div>
             </div>
-        </div>
-        <div class="row status" id="divStatus" runat="server" visible="false">
-            <div class="col-lg-12">
-                Nema proizvoda za traženi filter
+
+            <h2>Cena</h2>
+            <div class="filter-box">
+                <label class="before">Od:</label><asp:DropDownList ID="cmbPriceFrom" runat="server" OnSelectedIndexChanged="cmbPriceFrom_SelectedIndexChanged"></asp:DropDownList><label><small>din</small></label><br />
+                <label class="before">Do:</label><asp:DropDownList ID="cmbPriceTo" runat="server" OnSelectedIndexChanged="cmbPriceTo_SelectedIndexChanged"></asp:DropDownList><label><small>din</small></label>
             </div>
-        </div>
-        <div class="row product_box padding-left-05 padding-right-05">
-            <asp:Repeater ID="rptProducts" runat="server">
+            <asp:Repeater ID="rptFilter" runat="server">
                 <ItemTemplate>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding-left-0 padding-right-0 margin-top-05">
-                        <product_fp:Product_fp ID="product_fp" runat="server" ProductItem='<%#Container.DataItem %>' />
+                    <h2><asp:Literal ID="lblFilterName" runat="server" Text='<%#Eval("nameScreen") %>'></asp:Literal></h2>
+                    <asp:HiddenField ID="lblAttributeID" runat="server" Value='<%#Eval("attributeID") %>' />
+                    <div class="filter-box">
+                        <asp:CheckBoxList ID="chkValues" runat="server" DataSource='<%#Eval("values") %>' DataTextField="value" DataValueField="attributeValueID" OnSelectedIndexChanged="chkValues_SelectedIndexChanged"></asp:CheckBoxList>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-        <div class="row product-pager">
-            <div class="col-lg-5">
-                <pager:Pager ID="pgrPager1" runat="server" OnOnClick="pgrPages_Click" />
-                <asp:HiddenField ID="lblPageIndex" runat="server" />
+        <div class="col-xs-12 col-sm-9 col-md-10, col-lg-10 margin-top-1 products">
+            <slider:Slider ID="slider" runat="server" />
+            <ProductSlider:ProductSlider ID="productSlider" runat="server" Visible="false" />
+            <div class="row category-description">
+                <div class="col-md-12 padding-0">
+                    <asp:Label ID="lblCategoryDescription" runat="server"></asp:Label>
+                </div>
+            </div>
+            <div class="row product-pager">
+                <div class="col-lg-5">
+                    <pager:Pager ID="pgrPager" runat="server" OnOnClick="pgrPages_Click" />
+                </div>
+                <div class="col-lg-7">
+                    <div class="row sort">
+                        <div class="col-sm-6 col-xs-12">
+                            <div role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="cmbPageSize" class="col-xs-8 control-label">Po stranici:</label>
+                                    <div class="col-xs-4 padding-left-0">
+                                        <asp:DropDownList ID="cmbPageSize" runat="server" OnSelectedIndexChanged="cmbPageSize_SelectedIndexChanged" CssClass="form-control"></asp:DropDownList>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="cmbSort" class="col-xs-5 control-label">Sort:</label>
+                                    <div class="col-xs-7 padding-left-0">
+                                        <asp:DropDownList ID="cmbSort" runat="server" OnSelectedIndexChanged="cmbSort_SelectedIndexChanged" CssClass="pull-right form-control"></asp:DropDownList>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row status" id="divStatus" runat="server" visible="false">
+                <div class="col-lg-12">
+                    Nema proizvoda za traženi filter
+                </div>
+            </div>
+            <div class="row filter-btn hidden-sm hidden-md hidden-lg">
+                <div class="col-xs-12">
+                    <button type="button" class="btn btn-default width-100" onclick="ShowFilter()"><span class="fa fa-fw fa-filter"></span> Filter</button>
+                </div>
+            </div>
+            <div class="row product_box padding-left-05 padding-right-05">
+                <asp:Repeater ID="rptProducts" runat="server">
+                    <ItemTemplate>
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 padding-left-0 padding-right-0 margin-top-05">
+                            <product_fp:Product_fp ID="product_fp" runat="server" ProductItem='<%#Container.DataItem %>' />
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+            <div class="row product-pager">
+                <div class="col-lg-5">
+                    <pager:Pager ID="pgrPager1" runat="server" OnOnClick="pgrPages_Click" />
+                    <asp:HiddenField ID="lblPageIndex" runat="server" />
+                </div>
             </div>
         </div>
     </div>
@@ -137,6 +147,8 @@
                     //thumbnails:true
                 //})
             //}
+
+            setFilter();
         })
 
         function createQueryString() {
@@ -189,6 +201,39 @@
             if (href.indexOf('?') > 0)
                 href = href.substring(0, href.indexOf('?'));
             window.location = href + (queryString.length > 0 ? ('?' + encodeURI(queryString)) : '');
+        }
+
+        function setFilter() {
+            $('.product-filter').removeClass('col-sm-3 col-md-2 col-lg-2');
+
+            if ($(window).width() > 768) {
+                $('.product-filter').addClass('col-sm-3 col-md-2 col-lg-2');
+                $('.product-filter').css('position', 'inherit');
+                //$('.product-filter').position({ top: 0, left: 0 });
+            }
+            else {
+                $('.product-filter').css('position', 'absolute');
+                $('.product-filter').offset({ top: $('.product_box').offset().top, left: -180 });
+                
+            }
+        }
+
+        $(window).resize(function () {
+            setFilter();
+        })
+
+        function ShowFilter() {
+            $('.product-filter').offset({ top: $('.product_box').offset().top, left: $('.product-filter').offset().left });
+            $('.product-filter').removeClass('product-filter-xs-visible');
+            //$('.product-filter').show();
+            if ($('.product-filter').offset().left == -180){
+                
+                $('.product-filter').offset({ top: $('.product_box').offset().top, left: 0 });
+                $('.product-filter').addClass('product-filter-xs-visible');
+            }
+            else {
+                $('.product-filter').offset({ top: $('.product_box').offset().top, left: -180 });
+            }
         }
     </script>
     <%--<script src="<%=ResolveUrl("~/js/jquery.bxslider.min.js") %>"></script>
