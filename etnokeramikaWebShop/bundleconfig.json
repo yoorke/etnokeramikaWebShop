@@ -52,7 +52,8 @@
       "js/src/modernizr.js",
       "js/src/jquery.menu-aim.js",
       "js/src/main.js",
-      "js/src/tooltipStart.js"
+      "js/src/tooltipStart.js",
+      "js/src/webShop.js"
       //"js/src/jquery.tmpl.min.js"
       
     ],

@@ -22,7 +22,11 @@
                         <ItemTemplate>
                             <li id="secondLi" runat="server">
                                 <asp:HyperLink ID="lnkSubMenu" runat="server" NavigateUrl='<%# ResolveUrl("~" + Eval("url")) %>'>
-                                    <asp:Image ID="imgCategory" runat="server" ImageUrl='<%# ResolveUrl("~" + Eval("imageUrl")) %>' CssClass="menu-img" Visible='<%#Eval("imageUrl").ToString() != string.Empty %>' />
+                                    <asp:HiddenField ID="lblImageUrlSource" runat="server" Value='<%#Eval("imageUrlSource") %>'></asp:HiddenField>
+                                    <asp:HiddenField ID="lblImageUrlPositionX" runat="server" Value='<%#Eval("imageUrlPositionX") %>' />
+                                    <asp:HiddenField ID="lblImageUrlPositionY" runat="server" Value='<%#Eval("imageUrlPositionY") %>' />
+                                    <span id="imgSprite" runat="server" class="img-sprite" visible='<%#Eval("imageUrlSource").ToString().Equals("1") %>' style=""></span>
+                                    <asp:Image ID="imgCategory" runat="server" ImageUrl='<%# ResolveUrl("~" + Eval("imageUrl")) %>' CssClass="menu-img" Visible='<%#Eval("imageUrl").ToString() != string.Empty && Eval("imageUrlSource").ToString().Equals("0") %>' />
                                     <asp:Label ID="lblName" runat="server" Text='<%#Eval("name") %>'></asp:Label>
                                 </asp:HyperLink>
                                         

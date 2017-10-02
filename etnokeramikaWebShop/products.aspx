@@ -113,6 +113,7 @@
     <script src="<%=ResolveUrl("~/js/slider.min.js") %>"></script>
     <script>
         $(document).ready(function () {
+            
             $('[id*=chkBrands] input').click(function () {
                 //alert(this);
                 $('#ctl00_ContentPlaceHolder1_lblPageIndex').val('');
@@ -148,6 +149,10 @@
                 //})
             //}
 
+            //setTimeout(setFilter(), 2000);
+        })
+
+        $(window).load(function () {
             setFilter();
         })
 
