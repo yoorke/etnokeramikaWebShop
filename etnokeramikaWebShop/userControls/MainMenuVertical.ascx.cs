@@ -39,6 +39,17 @@ namespace etnokeramikaWebShop.userControls
                     ((HtmlControl)e.Item.FindControl("secondLi")).Attributes["class"] = "has-children";
                     
                 }
+
+                string imageUrlSource = ((HiddenField)e.Item.FindControl("lblImageUrlSource")).Value;
+                string imageUrl = ((Image)e.Item.FindControl("imgCategory")).ImageUrl;
+                int imageUrlPositionX = int.Parse(((HiddenField)e.Item.FindControl("lblImageUrlPositionX")).Value);
+                int imageUrlPositionY = int.Parse(((HiddenField)e.Item.FindControl("lblImageUrlPositionY")).Value);
+
+                if(imageUrlSource.Equals("1"))
+                {
+                    string style = "background:url('.." + imageUrl + "') " + imageUrlPositionX.ToString() + "px " + imageUrlPositionY.ToString() + "px";
+                    ((HtmlControl)e.Item.FindControl("imgSprite")).Attributes.Add("style", style);
+                }
             }
         }
     }

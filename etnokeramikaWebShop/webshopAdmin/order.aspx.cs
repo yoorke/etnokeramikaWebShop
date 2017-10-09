@@ -146,7 +146,7 @@ namespace webshopAdmin
             newRow["delivery"] = lblDelivery.Text;
             newRow["total"] = lblTotal.Text;
             newRow["code"] = lblCode.Text;
-            newRow["deliveryPrice"] = double.Parse(lblTotal.Text) > 10000 ? 0 : 350;
+            newRow["deliveryPrice"] = double.Parse(lblTotal.Text) > double.Parse(ConfigurationManager.AppSettings["freeDeliveryTotalValue"]) ? 0 : double.Parse(ConfigurationManager.AppSettings["deliveryCost"]);
             print.Tables[0].Rows.Add(newRow);
 
             for (int i = 0; i < dgvItems.Rows.Count; i++)

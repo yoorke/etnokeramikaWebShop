@@ -30,7 +30,7 @@
                     <asp:TemplateField HeaderText="Naziv">
                         <ItemTemplate>
                             <asp:HyperLink ID="lnkProduct" runat="server" NavigateUrl='<%# "/proizvodi/" + eshopBE.Product.CreateFriendlyUrl(Eval("categoryName") + "/" + Eval("brandName") + " " + Eval("name") + "-" + Eval("productID")) %>'>
-                            <asp:Label ID="lblBrand" runat="server" Text='<%#Eval(ConfigurationManager.AppSettings["productFP_Line1"]) + " " + Eval(ConfigurationManager.AppSettings["productFP_Line2"])%>'></asp:Label>
+                            <asp:Label ID="lblBrand" runat="server" Text='<%#Eval(ConfigurationManager.AppSettings["productFP_Line1"]) + " " + Eval(ConfigurationManager.AppSettings["productFP_Line2"]) + ", " + Eval("code")%>'></asp:Label>
                             </asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>

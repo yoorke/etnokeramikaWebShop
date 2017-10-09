@@ -192,7 +192,7 @@ namespace etnokeramikaWebShop.userControls
             taxBase = discount / 1.2;
             tax = discount - taxBase;
 
-            delivery = rdbDelivery.SelectedValue == "2" ? (cartTotal > 5000) ? 0 : 200 : 0;
+            delivery = rdbDelivery.SelectedValue != "2" ? ((cartTotal > double.Parse(ConfigurationManager.AppSettings["freeDeliveryTotalValue"])) ? 0 : double.Parse(ConfigurationManager.AppSettings["deliveryCost"])) : 0;
 
             total = discount + delivery;
             saving = cartTotal - discount;

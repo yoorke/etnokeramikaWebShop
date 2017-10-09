@@ -271,7 +271,7 @@
                                                         <div id="showDeliveryInfo" class="margin-top-2" style="display:block" runat="server">
                                                             <ul class="margin-left-1">
                                                                 <li><small>Za porudžbine preko 5.000,00 dinara dostava je BESPLATNA.</small></li>
-                                                                <li><small>Za porudžbine čija vrednost ne prelazi 5.000,00 dinara naplaćuje se dostava po cenovniku kurirske službe.</small></li>
+                                                                <li><small>Za porudžbine čija vrednost ne prelazi 5.000,00 dinara naplaćuje se dostava u iznosu od 300 din.</small></li>
                                                             </ul>
                                                         </div>
                                                         <div id="showShop" class="margin-top-2" runat="server" style="display:none">
