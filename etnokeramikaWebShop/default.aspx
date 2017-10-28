@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 padding-left-0 padding-right-0">
+        <%--<div class="col-md-4 padding-left-0 padding-right-0">
             <ws:Banner ID="banner1" runat="server" Position="FP1" />
         </div>
         <div class="col-md-4 padding-left-0 padding-right-0">
@@ -25,12 +25,12 @@
         </div>
         <div class="col-md-4 padding-left-0 padding-right-0">
             <ws:Banner ID="banner3" runat="server" Position="FP3" />
-        </div>
+        </div>--%>
     </div>
     <div class="row">
-        <div class="col-md-12 padding-left-0 padding-right-0">
+        <%--<div class="col-md-12 padding-left-0 padding-right-0">
             <ws:Banner ID="banner4" runat="server" Position="FP4" />
-        </div>
+        </div>--%>
     </div>
     <div class="row fp-description">
         <div class="col-md-12">

@@ -31,42 +31,6 @@ namespace etnokeramikaWebShop {
         protected global::etnokeramikaWebShop.userControls.Slider slider;
         
         /// <summary>
-        /// banner1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.Banner banner1;
-        
-        /// <summary>
-        /// banner2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.Banner banner2;
-        
-        /// <summary>
-        /// banner3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.Banner banner3;
-        
-        /// <summary>
-        /// banner4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.Banner banner4;
-        
-        /// <summary>
         /// rptCategories control.
         /// </summary>
         /// <remarks>

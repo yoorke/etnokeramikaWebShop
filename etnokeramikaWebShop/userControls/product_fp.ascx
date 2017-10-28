@@ -18,13 +18,13 @@
             <asp:Label ID="lblPrice" runat="server" CssClass="price" Visible="false">312</asp:Label>
             <span class="price_label">din</span>
         </div><!--price_div-->
-        <div class="webprice_div" id="webprice_div">
+        <div class="webprice_div">
             <asp:Label ID="lblCode" runat="server" CssClass="code hidden-sm hidden-xs" ToolTip="Šifra proizvoda"></asp:Label>
             <span class="webprice_label"></span>
             <asp:Label ID="lblWebPrice" runat="server">12313,12</asp:Label>
             <span class="webprice-label">RSD</span>
         </div>
-        <div class="saving_div" runat="server" id="saving_div">
+        <div class="saving_div" runat="server">
             <%--<span class="saving_label">Ušteda</span>--%>
             <asp:Label ID="lblSaving" runat="server" CssClass="saving" Visible="false">3213,32</asp:Label>
             <%--<span class="saving_label">din</span>--%>
