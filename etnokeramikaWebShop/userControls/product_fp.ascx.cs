@@ -113,6 +113,13 @@ namespace etnokeramikaWebShop.userControls
                 lnkEditProduct.NavigateUrl = "/administrator/product.aspx?id=" + _product.ProductID;
             }
             lblName.ToolTip = _product.Name;
+
+            if (!_product.IsInStock)
+            { 
+                btnCartAjax.Attributes.Add("disabled", "true");
+                btnCartAjax.Attributes.Add("class", "ws-btn btn-cart not-in-stock");
+                divNis.Style.Add("display", "block");
+            }
         }
 
         protected void btnCart_Click(object sender, EventArgs e)

@@ -113,6 +113,16 @@ namespace etnokeramikaWebShop
             loadProductSliders(product.Categories[0]);
 
             divUputstvo.Visible = ConfigurationManager.AppSettings["categoryManual"].Contains(product.Categories[0].Url.ToLower()) ? true : false;
+
+            txtAvailability.Text = product.IsInStock ? "NA STANJU" : "NEMA NA STANJU";
+
+            if (!product.IsInStock)
+            { 
+                btnCartAjax.Attributes.Add("disabled", "true");
+                btnCartAjax.Attributes.Add("class", "ws-btn btn-cart not-in-stock");
+                divNis.Style.Add("display", "block");
+                txtDelivery.Text = "-";
+            }
         }
 
         protected void btnCart_Click(object sender, EventArgs e)

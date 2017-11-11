@@ -19,6 +19,9 @@
         <!--images, name, price-->
         <div class="row">
             <div class="col-sm-5">
+                <div class="nis-cont" id="divNis" runat="server" style="display:none">
+                    <span class="nis-label">Nema na stanju</span>
+                </div>
                 <uc1:ProductImages ID="priProductImages" runat="server" />
                 <asp:Image ID="imgPromotion" runat="server" Visible="false" CssClass="imgPromotion" />
             </div><!--col-->
@@ -61,7 +64,7 @@
                         <div class="web-price-div"><p class="web-price margin-bottom-0" id="webPriceDiv" runat="server"><asp:Label ID="lblWebPrice" runat="server" Text="99.890 din"></asp:Label><span class="web-price-label"> RSD</span></p></div>
                         <div class="saving-div"><p id="savingDiv" runat="server"><asp:Label ID="lblSaving" runat="server" Text="Ušteda: 2.548,00 din"></asp:Label><span class="saving-label"></span></p></div>
                         <!--<asp:Button ID="btnCart" runat="server" CssClass="btnAddToCart" Text="Dodaj u korpu" OnClick="btnCart_Click" />-->
-                        <button type="button" id="btnCart" class="ws-btn btn-cart" onclick="AddToCart('<%=lblProductID.ClientID %>')"><span class="fa fa-fw fa-shopping-cart"></span><span>Dodaj u korpu</span></button>
+                        <button type="button" id="btnCartAjax" class="ws-btn btn-cart" onclick="AddToCart('<%=lblProductID.ClientID %>')" runat="server"><span class="fa fa-fw fa-shopping-cart"></span><span>Dodaj u korpu</span></button>
                     </div>
                 </div><!--row-->
                 <div class="row icons margin-top-05">

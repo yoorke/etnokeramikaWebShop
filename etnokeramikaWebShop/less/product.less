@@ -1,50 +1,92 @@
-﻿.product{
-    padding-top:1em;
+﻿.product {
+    padding-top: 1em;
 
-    h1{
-        font-size:2em;                
+    h1 {
+        font-size: 2em;
     }
 
-    h2{
-        font-size:1.2em;
-        color:lighten(@text-color, 10%);        
-        margin-bottom:1em;
+    h2 {
+        font-size: 1.2em;
+        color: lighten(@text-color, 10%);
+        margin-bottom: 1em;
     }
 
-    img.main-image{
-        margin:auto;
+    img.main-image {
+        margin: auto;
     }
 
-    .web-price{
-        font-size:1.5em;
-        color:@brand-primary;
-        font-weight:bold;
+    .web-price {
+        font-size: 1.5em;
+        color: @brand-primary;
+        font-weight: bold;
 
-        .web-price-label{
-            color:lighten(@brand-primary, 20%);
-            font-size:0.7em;
+        .web-price-label {
+            color: lighten(@brand-primary, 20%);
+            font-size: 0.7em;
         }
     }
 
-    .price-div{
-        min-height:20px;
+    .price-div {
+        min-height: 20px;
     }
 
-    .saving-div{
-        min-height:20px;
+    .saving-div {
+        min-height: 20px;
     }
 
-    .img-zoom{
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:315px;
-        background-color:#fff;
-        display:none;
-        border:1px solid @default-gray;
-        z-index:999;
+    .img-zoom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 315px;
+        background-color: #fff;
+        display: none;
+        border: 1px solid @default-gray;
+        z-index: 999;
     }
+
+    .not-in-stock {
+        background-color: #999;
+    }
+
+    .nis-cont {
+        top: 42px;
+        left: 59px;
+    }
+
+    .nis-cont:before {
+        width: 170px;
+    }
+}
+
+.nis-cont {
+    display: block;
+    position: absolute;
+    z-index: 9;
+    padding: 10px;
+    transform: rotate(-45deg);
+    color: #4a4a4a;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+
+    span {
+        display: block;
+        margin-top: -20px;
+        line-height: 20px;
+    }
+}
+
+.nis-cont:before {
+    border-bottom: 20px solid #cacc22;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    
 }
 
 .products{

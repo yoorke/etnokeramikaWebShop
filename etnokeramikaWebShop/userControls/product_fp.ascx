@@ -4,6 +4,9 @@
         <asp:LinkButton ID="btnDeleteFromWishList" runat="server" CssClass="btn-deleteFromWishList" OnClick="btnDeleteFromWishList_Click" Visible="false"><span class="glyphicon glyphicon-remove"></span></asp:LinkButton>
         <asp:HyperLink ID="lnkEditProduct" runat="server" CssClass="btn_editProduct" Visible="false" Target="_blank" ToolTip="Izmeni proizvod"></asp:HyperLink>
         <div class="photo">
+            <div class="nis-cont" id="divNis" runat="server" style="display:none">
+                <span>Nema na stanju</span>
+            </div>
             <asp:HyperLink ID="lnkPhoto" runat="server">
                 <asp:Image ID="imgPhoto" runat="server" ImageUrl="~/images/no-image.jpg" CssClass="img-responsive" />
             </asp:HyperLink>
@@ -31,7 +34,7 @@
         </div>
         <div class="buttons">
             <%--<asp:LinkButton ID="btnCart" runat="server" CssClass="btn_cart" OnClick="btnCart_Click" Text=""></asp:LinkButton>--%>
-            <button type="button" id="btnCart" class="ws-btn btn-cart" onclick="AddToCart('<%=lblProductID.ClientID %>')"><span class="fa fa-fw fa-shopping-cart"></span><span> Dodaj u korpu</span></button>
+            <button type="button" id="btnCartAjax" class="ws-btn btn-cart" onclick="AddToCart('<%=lblProductID.ClientID %>')" runat="server"><span class="fa fa-fw fa-shopping-cart"></span><span> Dodaj u korpu</span></button>
             <!--<asp:LinkButton ID="btnDetails" runat="server" Text="Detalji" CssClass="btn_details"></asp:LinkButton>-->
             <asp:HyperLink ID="lblDetails" runat="server" CssClass="btn-details"><span>Detalji</span></asp:HyperLink>
             <%--<asp:LinkButton ID="btnCompare" runat="server" Text="Uporedi" CssClass="btn_compare" OnClientClick="function(){ $('#messageBoxCompare').show()}"></asp:LinkButton>--%>

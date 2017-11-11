@@ -13,6 +13,15 @@ namespace etnokeramikaWebShop {
     public partial class product {
         
         /// <summary>
+        /// divNis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divNis;
+        
+        /// <summary>
         /// priProductImages control.
         /// </summary>
         /// <remarks>
@@ -155,6 +164,15 @@ namespace etnokeramikaWebShop {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCart;
+        
+        /// <summary>
+        /// btnCartAjax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnCartAjax;
         
         /// <summary>
         /// btnCompare control.
