@@ -17,7 +17,7 @@ namespace etnokeramikaWebShop
         {
             Master.FindControl("mainMenuVertical").Visible = true;
             txtLastname.Focus();
-            botDetect1.UserInputClientID = CaptchaCode.ClientID;
+            //botDetect1.UserInputClientID = CaptchaCode.ClientID;
         }
 
         protected void btnCreateUser_Click(object sender, EventArgs e)
@@ -44,6 +44,7 @@ namespace etnokeramikaWebShop
                             divRegistration.Visible = false;
                             divLoginMessage.Visible = true;
                             lblLoginText.InnerText = "Korisnički nalog je uspešno kreiran";
+                            //Page.Response.Redirect("~/");
                         }
                     }
                     else

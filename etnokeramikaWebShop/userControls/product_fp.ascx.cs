@@ -120,6 +120,8 @@ namespace etnokeramikaWebShop.userControls
                 btnCartAjax.Attributes.Add("class", "ws-btn btn-cart not-in-stock");
                 divNis.Style.Add("display", "block");
             }
+
+            btnCartAjax.Attributes.Add("onclick", "AddToCart('" + lblProductID.ClientID + "')");
         }
 
         protected void btnCart_Click(object sender, EventArgs e)

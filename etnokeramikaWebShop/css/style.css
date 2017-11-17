@@ -6605,6 +6605,19 @@ margin-bottom-1 {
 .uppercase {
   text-transform: uppercase;
 }
+.form-info {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+  padding: 0.2em;
+}
+.form-info-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+}
 .header .container {
   background-color: #fff;
 }

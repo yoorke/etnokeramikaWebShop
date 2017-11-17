@@ -185,6 +185,7 @@
     <Content Include="images\vaze-slider.jpg" />
     <Content Include="images\vinski-setovi-slider.jpg" />
     <Content Include="images\wrapper-background.jpg" />
+    <Content Include="js\src\registration.js" />
     <Content Include="retails.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\banner_cinije.jpg" />

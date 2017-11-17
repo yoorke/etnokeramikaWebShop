@@ -2839,7 +2839,7 @@ function AddToCart(lblProductID) {
 function GetCartItems() {
     $.ajax({
         type: 'POST',
-        url: 'WebMethods.aspx/GetCart',
+        url: '/WebMethods.aspx/GetCart',
         data: '',
         contentType: 'application/json;charset=utf-8',
         dataType: 'json',

@@ -64,7 +64,7 @@
                         <div class="web-price-div"><p class="web-price margin-bottom-0" id="webPriceDiv" runat="server"><asp:Label ID="lblWebPrice" runat="server" Text="99.890 din"></asp:Label><span class="web-price-label"> RSD</span></p></div>
                         <div class="saving-div"><p id="savingDiv" runat="server"><asp:Label ID="lblSaving" runat="server" Text="Ušteda: 2.548,00 din"></asp:Label><span class="saving-label"></span></p></div>
                         <!--<asp:Button ID="btnCart" runat="server" CssClass="btnAddToCart" Text="Dodaj u korpu" OnClick="btnCart_Click" />-->
-                        <button type="button" id="btnCartAjax" class="ws-btn btn-cart" onclick="AddToCart('<%=lblProductID.ClientID %>')" runat="server"><span class="fa fa-fw fa-shopping-cart"></span><span>Dodaj u korpu</span></button>
+                        <button type="button" id="btnCartAjax" class="ws-btn btn-cart" runat="server"><span class="fa fa-fw fa-shopping-cart"></span><span>Dodaj u korpu</span></button>
                     </div>
                 </div><!--row-->
                 <div class="row icons margin-top-05">

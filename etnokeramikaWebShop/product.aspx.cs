@@ -123,6 +123,8 @@ namespace etnokeramikaWebShop
                 divNis.Style.Add("display", "block");
                 txtDelivery.Text = "-";
             }
+
+            btnCartAjax.Attributes.Add("onclick", "AddToCart('" + lblProductID.ClientID + "')");
         }
 
         protected void btnCart_Click(object sender, EventArgs e)

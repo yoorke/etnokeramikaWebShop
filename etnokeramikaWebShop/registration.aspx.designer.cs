@@ -199,7 +199,7 @@ namespace etnokeramikaWebShop {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BotDetect.Web.UI.Captcha botDetect1;
+        protected global::BotDetect.Web.UI.WebFormsCaptcha botDetect1;
         
         /// <summary>
         /// CaptchaCode control.

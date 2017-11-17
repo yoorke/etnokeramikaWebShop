@@ -34,7 +34,7 @@
         </div>
         <div class="buttons">
             <%--<asp:LinkButton ID="btnCart" runat="server" CssClass="btn_cart" OnClick="btnCart_Click" Text=""></asp:LinkButton>--%>
-            <button type="button" id="btnCartAjax" class="ws-btn btn-cart" onclick="AddToCart('<%=lblProductID.ClientID %>')" runat="server"><span class="fa fa-fw fa-shopping-cart"></span><span> Dodaj u korpu</span></button>
+            <button type="button" id="btnCartAjax" class="ws-btn btn-cart" runat="server"><span class="fa fa-fw fa-shopping-cart"></span><span> Dodaj u korpu</span></button>
             <!--<asp:LinkButton ID="btnDetails" runat="server" Text="Detalji" CssClass="btn_details"></asp:LinkButton>-->
             <asp:HyperLink ID="lblDetails" runat="server" CssClass="btn-details"><span>Detalji</span></asp:HyperLink>
             <%--<asp:LinkButton ID="btnCompare" runat="server" Text="Uporedi" CssClass="btn_compare" OnClientClick="function(){ $('#messageBoxCompare').show()}"></asp:LinkButton>--%>
