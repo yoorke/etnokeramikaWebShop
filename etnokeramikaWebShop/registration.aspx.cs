@@ -45,6 +45,8 @@ namespace etnokeramikaWebShop
                             divLoginMessage.Visible = true;
                             lblLoginText.InnerText = "Korisnički nalog je uspešno kreiran";
                             //Page.Response.Redirect("~/");
+
+                            Common.SendUserCreatedConfirmationMail(txtEmail.Text, txtPassword.Text);
                         }
                     }
                     else

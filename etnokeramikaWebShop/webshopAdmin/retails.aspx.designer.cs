@@ -7,45 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace etnokeramikaWebShop {
+namespace WebShopAdmin.webshopAdmin {
     
     
-    public partial class _default {
+    public partial class retails {
         
         /// <summary>
-        /// mainMenuVertical control.
+        /// btnAddRetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.MainMenuVerticalV2 mainMenuVertical;
+        protected global::System.Web.UI.WebControls.Button btnAddRetail;
         
         /// <summary>
-        /// slider control.
+        /// customStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::etnokeramikaWebShop.userControls.Slider slider;
+        protected global::webshopAdmin.CustomStatus customStatus;
         
         /// <summary>
-        /// rptPromotions control.
+        /// dgvRetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptPromotions;
-        
-        /// <summary>
-        /// rptCategories control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptCategories;
+        protected global::System.Web.UI.WebControls.GridView dgvRetails;
     }
 }

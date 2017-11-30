@@ -17,6 +17,7 @@ namespace etnokeramikaWebShop
             if (!Page.IsPostBack)
             { 
                 loadCategories();
+                loadPromotions();
                 //Page.Header.DataBind();
             }
             insertFacebookTags();
@@ -26,6 +27,12 @@ namespace etnokeramikaWebShop
         {
             rptCategories.DataSource = new CategoryBL().GetCategoriesForFirstPage();
             rptCategories.DataBind();
+        }
+
+        private void loadPromotions()
+        {
+            rptPromotions.DataSource = new PromotionBL().GetPromotions(false, true, false);
+            rptPromotions.DataBind();
         }
 
         protected void rptCategories_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -62,6 +69,21 @@ namespace etnokeramikaWebShop
 
             foreach (HtmlMeta tag in tags)
                 Header.Controls.Add(tag);
+        }
+
+        protected void rptPromotions_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if(e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                product_slider productSlider = (product_slider)e.Item.FindControl("psPromotion");
+                productSlider.NumberOfProducts = 4;
+                productSlider.LgCols = 3;
+                productSlider.Products = new ProductBL().GetProductsForPromotion(int.Parse(((HiddenField)e.Item.FindControl("lblPromotionID")).Value));
+                ((Literal)productSlider.FindControl("lblPrev")).Text = @"<a id=""prev"" runat=""server"" href=" + "#carousel" + ((HiddenField)e.Item.FindControl("lblPromotionID")).Value + @" data-slide=""prev""><span class='fa fa-fw fa-chevron-circle-left direction-icon'></span></a>";
+                ((Literal)productSlider.FindControl("lblNext")).Text = @"<a id=""next"" runat=""server"" href=" + "#carousel" + ((HiddenField)e.Item.FindControl("lblPromotionID")).Value + @" data-slide=""next""><span class='fa fa-fw fa-chevron-circle-right direction-icon'></span></a>";
+                ((Literal)productSlider.FindControl("lblCarousel")).Text = @"<div id=" + "carousel" + ((HiddenField)e.Item.FindControl("lblPromotionID")).Value + @" class=""carousel slide"" data-ride="""" runat=""server"">";
+                ((Literal)productSlider.FindControl("lblCarouselClose")).Text = "</div>";
+            }
         }
     }
 }

@@ -44,6 +44,18 @@
     </div>
     <div class="row">
         <div class="col-md-12">
+            <asp:Repeater ID="rptPromotions" runat="server" OnItemDataBound="rptPromotions_ItemDataBound">
+                <ItemTemplate>
+                    <asp:HiddenField ID="lblPromotionID" runat="server" Value='<%#Eval("promotionID") %>' />
+                    <%--<asp:HiddenField ID="lblNumberOfProducts" runat="server" Value='<%#Eval("numberOfProducts") %>' />--%>
+                    <%--<asp:HiddenField ID="lblFirstPageOrderBy" runat="server" Value='<%#Eval("firstPageOrderBy") %>' />--%>
+                    <ws:ProductSlider ID="psPromotion" runat="server" />
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <asp:Repeater ID="rptCategories" runat="server" OnItemDataBound="rptCategories_ItemDataBound">
                 <ItemTemplate>
                     <asp:HiddenField ID="lblCategoryID" runat="server" Value='<%#Eval("categoryID") %>' />

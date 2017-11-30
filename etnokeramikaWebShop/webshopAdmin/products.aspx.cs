@@ -55,7 +55,7 @@ namespace webshopAdmin
             ProductBL productsBL = new ProductBL();
 
             //List<Product> products = productsBL.GetProducts(categoryID, supplierID, cmbApproved.SelectedItem.Text, cmbActive.SelectedItem.Text, brandID, promotionID, cmbSort.SelectedIndex > -1 ? cmbSort.SelectedValue : null);
-            DataTable products = productsBL.GetProductsDataTable(categoryID, supplierID, promotionID, brandID, cmbActive.SelectedItem.Text, cmbApproved.SelectedItem.Text, string.Empty);
+            DataTable products = productsBL.GetProductsDataTable(categoryID, supplierID, promotionID, brandID, cmbActive.SelectedItem.Text, cmbApproved.SelectedItem.Text, txtSearch.Text);
 
             //if (txtSearch.Text.Length > 0)
             //{

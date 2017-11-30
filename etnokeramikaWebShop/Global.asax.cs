@@ -6,6 +6,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Routing;
 using System.Configuration;
+using eshopBL;
 
 namespace etnokeramikaWebShop
 {
@@ -15,7 +16,8 @@ namespace etnokeramikaWebShop
         protected void Application_Start(object sender, EventArgs e)
         {
             ///new TransferImages().Start();
-            new CustomRoutes().RegisterRoutes(RouteTable.Routes);
+            //new CustomRoutes().RegisterRoutes(RouteTable.Routes);
+            new RoutesBL().RegisterRoutes();
         }
 
         protected void Session_Start(object sender, EventArgs e)
