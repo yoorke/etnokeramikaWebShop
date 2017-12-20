@@ -6618,6 +6618,9 @@ margin-bottom-1 {
   background-color: #f2dede;
   border: 1px solid #ebccd1;
 }
+.display-inline-block {
+  display: inline-block;
+}
 .header .container {
   background-color: #fff;
 }
