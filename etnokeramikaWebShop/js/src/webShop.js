@@ -123,6 +123,9 @@ $(document).click(function (e) {
     if ($('#compareFpContainer').is(':visible')) {
         $('#compareFpContainer').hide();
     }
+    if ($('#wishListFpContainer').is(':visible')) {
+        $('#wishListFpContainer').hide();
+    }
 })
 
 $(document).ready(function () {

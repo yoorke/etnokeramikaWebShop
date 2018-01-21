@@ -74,7 +74,7 @@
                     <%--</div>--%>
                     <div class="col-xs-4 text-center"><!--<asp:LinkButton ID="btnCompare" runat="server" Text="Uporedi" OnClientClick="btnCompare_Click('<%=lblProductID.ClientID %>')"></asp:LinkButton>-->
                         <!--<button type="button" id="btnCompare" onclick="btnCompare_Click('<%=lblProductID.ClientID %>')">Uporedi</button>-->
-                        <button type="button" onclick="btnCompare_Click('<%=lblProductID.ClientID %>')" class="ws-btn btn-icon"><span class="fa fa-fw fa-balance-scale"></span></button>
+                        <button type="button" onclick="AddToCompare(event, '<%=lblProductID.ClientID %>')" class="ws-btn btn-icon"><span class="fa fa-fw fa-balance-scale"></span></button>
 
                     </div>
                     <%--<div class="col-xs-1">--%>

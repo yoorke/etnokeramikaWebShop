@@ -47,7 +47,7 @@ namespace etnokeramikaWebShop.userControls
 
                 if(imageUrlSource.Equals("1"))
                 {
-                    string style = "background:url('.." + imageUrl + "') " + imageUrlPositionX.ToString() + "px " + imageUrlPositionY.ToString() + "px";
+                    string style = "background:url('" + imageUrl + "') " + imageUrlPositionX.ToString() + "px " + imageUrlPositionY.ToString() + "px";
                     ((HtmlControl)e.Item.FindControl("imgSprite")).Attributes.Add("style", style);
                 }
             }
