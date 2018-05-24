@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace etnokeramikaWebShop.webshopAdmin {
+namespace eshopv2.webshopAdmin {
     
     
     /// <summary>

@@ -94,6 +94,8 @@ namespace etnokeramikaWebShop
                 savingDiv.Visible = false;
             }
 
+            lblCode.Text = product.Code;
+
             lblSpecification.Text = !product.Specification.Contains("<table class='table table-striped'><tbody></table>") ? product.Specification : "Nema podataka";
             lblDescription.Text = product.Description != string.Empty ? product.Description : "Nema opisa";
             if (product.Promotion != null)

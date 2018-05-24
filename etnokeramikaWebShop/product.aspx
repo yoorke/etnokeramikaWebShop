@@ -54,6 +54,7 @@
                 
                 <div class="row box-content box-content-secondary">
                     <div class="col-sm-6">
+                        <p>Šifra: <asp:Label ID="lblCode" runat="server"></asp:Label></p>
                         <p>Dostupnost:</p>
                         <p class="bold uppercase"><asp:Literal ID="txtAvailability" runat="server" Text="Na stanju"></asp:Literal></p>
                         <p class="margin-top-2">Očekivani rok isporuke:</p>
