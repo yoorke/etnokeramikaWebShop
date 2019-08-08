@@ -49,7 +49,7 @@ namespace etnokeramikaWebShop
         private void searchProducts()
         {
             string searchString = ViewState["searchString"].ToString();
-            List<Product> products = new ProductBL().SearchProducts(searchString, this.sort);
+            List<Product> products = new ProductBL().SearchProducts(searchString, this.sort, -1);
             PagedDataSource pagedDataSource = new PagedDataSource();
             pagedDataSource.DataSource = products;
             pagedDataSource.AllowPaging = true;

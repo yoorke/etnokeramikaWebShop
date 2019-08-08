@@ -70,7 +70,7 @@
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                 <span>Dobrodošli, </span><asp:Label ID="lblUsername" runat="server"></asp:Label>
-                                <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Odjava"></asp:LinkButton>
+                                <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Odjava" CausesValidation="false"></asp:LinkButton>
                             </LoggedInTemplate>
                         </asp:LoginView>
                     </div>

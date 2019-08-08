@@ -38,7 +38,10 @@
                         <label for="cmbPromotion">Promocija:</label>
                         <asp:DropDownList id="cmbPromotion" runat="server" CssClass="form-control"></asp:DropDownList>
                     </div>
-                    
+                    <div class="form-group">
+                        <label for="cmbHasImage">Slika:</label>
+                        <asp:DropDownList ID="cmbHasImage" runat="server" CssClass="form-control"></asp:DropDownList>
+                    </div>
                         
                     
                 </div><!--form-->
@@ -65,18 +68,32 @@
             </div><!--col-->
             <div class="col-lg-4 background-gray padding-05">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 padding-bottom-05">
                         <label for="cmbPromotions">Promocija:</label>
                         <asp:DropDownList ID="cmbPromotions" runat="server" CssClass="form-control"></asp:DropDownList>
                         <asp:Button ID="btnAddToPromotion" runat="server" OnClick="btnAddToPromotion_Click" Text="Dodaj na promociju" CssClass="btn btn-primary margin-top-05" />
                         <asp:Button ID="btnDeleteFromPromotion" runat="server" OnClick="btnDeleteFromPromotion_Click" Text="Obriši sa promocije" CssClass="btn btn-primary margin-top-05" />
                     </div>
-                </div>
-                <div class="row margin-top-1-5" id="divAdditionalCategory" runat="server">
+                </div>                
+                <div class="row margin-top-05" id="divAdditionalCategory" runat="server">
                     <div class="col-lg-12">
                         <label for="cmbAdditionallyCategory">Dodatna kategorija:</label>
                         <asp:DropDownList ID="cmbAdditionallyCategory" runat="server" CssClass="form-control"></asp:DropDownList>
                         <asp:Button ID="btnSaveProductCategory" runat="server" OnClick="btnSaveProductCategory_Click" Text="Dodaj kategoriju" CssClass="btn btn-primary margin-top-05" />
+                    </div>
+                </div>
+                <div class="row margin-top-05">
+                    <div class="col-lg-12">
+                        <label for="cmbNewCategory">Kategorija:</label>
+                        <asp:DropDownList ID="cmbNewCategory" runat="server" CssClass="form-control"></asp:DropDownList>
+                        <button type="button" id="btnChangeCategory" class="btn btn-primary margin-top-05" onclick="btnChangeCategory_Click()">Prebaci u kategoriju</button>
+                    </div>
+                </div>
+                <div class="row margin-top-05">
+                    <div class="col-md-12">
+                        <label for="cmbCustomPage">Stranica:</label>
+                        <asp:DropDownList ID="cmbCustomPage" runat="server" CssClass="form-control"></asp:DropDownList>
+                        <asp:Button ID="btnAddProductsToCustomPage" runat="server" CssClass="btn btn-primary margin-top-05" OnClick="btnAddProductsToCustomPage_Click" Text="Dodaj proizvode na stranicu" />
                     </div>
                 </div>
             </div>
@@ -106,6 +123,16 @@
                 <uc1:CustomStatus ID="csStatus" runat="server" Visible="false" />        
             </div><!--col-->
         </div><!--row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="statusBox" class="alert alert-success text-center" style="display:none"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="errorStatusBox" class="alert alert-danger text-center" style="display:none"></div>
+            </div>
+        </div>
         <div class="row margin-top-05">
             <div class="col-lg-6">
                 <label for="lblProductsCount">Ukupno proizvoda:</label>
@@ -138,7 +165,7 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="ProductID" ControlStyle-Width="50px" Visible="false">
+                            <asp:TemplateField HeaderText="ProductID" ControlStyle-Width="50px" Visible="true">
                                 <ItemTemplate>
                                     <asp:Label ID="lblProductID" runat="server" Text='<%#Eval("productID") %>'></asp:Label>
                                 </ItemTemplate>
@@ -231,7 +258,7 @@
 
                             <asp:TemplateField HeaderText="">
                                 <ItemTemplate>
-                                    <asp:HyperLink ID="lnkProductPage" runat="server" NavigateUrl='<%#"~/proizvodi/proizvod/" + Eval("name") + "-" + Eval("productID") %>' Target="_blank"><span class="fa fa-fw fa-sign-in"></span></asp:HyperLink>
+                                    <asp:HyperLink ID="lnkProductPage" runat="server" NavigateUrl='<%#"~/proizvodi/" + (bool.Parse(ConfigurationManager.AppSettings["includeParentUrlInCategoryUrl"]) ? Eval("FullCategoryUrl") : "proizvod") + "/" + Eval("name") + "-" + Eval("productID") %>' Target="_blank"><span class="fa fa-fw fa-sign-in"></span></asp:HyperLink>
                                 </ItemTemplate>
                             </asp:TemplateField>
 

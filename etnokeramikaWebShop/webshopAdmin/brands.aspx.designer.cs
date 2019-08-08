@@ -7,27 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace webshopAdmin {
+namespace WebShopAdmin.webshopAdmin {
     
     
-    public partial class CustomStatus {
+    public partial class brands {
         
         /// <summary>
-        /// divCol control.
+        /// btnAddBrand control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCol;
+        protected global::System.Web.UI.WebControls.Button btnAddBrand;
         
         /// <summary>
-        /// lblStatusText control.
+        /// customStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStatusText;
+        protected global::webshopAdmin.CustomStatus customStatus;
+        
+        /// <summary>
+        /// dgvBrands control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvBrands;
     }
 }

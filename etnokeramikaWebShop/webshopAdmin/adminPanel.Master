@@ -42,6 +42,17 @@
 <body>
     <form id="form1" runat="server">
         <div id="wrapper">
+            <div class="top">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="header"><span class="header-highlighted">WS</span>Admin</span>
+                    </div>
+                    <div class="col-md-4 pull-right text-right">
+                        <span>Korisnik: </span>
+                        <asp:Label ID="lblUsername" runat="server" CssClass="username"></asp:Label>
+                    </div>
+                </div>
+            </div>
             <div class="navbar-default sidebar" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#side-menu">

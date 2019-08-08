@@ -90,6 +90,8 @@ namespace webshopAdmin
             Page.Title = user.Username;
             ViewState.Add("pageTitle", user.Username);
             lblUserID.Value = user.UserID.ToString();
+            chkActive.Checked = user.Active;
+            chkBlocked.Checked = user.Blocked;
         }
 
         private void saveUser()
@@ -105,6 +107,8 @@ namespace webshopAdmin
             user.City = txtCity.Text;
             user.Discount = double.Parse(txtDiscount.Text);
             user.DiscountTypeID = int.Parse(cmbDiscountType.SelectedValue);
+            user.Active = chkActive.Checked;
+            user.Blocked = chkBlocked.Checked;
 
             int status = new UserBL().UpdateUser(user);
             if (status > 0)
@@ -119,8 +123,13 @@ namespace webshopAdmin
         private void setCustomStatus(string text, string classes)
         {
             customStatus.Text = text;
-            customStatus.Class = "alert alert-" + classes + " status";
+            customStatus.Class = classes;
             customStatus.Show();
+        }
+
+        protected void btnChangePassword_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

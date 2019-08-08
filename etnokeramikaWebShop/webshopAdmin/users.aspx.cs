@@ -18,7 +18,7 @@ namespace webshopAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (User.Identity.IsAuthenticated)
+            if (User.Identity.IsAuthenticated && User.IsInRole("administrator"))
             {
                 if (!Page.IsPostBack)
                 {
@@ -44,6 +44,15 @@ namespace webshopAdmin
         protected void btnAddUser_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/" + ConfigurationManager.AppSettings["webshopAdminUrl"] + "/createUser.aspx");
+        }
+
+        protected void dgvUsers_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if(e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (((Label)e.Row.FindControl("lblUsername")).Text.StartsWith("admin"))
+                    ((ImageButton)e.Row.Cells[5].Controls[0]).Visible = false;
+            }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace webshopAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (User.Identity.IsAuthenticated)
+            if (User.Identity.IsAuthenticated && User.IsInRole("administrator"))
             {
                 if (!Page.IsPostBack)
                 {
@@ -101,6 +101,8 @@ namespace webshopAdmin
 
         protected void btnPrint_Click(object sender, EventArgs e)
         {
+            Settings settings = new SettingsBL().GetSettings();
+
             DataSet print = new DataSet();
             print.Tables.Add("order");
             print.Tables[0].Columns.Add("number");
@@ -146,7 +148,7 @@ namespace webshopAdmin
             newRow["delivery"] = lblDelivery.Text;
             newRow["total"] = lblTotal.Text;
             newRow["code"] = lblCode.Text;
-            newRow["deliveryPrice"] = double.Parse(lblTotal.Text) > double.Parse(ConfigurationManager.AppSettings["freeDeliveryTotalValue"]) ? 0 : double.Parse(ConfigurationManager.AppSettings["deliveryCost"]);
+            newRow["deliveryPrice"] = double.Parse(lblTotal.Text) > 10000 ? 0 : 350;
             print.Tables[0].Rows.Add(newRow);
 
             for (int i = 0; i < dgvItems.Rows.Count; i++)
@@ -237,8 +239,23 @@ namespace webshopAdmin
 
             html.Append("<div style='float:right;padding:0.5em;background-color:#eeeeee;margin-top:20px'>");
             html.Append("<div><strong>Ukupno:</strong> " + lblTotal.Text + "</div>");
-            html.Append("<div><strong>Dostava:</strong> " + (double.Parse(lblTotal.Text) > double.Parse(ConfigurationManager.AppSettings["freeDeliveryTotalValue"]) ? "0,00" : string.Format("{0:N2}", double.Parse(ConfigurationManager.AppSettings["deliveryCost"]))) + "</div>");
-            html.Append("<div><strong>Ukupno:</strong> " + string.Format("{0:N2}", (double.Parse(lblTotal.Text) + (double.Parse(lblTotal.Text) > double.Parse(ConfigurationManager.AppSettings["freeDeliveryTotalValue"]) ? 0 : double.Parse(ConfigurationManager.AppSettings["deliveryCost"])))) + "</div>");
+
+            //html.Append("<div><strong>Dostava:</strong> " + 
+                //(double.Parse(lblTotal.Text) > double.Parse(ConfigurationManager.AppSettings["freeDeliveryTotalValue"]) 
+                    //? "0,00" : string.Format("{0:N2}", double.Parse(ConfigurationManager.AppSettings["deliveryCost"]))) + "</div>");
+
+            html.Append("<div><strong>Dostava:</strong> " +
+                (double.Parse(lblTotal.Text) > settings.FreeDeliveryTotalValue
+                    ? "0,00" : string.Format("{0:N2}", settings.DeliveryCost)) + "</div>");
+
+            //html.Append("<div><strong>Ukupno:</strong> " 
+                //+ string.Format("{0:N2}", (double.Parse(lblTotal.Text) + (double.Parse(lblTotal.Text) > double.Parse(ConfigurationManager.AppSettings["freeDeliveryTotalValue"]) 
+                    //? 0 : double.Parse(ConfigurationManager.AppSettings["deliveryCost"])))) + "</div>");
+
+            html.Append("<div><strong>Ukupno:</strong> "
+                + string.Format("{0:N2}", (double.Parse(lblTotal.Text) + (double.Parse(lblTotal.Text) > settings.FreeDeliveryTotalValue
+                    ? 0 : settings.DeliveryCost))) + "</div>");
+
             html.Append("</div>");
 
             html.Append("</body></html>");
@@ -313,7 +330,7 @@ namespace webshopAdmin
         private void setStatus(string message, string classes)
         {
             customStatus.Text = message;
-            customStatus.Class = "alert alert-" + classes + " status";
+            customStatus.Class = classes;
             customStatus.Show();
         }
     }

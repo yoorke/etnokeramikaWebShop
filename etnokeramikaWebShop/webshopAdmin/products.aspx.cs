@@ -14,6 +14,7 @@ using eshopBE;
 using eshopBL;
 using System.Collections.Generic;
 using System.Data;
+using eshopUtilities;
 
 namespace webshopAdmin
 {
@@ -21,7 +22,7 @@ namespace webshopAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (User.Identity.IsAuthenticated && User.IsInRole("administrator"))
+            if (User.Identity.IsAuthenticated && (User.IsInRole("administrator") || User.IsInRole("korisnik") || User.IsInRole("prodavac")))
             {
                 if (!Page.IsPostBack)
                 {
@@ -55,7 +56,7 @@ namespace webshopAdmin
             ProductBL productsBL = new ProductBL();
 
             //List<Product> products = productsBL.GetProducts(categoryID, supplierID, cmbApproved.SelectedItem.Text, cmbActive.SelectedItem.Text, brandID, promotionID, cmbSort.SelectedIndex > -1 ? cmbSort.SelectedValue : null);
-            DataTable products = productsBL.GetProductsDataTable(categoryID, supplierID, promotionID, brandID, cmbActive.SelectedItem.Text, cmbApproved.SelectedItem.Text, txtSearch.Text, cmbSort.SelectedIndex > -1 ? cmbSort.SelectedValue : "product.Name", string.Empty);
+            DataTable products = productsBL.GetProductsDataTable(categoryID, supplierID, promotionID, brandID, cmbActive.SelectedItem.Text, cmbApproved.SelectedItem.Text, txtSearch.Text, cmbSort.SelectedIndex > -1 ? cmbSort.SelectedValue : "product.Name", string.Empty, cmbHasImage.SelectedItem.Text);
 
             //if (txtSearch.Text.Length > 0)
             //{
@@ -132,6 +133,21 @@ namespace webshopAdmin
             cmbSort.Items.Add(new ListItem("Datumu unosa", "product.insertDate"));
             cmbSort.Items.Add(new ListItem("Datumu izmene", "product.updateDate"));
             cmbSort.Items.Add(new ListItem("Datum izmene opadajuće", "product.updateDate DESC"));
+            cmbSort.Items.Add(new ListItem("Datum unosa opadajuće", "product.insertDate DESC"));
+
+            cmbNewCategory.DataSource = new CategoryBL().GetNestedCategoriesDataTable(true, true);
+            cmbNewCategory.DataTextField = "name";
+            cmbNewCategory.DataValueField = "categoryID";
+            cmbNewCategory.DataBind();
+
+            cmbHasImage.Items.Add(new ListItem("Sve", "null"));
+            cmbHasImage.Items.Add(new ListItem("Ima", "true"));
+            cmbHasImage.Items.Add(new ListItem("Nema", "false"));
+
+            cmbCustomPage.DataSource = new CustomPageBL().GetCustomPages();
+            cmbCustomPage.DataTextField = "title";
+            cmbCustomPage.DataValueField = "customPageID";
+            cmbCustomPage.DataBind();
         }
 
         protected void btnShowProducts_Click(object sender, EventArgs e)
@@ -146,10 +162,21 @@ namespace webshopAdmin
 
         protected void dgvProducts_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            ProductBL productBL = new ProductBL();
-            productBL.DeleteProduct(int.Parse(dgvProducts.DataKeys[e.RowIndex].Values[0].ToString()));
+            try
+            { 
+                ProductBL productBL = new ProductBL();
+                productBL.DeleteProduct(int.Parse(dgvProducts.DataKeys[e.RowIndex].Values[0].ToString()));
 
-            Page.Response.Redirect("~/" + ConfigurationManager.AppSettings["webshopAdminUrl"] + "/products.aspx");
+                Page.Response.Redirect("~/" + ConfigurationManager.AppSettings["webshopAdminUrl"] + "/products.aspx");
+            }
+            catch(BLException blEx)
+            {
+                setStatus(blEx.Message, System.Drawing.Color.Red, true, "danger");
+            }
+            catch(Exception ex)
+            {
+                setStatus("Nije moguće obrisati proizvod.", System.Drawing.Color.Red, true, "danger");
+            }
         }
 
         protected void dgvProducts_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -184,7 +211,7 @@ namespace webshopAdmin
             csStatus.Text = text;
             csStatus.Visible = visible;
             csStatus.ForeColor = foreColor;
-            csStatus.Class = "status " + status;
+            csStatus.Class = status;
             csStatus.Show();
         }
 
@@ -301,6 +328,21 @@ namespace webshopAdmin
                 }
 
                 setStatus("Proizvodi dodati u kategoriju", System.Drawing.Color.Black, true, "success");
+            }
+        }
+
+        protected void btnAddProductsToCustomPage_Click(object sender, EventArgs e)
+        {
+            if(cmbCustomPage.SelectedIndex > -1)
+            { 
+            List<CustomPageProduct> products = new List<CustomPageProduct>();
+            for(int i = 0;i < dgvProducts.Rows.Count; i++)
+            {
+                if (((CheckBox)dgvProducts.Rows[i].FindControl("chkSelect")).Checked)
+                    products.Add(new CustomPageProduct(int.Parse(((Label)dgvProducts.Rows[i].FindControl("lblProductID")).Text), ((Label)dgvProducts.Rows[i].FindControl("lblName")).Text));
+            }
+
+            new CustomPageBL().SaveCustomPageProducts(products, int.Parse(cmbCustomPage.SelectedValue));
             }
         }
     }

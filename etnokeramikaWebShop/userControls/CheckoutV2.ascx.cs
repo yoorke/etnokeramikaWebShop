@@ -49,7 +49,8 @@ namespace etnokeramikaWebShop.userControls
                 int userID=1;
                 if (chkCreateAccount.Checked)
                 {
-                    userID = createUser();
+                    User user = createUser();
+                    userID = user.UserID;
                     if (userID > 0)
                         FormsAuthentication.SetAuthCookie(txtEmail.Text, true);
                 }
@@ -58,9 +59,19 @@ namespace etnokeramikaWebShop.userControls
                 else userID = 42;
                 Order order = createOrder(userID);
                 
+                try
+                {
+                    System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem(bw =>
+                    {
+                        Settings settings = new SettingsBL().GetSettings();
+                        Common.SendOrderConfirmationMail(txtEmail.Text, txtFirstname.Text + " " + txtLastname.Text, order, settings);
+                        Common.SendNewOrderNotification(order.OrderID.ToString(), order, settings);
+                    });
+                }
+                catch
+                {
 
-                Common.SendOrderConfirmationMail(txtEmail.Text, txtFirstname.Text + " " + txtLastname.Text, order);
-                Common.SendNewOrderNotification(order.OrderID.ToString(), order);
+                }
                 new CartBL().ClearItems(Session["cartID"].ToString());
                 new CartBL().RemoveCoupon(Session["cartID"].ToString());
                 //Server.Transfer("/orderSuccessful.aspx");
@@ -115,7 +126,7 @@ namespace etnokeramikaWebShop.userControls
             return order;
         }
 
-        private int createUser()
+        private User createUser()
         {
             return UserBL.SaveUser(txtFirstname.Text, txtLastname.Text, txtEmail.Text, string.Empty, txtEmail.Text, txtAddress.Text, txtCity.Text, txtPhone.Text, "kupac", txtZip.Text);
         }
