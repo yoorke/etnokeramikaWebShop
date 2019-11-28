@@ -22,6 +22,7 @@ namespace webshopAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //this.Form.DefaultButton = btnShowProducts.ClientID;
             if (User.Identity.IsAuthenticated && (User.IsInRole("administrator") || User.IsInRole("korisnik") || User.IsInRole("prodavac")))
             {
                 if (!Page.IsPostBack)
@@ -46,7 +47,7 @@ namespace webshopAdmin
                 supplierID = int.Parse(cmbSupplier.SelectedValue);
 
             int? brandID = null;
-            if (cmbBrand.SelectedIndex > 1)
+            if (cmbBrand.SelectedIndex > 0)
                 brandID = int.Parse(cmbBrand.SelectedValue);
 
             int? promotionID = null;
@@ -344,6 +345,14 @@ namespace webshopAdmin
 
             new CustomPageBL().SaveCustomPageProducts(products, int.Parse(cmbCustomPage.SelectedValue));
             }
+        }
+
+        protected void chkPriceLocked_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox chkPriceLocked = (CheckBox)sender;
+            GridViewRow gridViewRow = (GridViewRow)chkPriceLocked.NamingContainer;
+
+            new ProductBL().SetPriceLocked(int.Parse(((Label)gridViewRow.FindControl("lblProductID")).Text), bool.Parse(((CheckBox)gridViewRow.FindControl("chkPriceLocked")).Checked.ToString()));
         }
     }
 }

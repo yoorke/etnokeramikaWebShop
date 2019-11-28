@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/webshopAdmin/adminPanel.Master" AutoEventWireup="true" CodeBehind="products.aspx.cs" Inherits="webshopAdmin.products" Title="Proizvodi | Admin panel" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/webshopAdmin/adminPanel.Master" AutoEventWireup="true" CodeBehind="products.aspx.cs" Inherits="webshopAdmin.products" Title="Proizvodi | Admin panel" MaintainScrollPositionOnPostback="true" %>
 <%@ Register src="customControls/CustomStatus.ascx" tagname="CustomStatus" tagprefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -12,13 +12,18 @@
         <div class="row">
             <div class="col-lg-12 margin-top-05">
                 <div class="btn-group">
-                    <asp:Button ID="btnAddProduct" runat="server" Text="Dodaj proizvod" OnClick="btnAddProduct_Click" CssClass="btn btn-primary" />
+                    <%--<asp:Button ID="btnAddProduct" runat="server" Text="Dodaj proizvod" OnClick="btnAddProduct_Click" CssClass="btn btn-primary" />
                     <asp:Button ID="btnApproveAll" runat="server" Text="Odobri selektovane" OnClick="btnApproveAll_Click" CssClass="btn btn-primary" />
                     <asp:Button ID="btnActivateAll" runat="server" Text="Aktiviraj selektovane" OnClick="btnActivateAll_Click" CssClass="btn btn-primary" />
-                    <asp:Button ID="btnDeleteAll" runat="server" Text="Obriši selektovane" OnClick="btnDeleteAll_Click" CssClass="btn btn-primary" />                    
+                    <asp:Button ID="btnDeleteAll" runat="server" Text="Obriši selektovane" OnClick="btnDeleteAll_Click" CssClass="btn btn-primary" />                    --%>
+                    <asp:LinkButton ID="btnAddProduct" runat="server" OnClick="btnAddProduct_Click" CssClass="btn btn-primary" ToolTip="Dodaj proizvod"><span class="fa fa-plus"></span></asp:LinkButton>
+                    <asp:LinkButton ID="btnApproveAll" runat="server" OnClick="btnApproveAll_Click" CssClass="btn btn-primary" ToolTip="Odobri selektovane"><span class="fa fa-check"></span></asp:LinkButton>
+                    <asp:LinkButton ID="btnActivateAll" runat="server" OnClick="btnActivateAll_Click" CssClass="btn btn-primary" ToolTip="Aktiviraj selektovane"><span class="fa fa-check-square"></span></asp:LinkButton>
+                    <asp:LinkButton ID="btnDeleteAll" runat="server" OnClick="btnDeleteAll_Click" CssClass="btn btn-primary" ToolTip="Obriši selektovane"><span class="fa fa-trash"></span></asp:LinkButton>
                 </div><!--btn-group-->
             </div>
         </div>
+        <asp:Panel runat="server" DefaultButton="btnShowProducts">
         <div class="row margin-top-2">
             <div class="col-lg-4">
                 <div role="form">
@@ -105,6 +110,7 @@
                 
             
         </div><!--row-->
+            </asp:Panel>
         <div class="row margin-top-05">
             <div class="col-lg-12 pull-right">
                 
@@ -165,13 +171,13 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="ProductID" ControlStyle-Width="50px" Visible="true">
+                            <asp:TemplateField HeaderText="ID" ControlStyle-Width="50px" Visible="true" ItemStyle-Width="50px">
                                 <ItemTemplate>
                                     <asp:Label ID="lblProductID" runat="server" Text='<%#Eval("productID") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField ControlStyle-Width="50px" ItemStyle-Width="50px">
+                            <asp:TemplateField ControlStyle-Width="50px" ItemStyle-Width="50px" Visible="false">
                                 <ItemTemplate>
                                     <asp:Image ID="imgProduct" runat="server" ImageUrl='<%#Eval("ImageUrl") %>'></asp:Image>
                                 </ItemTemplate>
@@ -183,7 +189,7 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Proizvođač" ControlStyle-Width="70px">
+                            <asp:TemplateField HeaderText="Proizv" ControlStyle-Width="70px">
                                 <ItemTemplate>
                                     <asp:Label ID="lblBrand" runat="server" Text='<%#Eval("brandName") %>'></asp:Label>
                                 </ItemTemplate>
@@ -215,24 +221,24 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Promocija" ControlStyle-Width="50px" ItemStyle-HorizontalAlign="Right" ItemStyle-Width="50px">
+                            <asp:TemplateField HeaderText="Prom" ControlStyle-Width="50px" ItemStyle-HorizontalAlign="Right" ItemStyle-Width="50px">
                                 <ItemTemplate>
                                     <asp:Label ID="lblPromotionPrice" runat="server" Text='<%#String.Format("{0:N2}", Eval("promotionPrice")) %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Odobreno" ControlStyle-Width="20px" ItemStyle-Width="20px">
+                            <asp:TemplateField HeaderText="Odob" ControlStyle-Width="20px" ItemStyle-Width="20px">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="chkApproved" runat="server" Checked='<%#Eval("isApproved") %>' AutoPostBack="true" OnCheckedChanged="chkApproved_CheckChanged" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Aktivan" ControlStyle-Width="20px" ItemStyle-Width="20px">
+                            <asp:TemplateField HeaderText="Akt" ControlStyle-Width="20px" ItemStyle-Width="20px">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="chkActive" runat="server" Checked='<%#Eval("isActive") %>' AutoPostBack="true" OnCheckedChanged="chkActive_CheckChanged" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Zaključan" ControlStyle-Width="20px" ItemStyle-Width="20px">
+                            <asp:TemplateField HeaderText="Zaklj" ControlStyle-Width="20px" ItemStyle-Width="20px">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="chkLocked" runat="server" Checked='<%#Eval("isLocked") %>' OnCheckedChanged="chkLocked_CheckedChanged" AutoPostBack="true" />
                                 </ItemTemplate>
@@ -241,6 +247,12 @@
                             <asp:TemplateField HeaderText="Na stanju" ControlStyle-Width="20px" ItemStyle-Width="20px">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="chkInStock" runat="server" Checked='<%#Eval("isInStock") %>' OnCheckedChanged="chkInStock_CheckedChanged" AutoPostBack="true" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Zak. cena" ControlStyle-Width="20px" ItemStyle-Width="20px">
+                                <ItemTemplate>
+                                    <asp:CheckBox ID="chkPriceLocked" runat="server" Checked='<%#Eval("isPriceLocked") %>' OnCheckedChanged="chkPriceLocked_CheckedChanged" AutoPostBack="true" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 

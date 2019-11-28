@@ -183,6 +183,7 @@
     <Content Include="images\vinski-setovi-slider.jpg" />
     <Content Include="images\wrapper-background.jpg" />
     <Content Include="js\src\registration.js" />
+    <Content Include="not-found.aspx" />
     <Content Include="retails.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\banner_cinije.jpg" />
@@ -534,6 +535,13 @@
       <DependentUpon>eshop.Master</DependentUpon>
     </Compile>
     <Compile Include="FacebookHandler.cs" />
+    <Compile Include="not-found.aspx.cs">
+      <DependentUpon>not-found.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="not-found.aspx.designer.cs">
+      <DependentUpon>not-found.aspx</DependentUpon>
+    </Compile>
     <Compile Include="retails.aspx.cs">
       <DependentUpon>retails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

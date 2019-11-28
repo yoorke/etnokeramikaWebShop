@@ -35,6 +35,10 @@
                     <label for="txtWorkingHours">Radno vreme:</label>
                     <asp:TextBox ID="txtWorkingHours" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
+                <div class="form-group">
+                    <label for="txtUnknownBrandName">Naziv za nepoznatog proizvođača:</label>
+                    <asp:TextBox ID="txtUnknownBrandName" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
@@ -44,6 +48,10 @@
                 <div class="form-group">
                     <label for="txtFreeDeliveryTotalValue">Min vrednost za besplatnu dostavu:</label>
                     <asp:TextBox ID="txtFreeDeliveryTotalValue" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="txtExchangeRate">Kurs:</label>
+                    <asp:TextBox ID="txtExchangeRate" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
         </div>

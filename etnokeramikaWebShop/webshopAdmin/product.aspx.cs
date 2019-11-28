@@ -161,6 +161,7 @@ namespace webshopAdmin
             cmbUnitOfMeasure.DataSource = new UnitOfMeasureBL().GetUnitsOfMeasure(true);
             cmbUnitOfMeasure.DataTextField = "FullName";
             cmbUnitOfMeasure.DataValueField = "unitOfMeasureID";
+            cmbUnitOfMeasure.SelectedValue = "2";
             cmbUnitOfMeasure.DataBind();
 
             cmbCategories.DataSource = categoryBL.GetNestedCategoriesDataTable();
@@ -229,6 +230,7 @@ namespace webshopAdmin
                 cmbUnitOfMeasure.SelectedValue = product.UnitOfMeasure.UnitOfMeasureID.ToString();
                 lblPageHeader.Text = product.Name;
                 ViewState.Add("productName", product != null ? product.Name : string.Empty);
+                chkPriceLocked.Checked = product.IsPriceLocked;
 
                 if (product.Promotion != null)
                 {
@@ -385,6 +387,7 @@ namespace webshopAdmin
             product.Specification = txtSpecification.Text;
             product.ProductID = (lblProductID.Value != string.Empty) ? int.Parse(lblProductID.Value) : 0;
             product.UnitOfMeasure = new UnitOfMeasure(int.Parse(cmbUnitOfMeasure.SelectedValue), cmbUnitOfMeasure.SelectedItem.Text, string.Empty);
+            product.IsPriceLocked = chkPriceLocked.Checked;
 
             if (cmbPromotions.SelectedIndex > 0)
             {
@@ -666,7 +669,7 @@ namespace webshopAdmin
                         foreach (object control in pnlAttributes.Controls)
                             if (control is customControls.AttributeControl)
                                 if (((customControls.AttributeControl)control).ID == lblAttributeName.Value)
-                                    ((customControls.AttributeControl)control).setValues();
+                                    ((customControls.AttributeControl)control).setValues(txtAttributeValue.Text);
                         break;
                     }
                 case "supplier":
@@ -729,6 +732,29 @@ namespace webshopAdmin
                     return code;
             }
             return code;
+        }
+
+        protected void btnSaveAs_Click(object sender, EventArgs e)
+        {
+            int productID = -1;
+            if(int.TryParse(lblProductID.Value, out productID))
+            {
+                lblProductID.Value = "-1";
+                txtCode.Text = string.Empty;
+                txtSupplierCode.Text = string.Empty;
+                txtEan.Text = string.Empty;
+
+                txtCode.Focus();
+
+                setStatus("Proizvod će biti sačuvan kao novi nakon unosa šifre, barkoda i šifre dobavljača.", "info");
+            }
+        }
+
+        private void setStatus(string text, string classes)
+        {
+            customStatus.Text = text;
+            customStatus.Class = classes;
+            customStatus.Show();
         }
     }
 }

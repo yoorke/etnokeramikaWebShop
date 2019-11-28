@@ -83,6 +83,8 @@ namespace etnokeramikaWebShop
                 if (Page.RouteData.Values["category"] != null)
                     categoryUrl = Page.RouteData.Values["category"].ToString();
 
+                if (categoryUrl.EndsWith("/"))
+                    categoryUrl = categoryUrl.Substring(0, categoryUrl.Length - 1);
                 if (new CategoryBL().GetCategoryByUrl(categoryUrl) == null)
                     Server.Transfer("/not-found.aspx");
                 string[] brandIDs = brands != string.Empty ? brands.Split(',') : new string[] {};
